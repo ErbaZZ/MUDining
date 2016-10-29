@@ -1,17 +1,18 @@
 <html>
 <head>
+  <link rel="stylesheet" media="screen" href="./assets/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/animate-custom.css" />
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
 <body>
-  <div class="bar">
-      <p>Test Commit</p>
-  </div>
+  <header id="banner" class="body">
+    <h1><a href="#">MU <strong>Dining</strong></a></h1>
+	</header>
 
   <div id="wrapper">
+
     <div id="register" class="animate form">
-      <h1>&nbsp;</h1>
-      <h1 class="regisheader">Registration Form</h1><br/>
+      <h1>Registration</h1>
       <form name="input" action="regis_complete.html" method="get">
     		<table style="font-size:27px;" align="center">
     			<tr><td class="formLabel">First name:</td><td><input type="text" name="firstname" pattern="[A-Za-z]{1,}" title="Letters only" required></td></tr>
@@ -22,22 +23,27 @@
     										<input type="radio" name="sex" value="female"> Female
     								<br/>
     			</td></tr>
+          <tr><td class="formLabel">Email:     </td><td><input type="email" name="email" required></td></tr>
     			<tr><td class="formLabel">Food Preferences:   </td><td>
     										<input type="checkbox" name="foodprefs" value="thai"> Thai
-    										<input type="checkbox" name="foodprefs" value="japan"> Japan<br/>
+    										<input type="checkbox" name="foodprefs" value="japan"> Japan
     										<input type="checkbox" name="foodprefs" value="foo"> Foo
     										<input type="checkbox" name="foodprefs" value="foo2"> Foo2<br/>
     										<input type="checkbox" name="foodprefs" value="foo3"> Foo3
                         <br/>
-    			<tr><td class="formLabel">Email:     </td><td><input type="email" name="email" required></td></tr>
     		</table>
-    		<b>
+    		<b id="regisbtn">
     			<input type="submit" value="Submit" style="font-size:24px;color:blue;">
     			<input type="reset" value="Reset" style="font-size:24px;color:red;">
     		</b>
     		<br/><br/>
     	</form>
     </div>
+
+    <div id="contact" class="animate form">
+      <h1>Contact</h1>
+    </div>
+
   </div>
 
 </body>
