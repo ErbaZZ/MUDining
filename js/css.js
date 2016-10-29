@@ -5,6 +5,6 @@ document.write('\
 <script src="js/popup.js" type="text/javascript"></script>\
 <link rel="stylesheet" media="screen" href="assets/css/bootstrap.css">\
 <link rel="stylesheet" type="text/css" href="assets/css/animate-custom.css" />\
-<link rel="stylesheet" type="text/css" href="assets/css/style.css" />\
 <link rel="stylesheet" type="text/css" href="assets/css/login-panel.css" />\
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" />\
 ');

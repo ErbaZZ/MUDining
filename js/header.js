@@ -19,13 +19,13 @@ document.write('\
         <span class="icon-bar"></span>\
         <span class="icon-bar"></span>\
       </button>\
-      <a class="navbar-brand" href="#">MU <strong>Dining</strong></a>\
+      <a class="navbar-brand" href="index.html">MU<strong>Dining</strong></a>\
     </div>\
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">\
       <ul class="nav navbar-nav">\
         <li class="active"><a href="index.html">Home</a></li>\
-        <li><a href="#">Restaurants</a></li>\
-        <li><a href="#">Reviews</a></li>\
+        <li><a href="restaurants.html">Restaurants</a></li>\
+        <li><a href="reviews.html">Reviews</a></li>\
         <li><a href="contact.html">Contact Us</a></li>\
       </ul>\
       <ul class="nav navbar-nav navbar-right">\
