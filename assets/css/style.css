@@ -197,7 +197,7 @@ p.change_link{
 	top: 1px;
 }
 
-#register{
+#contact, #register{
   text-align: center;
 }
 
@@ -227,6 +227,7 @@ p.change_link{
 }
 
 .circular {
+  display:inline-block;
   width: 300px;
 	height: 300px;
 	border-radius: 50%;
