@@ -1,18 +1,24 @@
 body {
+  font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
   background-color: #ffffdd;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 #banner {
   background-color: #ffa000;
-  border-style: solid;
-  border-bottom-color: #ffffff;
-  border-width: 0px 0px 5px 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffcc00;
+  border-bottom-width: 5px;
   height: 75px;
   width: 100%;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#banner h1 a:hover {
+  color: #fffff;
+  text-decoration: none;
 }
 
 #regisbtn {
