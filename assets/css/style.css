@@ -198,13 +198,9 @@ p.change_link{
 }
 
 #register{
-	z-index: 21;
   text-align: center;
 }
-#contact{
-	z-index: 22;
-  opacity: 0;
-}
+
 #toregister:target ~ #wrapper #register,
 #tocontact:target ~ #wrapper #contact
 {
@@ -229,3 +225,14 @@ p.change_link{
 	-o-animation-name: fadeOutLeft;
 	animation-name: fadeOutLeft;
 }
+
+.circular {
+  width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
