@@ -1,6 +1,6 @@
 #banner {
   font-family: 'Roboto', sans-serif;
-  background-color: #ffa000;
+  background-color: #ffa600;
   border-bottom-style: solid;
   border-bottom-color: #ffcc00;
   border-bottom-width: 5px;
@@ -16,6 +16,24 @@
 
 #banner h1 {
   margin: 15px;
+}
+
+#banner a, #banner a:link, #banner a:visited {
+  font-family: 'Roboto', sans-serif;
+  color: #00aeff;
+  text-decoration: none;
+  text-shadow: 1px 1px 3px #000;
+}
+
+#banner a:hover {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 3px #000;
+}
+
+#banner a:active {
+  text-decoration: none;
+  text-shadow: 0px 0px 1px #000;
 }
 
 #banner nav {
