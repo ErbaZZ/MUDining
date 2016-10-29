@@ -1,11 +1,12 @@
 body {
-  font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #ffffdd;
   margin: 0px;
   padding: 0px;
 }
 
 #banner {
+  font-family: 'Roboto', sans-serif;
   background-color: #ffa000;
   border-bottom-style: solid;
   border-bottom-color: #ffcc00;
@@ -14,23 +15,44 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  font-size: 42px;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 5px 10px #ccccaa;
 }
 
-#banner h1 a:hover {
+#banner nax {
+  font-size: 20px;
+}
+#banner h1 {
+  margin: 15px;
+}
+#banner a:hover {
   color: #fffff;
   text-decoration: none;
+}
+
+#wrapper {
+  margin: 100px auto 0px auto;
+  padding: 30px;
+  width: 45%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #ddd;
 }
 
 #regisbtn {
   vertical-align: middle;
 }
 
-table, th, td, input {
-  padding: 7px;
+.head {
+  font-size: 35px;
+  font-weight: bold;
 }
 
-h1 {
-  padding: 10px;
+table, th, td, input {
+  padding: 7px;
+  font-size: 20px;
 }
 
 input:focus:invalid {
@@ -50,7 +72,6 @@ input:required:valid {
 	cursor: pointer;
 	background: rgb(61, 157, 179);
 	padding: 8px 5px;
-	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
 	color: #fff;
 	font-size: 24px;
 	border: 1px solid rgb(28, 108, 122);
@@ -177,9 +198,13 @@ p.change_link{
 }
 
 #register{
+	z-index: 21;
   text-align: center;
 }
-
+#contact{
+	z-index: 22;
+  opacity: 0;
+}
 #toregister:target ~ #wrapper #register,
 #tocontact:target ~ #wrapper #contact
 {
@@ -204,12 +229,3 @@ p.change_link{
 	-o-animation-name: fadeOutLeft;
 	animation-name: fadeOutLeft;
 }
-
-.circular {
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	}

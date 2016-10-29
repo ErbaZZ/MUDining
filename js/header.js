@@ -1,11 +1,11 @@
 document.write('\
-<h1 id="banner">\
-  <a href="index.html">MU <strong>Dining</strong></a>\
+<div id="banner" class="fixed-top">\
+  <h1><a href="index.html">MU <strong>Dining</strong></a></h1>\
   <nav><ul>\
-			<li class="active"><a href="#">home</a></li>\
+			<li><a href="#">home</a></li>\
 			<li><a href="#">restaurants</a></li>\
 			<li><a href="#">reviews</a></li>\
 			<li><a href="#">contact</a></li>\
 		</ul></nav>\
-</h1>\
+</div>\
 ');
