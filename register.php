@@ -1,3 +1,15 @@
+<?php
+  $dbServer = "localhost";
+  $dbUser = "root";
+  $dbPass = "";
+  $dbName = "mudining";
+  $db = new mysqli($dbServer, $dbUser, $dbPass, $dbName);
+
+  // check connection
+  if ($db->connect_error) {
+    trigger_error('Database connection failed: '  . $db->connect_error, E_USER_ERROR);
+  }
+?>
 <html>
 <head>
   <script src="js/css.js"></script>
@@ -36,8 +48,26 @@
     		<br/><br/>
     	</form>
     </div>
+    <?php
+    // Testing MySQLi queries
+      $db->query("DROP TABLE IF EXISTS User");
+      $db->query("CREATE TABLE IF NOT EXISTS User (UserID int, FirstName varchar(255), LastName varchar(255), Nickname varchar(255), Gender character(1), Email varchar(255));");
+      $fn = array("John","Tim","James");
+      $ln = array("Smith","Beagle","Bond");
+      $nn = array("JS","TB","JB");
+      for ($i=0; $i<3; $i++) {
+        // ***Problematic*** table name has to be in *lower case*, variables in VALUES have to be 'quoted'
+        $db->query("INSERT INTO user(FirstName, LastName, Nickname) VALUES ('$fn[$i]','$ln[$i]','$nn[$i]');");
+      }
+      $data = $db->query("SELECT * FROM user;");
+
+      while($row = $data->fetch_assoc())
+      {
+        echo $row['FirstName'] . " " . $row['LastName'];
+        echo "<br />";
+      }
+    ?>
 
   </div>
-
 </body>
 </html>
