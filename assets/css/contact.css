@@ -11,6 +11,10 @@
   box-shadow: 0 0 60px rgba(0, 0, 300, .8);
 }
 
+#contact {
+  text-align: center;
+}
+
 figure {
   display: inline-block;
   margin: 20px;

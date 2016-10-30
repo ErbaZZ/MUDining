@@ -8,14 +8,14 @@ document.write('\
         <span class="icon-bar"></span>\
         <span class="icon-bar"></span>\
       </button>\
-      <a class="navbar-brand" href="index.html">MU<strong>Dining</strong></a>\
+      <a class="navbar-brand" href="index.php">MU<strong>Dining</strong></a>\
     </div>\
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">\
       <ul class="nav navbar-nav" id="diningmenus">\
-        <li><a href="index.html">Home</a></li>\
-        <li><a href="restaurants.html">Restaurants</a></li>\
-        <li><a href="reviews.html">Reviews</a></li>\
-        <li><a href="contact.html">Contact Us</a></li>\
+        <li><a href="index.php">Home</a></li>\
+        <li><a href="restaurants.php">Restaurants</a></li>\
+        <li><a href="reviews.php">Reviews</a></li>\
+        <li><a href="contact.php">Contact Us</a></li>\
       </ul>\
       <ul class="nav navbar-nav navbar-right">\
         <li class="dropdown">\
@@ -32,7 +32,7 @@ document.write('\
 										<div class="form-group">\
 											 <label class="sr-only" for="exampleInputPassword2">Password</label>\
 											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>\
-                                             <div class="help-block text-right"><a href="">Forget the password ?</a></div>\
+                                             <div class="help-block text-right"><a href="#">Forget the password ?</a></div>\
 										</div>\
 										<div class="form-group">\
 											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>\
@@ -45,7 +45,7 @@ document.write('\
 								 </form>\
 							</div>\
 							<div class="bottom text-center">\
-								New here ? <a href="register.html"><b>Register</b></a>\
+								New here ? <a href="register.php"><b>Register</b></a>\
 							</div>\
 					 </div>\
 				</li>\
