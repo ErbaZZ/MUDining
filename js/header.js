@@ -1,16 +1,5 @@
-/*document.write('\
-<div id="banner" class="fixed-top">\
-  <h1><a href="index.html">MU<strong>Dining</strong></a></h1>\
-  <nav><ul>\
-			<li><a href="index.html">home</a></li>\
-			<li><a href="#">restaurants</a></li>\
-			<li><a href="#">reviews</a></li>\
-			<li><a href="contact.html">contact</a></li>\
-		</ul>\
-</div>\
-');*/
 document.write('\
-<nav class="navbar navbar-default" role="navigation">\
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">\
   <div class="container-fluid">\
     <div class="navbar-header">\
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">\
@@ -22,7 +11,7 @@ document.write('\
       <a class="navbar-brand" href="index.html">MU<strong>Dining</strong></a>\
     </div>\
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">\
-      <ul class="nav navbar-nav">\
+      <ul class="nav navbar-nav" id="diningmenus">\
         <li class="active"><a href="index.html">Home</a></li>\
         <li><a href="restaurants.html">Restaurants</a></li>\
         <li><a href="reviews.html">Reviews</a></li>\
@@ -30,7 +19,7 @@ document.write('\
       </ul>\
       <ul class="nav navbar-nav navbar-right">\
         <li class="dropdown">\
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>\
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <span class="caret"></span></a>\
 			<ul id="login-dp" class="dropdown-menu">\
 				<li>\
 					 <div class="row">\
