@@ -35,7 +35,7 @@
         <div>
           <img src="http://lorempixel.com/200/200/abstract/3/" alt="" class="img-thumbnail">
           <h2>LODIHAM</h2>
-          <p>System.out.println((new StringBuilder("MAHIDOL").reverse()))
+          <p>System.out.println((new StringBuilder("MAHIDOL")).reverse())
           </p>
           <a href="#" class="btn btn-primary" title="Read more">Read more</a>
         </div>
