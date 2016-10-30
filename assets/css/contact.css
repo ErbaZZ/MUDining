@@ -1,0 +1,46 @@
+.circular {
+  display:inline-block;
+  width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	box-shadow: 0 0 12px rgba(0, 0, 0, .8);
+  transition: all 0.5s ease-in-out;
+}
+
+.circular:hover {
+  box-shadow: 0 0 60px rgba(0, 0, 300, .8);
+}
+
+figure {
+  display: inline-block;
+  margin: 20px;
+}
+
+figure img {
+  vertical-align: top;
+}
+
+figure figcaption {
+  text-align: center;
+  margin-top: 20px;
+}
+
+figcaption span {
+  display: block;
+  font-size: 150%;
+  color: rgba(.6, .7, .9, .7);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
+  transition: all 0.5s ease-out;
+}
+
+figcaption span#def {
+  opacity: 1;
+}
+
+figcaption span#new {
+  opacity: 0;
+}
+
+figcaption:hover span#new {
+  opacity: 1;
+}
