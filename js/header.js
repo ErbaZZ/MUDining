@@ -12,7 +12,7 @@ document.write('\
     </div>\
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">\
       <ul class="nav navbar-nav" id="diningmenus">\
-        <li class="active"><a href="index.html">Home</a></li>\
+        <li><a href="index.html">Home</a></li>\
         <li><a href="restaurants.html">Restaurants</a></li>\
         <li><a href="reviews.html">Reviews</a></li>\
         <li><a href="contact.html">Contact Us</a></li>\
