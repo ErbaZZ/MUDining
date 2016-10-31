@@ -19,12 +19,7 @@
   $firstname = $_POST['firstname'];
   $lastname = $_POST['lastname'];
   $nickname = $_POST['nickname'];
-  if ($_POST['sex'] == 'male') {
-    $gender = 'm';
-  }
-  else {
-    $gender = 'f';
-  }
+  $gender = $_POST['sex'];
   $email = $_POST['email'];
   // Testing MySQLi queries
   $db->query("CREATE TABLE IF NOT EXISTS User (UserID int NOT NULL AUTO_INCREMENT PRIMARY KEY, Username varchar(255) NOT NULL UNIQUE, Password varchar(255) NOT NULL UNIQUE, FirstName varchar(255), LastName varchar(255), Nickname varchar(255), Gender character(1), Email varchar(255));");

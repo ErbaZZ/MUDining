@@ -18,8 +18,8 @@
     			<tr><td class="formLabel">Last name:</td><td><input type="text" name="lastname" pattern="[A-Za-z]{1,}" title="Letters only" required></td></tr>
     			<tr><td class="formLabel">Nickname:</td><td><input type="text" name="nickname" pattern="[A-Za-z]{1,}" title="Letters only"></td></tr>
     			<tr><td class="formLabel">Gender:</td><td>
-    										<input type="radio" name="sex" value="male" checked> Male
-    										<input type="radio" name="sex" value="female"> Female
+    										<input type="radio" name="sex" value="m" checked> Male
+    										<input type="radio" name="sex" value="f"> Female
     								<br/>
     			</td></tr>
           <tr><td class="formLabel">Email:     </td><td><input type="email" name="email" required></td></tr>
