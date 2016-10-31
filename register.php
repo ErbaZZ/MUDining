@@ -16,7 +16,7 @@
           <tr><td class="formLabel">Password:</td><td><input type="password" name="password" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required></td></tr>
     			<tr><td class="formLabel">First name:</td><td><input type="text" name="firstname" pattern="[A-Za-z]{1,}" title="Letters only" required></td></tr>
     			<tr><td class="formLabel">Last name:</td><td><input type="text" name="lastname" pattern="[A-Za-z]{1,}" title="Letters only" required></td></tr>
-    			<tr><td class="formLabel">Nickname:</td><td><input type="text" name="nicktname" pattern="[A-Za-z]{1,}" title="Letters only"></td></tr>
+    			<tr><td class="formLabel">Nickname:</td><td><input type="text" name="nickname" pattern="[A-Za-z]{1,}" title="Letters only"></td></tr>
     			<tr><td class="formLabel">Gender:</td><td>
     										<input type="radio" name="sex" value="male" checked> Male
     										<input type="radio" name="sex" value="female"> Female
