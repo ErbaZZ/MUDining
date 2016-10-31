@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <html>
 <head>
   <script src="js/css.js"></script>
@@ -37,6 +40,12 @@
     		</b>
     		<br/><br/>
     	</form>
+      <?php
+        if (isset($_SESSION['errormsg'])) {
+          echo $_SESSION['errormsg'];
+        }
+        $_SESSION['errormsg'] = "";
+      ?>
     </div>
   </div>
 </body>
