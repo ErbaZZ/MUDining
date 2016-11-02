@@ -17,16 +17,11 @@
 
   $username = $_POST['username'];
   $password = $_POST['password'];
-  
+
   try {
-		$stmt = $db->prepare('SELECT user FROM WHERE Username="$username" and Password="$password" LIMIT 0,1');
-		$stmt->execute();
-		$resultSet = $stmt->get_result();
-		$result = $resultSet->fetch_all();
+		$result = $db->query('SELECT * FROM user WHERE Username="$username" and Password="$password" LIMIT 0,1');
 		if ( count($result) ) {
-			foreach($result as $row) { 
 			echo 'Welcome';
-			}
 		} else {
 		echo 'Wrong user name or password';
 		exit;
@@ -34,6 +29,6 @@
 	} catch(PDOException $e) {
     echo 'ERROR: ' . $e->getMessage();
     }
-	
+
   $db->close();
 ?>
