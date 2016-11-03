@@ -8,7 +8,7 @@
 }
 
 .circular:hover {
-  box-shadow: 0 0 60px rgba(0, 0, 300, .8);
+  box-shadow: 0 0 60px #e0881f;
 }
 
 #contact {
@@ -35,6 +35,11 @@ figcaption span {
   color: rgba(.6, .7, .9, .7);
   text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
   transition: all 0.5s ease-out;
+}
+
+figure:hover > figcaption {
+  color: orange;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, .8);
 }
 
 figcaption span#def {
