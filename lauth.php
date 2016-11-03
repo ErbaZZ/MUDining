@@ -4,31 +4,37 @@
   $dbUser = "root";
   $dbPass = "";
   $dbName = "mudining";
-  $db = new mysqli($dbServer, $dbUser, $dbPass, $dbName);
+  $metusername="false";
+    $con = new mysqli($dbServer, $dbUser, $dbPass, $dbName);
+    $go = false;
 
-  // check connection
-  if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
-  }
+    $result = mysqli_query($con,"SELECT * FROM user");
 
-  if(!isset($_POST['username'])) {
-    header("LOCATION: index.php");
-  }
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    #echo $username;
+    #echo $password;
 
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-
-  try {
-		$result = $db->query('SELECT * FROM user WHERE Username="$username" and Password="$password" LIMIT 0,1');
-		if ( count($result) ) {
-			echo 'Welcome';
-		} else {
-		echo 'Wrong user name or password';
-		exit;
-		}
-	} catch(PDOException $e) {
-    echo 'ERROR: ' . $e->getMessage();
+    while($row = mysqli_fetch_array($result)){
+    if($row['Username']==$username){
+        $metusername = true;	
+    }		
+			if($row['Username']==$username && $row['Password']==$password){
+				$_SESSION['id'] = $row['UserID'];	
+				$go = true;
+                $_SESSION['Checked'];
+			}
+        
     }
+	if($go){header('Refresh:0;/MUDining/index.php');
+	}else{
+		if($metusername){
+			$_SESSION['inpass'] = "Invalid password";
+		}else{
+			$_SESSION['inuser'] = "Your username is not recognized.  Please register to our system.";
+		}	
+		
+	} 
+	mysqli_close($con);
 
-  $db->close();
 ?>
