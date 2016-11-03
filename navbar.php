@@ -1,5 +1,3 @@
-<?php
-  session_start();
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -20,6 +18,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
+     
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <span class="caret"></span></a>
     			<ul id="login-dp" class="dropdown-menu">
     				<li>
@@ -52,8 +51,8 @@
     				</li>
     			</ul>
         </li>
+  
       </ul>
     </div>
   </div>
 </nav>
-?>
