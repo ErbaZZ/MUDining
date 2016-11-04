@@ -1,7 +1,28 @@
 <?php
   session_start();
-  if (isset($_SESSION['ID']))
+  if (isset($_SESSION['Username']))
     header("Location: index.php");
+  include_once("dbconnect.php");
+
+  if (isset( $_POST['username'])) {
+    $username = $_POST['username'];
+    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+  	$password = md5(md5($username)."UMIDINGN".md5($password));
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $nickname = $_POST['nickname'];
+    $gender = $_POST['sex'];
+    $email = $_POST['email'];
+
+    $con->query("CREATE TABLE IF NOT EXISTS User (UserID int NOT NULL AUTO_INCREMENT PRIMARY KEY, Username varchar(255) NOT NULL UNIQUE, Password varchar(255) NOT NULL UNIQUE, FirstName varchar(255), LastName varchar(255), Nickname varchar(255), Gender character(1), Email varchar(255));");
+    if (!$con->query("INSERT INTO user(Username, Password, FirstName, LastName, Nickname, Gender, Email) VALUES ('$username','$password','$firstname','$lastname','$nickname','$gender','$email');"))
+      $errormsg = "Username is already used.";
+    else
+      $successmsg = "Successfully Registered. Redirecting to home page.";
+      $_SESSION['Username'] = $username;
+      header("refresh:2;url=index.php");
+    $con->close();
+  }
 ?>
 <html>
 <head>
@@ -15,7 +36,7 @@
 
     <div id="register" class="animate form">
       <span class="head">Registration</span>
-      <form name="input" action="auth.php" method="POST">
+      <form name="input" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
     		<table align="center">
           <tr><td class="formLabel">Username:</td><td><input type="text" name="username" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required></td></tr>
           <tr><td class="formLabel">Password:</td><td><input type="password" name="password" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required></td></tr>
@@ -42,12 +63,14 @@
     		</b>
     		<br/><br/>
     	</form>
+      <span>
       <?php
-        if (isset($_SESSION['errormsg'])) {
-          echo $_SESSION['errormsg'];
-        }
-        $_SESSION['errormsg'] = "";
+        if (isset($errormsg))
+          echo $errormsg;
+        else if (isset($successmsg))
+          echo $successmsg;
       ?>
+      </span>
     </div>
   </div>
 </body>

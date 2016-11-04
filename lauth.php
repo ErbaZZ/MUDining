@@ -1,20 +1,20 @@
 <?php
   session_start();
-  if (isset($_SESSION['ID']))
+  if (isset($_SESSION['Username']))
     header("Location: index.php");
 
   include_once("dbconnect.php");
 
   $result = mysqli_query($con, "SELECT * FROM user");
 
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
+  $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
 
-  $metusername = "false";
-  if ($row = mysqli_fetch_array($result)) {
+  $metusername = false;
+  while ($row = mysqli_fetch_array($result)) {
     if ($row['Username'] == $username)
       $metusername = true;
-		if ($row['Username'] == $username && $row['Password'] == $password) {
+		if ($metusername && $row['Password'] == md5(md5($username)."UMIDINGN".md5($password))) {
 			$_SESSION['ID'] = $row['UserID'];
       $_SESSION['Username'] = $username;
       header("Location: index.php");
@@ -24,6 +24,8 @@
 		$_SESSION['inpass'] = "Invalid password";
 	else
 		$_SESSION['inuser'] = "Your username is not recognized.  Please register to our system.";
-	mysqli_close($con);
+  // looking for better feedback of these cases
+  header("Location: index.php");
+  mysqli_close($con);
 
 ?>
