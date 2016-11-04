@@ -1,40 +1,29 @@
 <?php
   session_start();
-  $dbServer = "localhost";
-  $dbUser = "root";
-  $dbPass = "";
-  $dbName = "mudining";
-  $metusername="false";
-    $con = new mysqli($dbServer, $dbUser, $dbPass, $dbName);
-    $go = false;
+  if (isset($_SESSION['ID']))
+    header("Location: index.php");
 
-    $result = mysqli_query($con,"SELECT * FROM user");
+  include_once("dbconnect.php");
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    #echo $username;
-    #echo $password;
+  $result = mysqli_query($con, "SELECT * FROM user");
 
-    while($row = mysqli_fetch_array($result)){
-    if($row['Username']==$username){
-        $metusername = true;	
-    }		
-			if($row['Username']==$username && $row['Password']==$password){
-				$_SESSION['id'] = $row['UserID'];	
-				$go = true;
-                $_SESSION['Checked'];
-			}
-        
-    }
-	if($go){header('Refresh:0;/MUDining/index.php');
-	}else{
-		if($metusername){
-			$_SESSION['inpass'] = "Invalid password";
-		}else{
-			$_SESSION['inuser'] = "Your username is not recognized.  Please register to our system.";
-		}	
-		
-	} 
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  $metusername = "false";
+  if ($row = mysqli_fetch_array($result)) {
+    if ($row['Username'] == $username)
+      $metusername = true;
+		if ($row['Username'] == $username && $row['Password'] == $password) {
+			$_SESSION['ID'] = $row['UserID'];
+      $_SESSION['Username'] = $username;
+      header("Location: index.php");
+		}
+  }
+	if ($metusername)
+		$_SESSION['inpass'] = "Invalid password";
+	else
+		$_SESSION['inuser'] = "Your username is not recognized.  Please register to our system.";
 	mysqli_close($con);
 
 ?>

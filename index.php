@@ -3,16 +3,7 @@
   <script src="js/css.js"></script>
 </head>
 <body>
-  <?php 
-    session_start();
-    
-    if(isset($_SESSION['Checked'])){
-    include_once("navbar.php");
-    }
-    else{
-    include_once("navbarlog.php");
-    }
-    ?>
+  <?php include_once("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
 
   <div id="wrapper" class="container">
