@@ -32,22 +32,23 @@
 }
 
 #bottombar {
-}
-
-.table-responsive>table {
-    min-height: 25%;
-    max-height: 25%;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
-    height: 100%;
+    background-color: #333333;
+    width: auto;
+    height: 25%;
     white-space: nowrap;
-    background-color: rgba(0, 0, 0, .9);
-    box-shadow: 0 0 60px rgba(0, 0, 0, 1);
-    vertical-align: middle;
 }
 
-.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
-    vertical-align: middle;
-    padding: auto;
-    margin: auto;
+#bottombar .text {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    padding: 16px;
+}
+
+#bottombar .text:hover {
+    background-color: #111111;
 }

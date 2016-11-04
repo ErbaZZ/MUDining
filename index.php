@@ -13,18 +13,10 @@
   </div>
 
   <div id="bottombar">
-    <div class="table-responsive">
-      <table class="table">
-        <tbody>
-          <tr>
-            <td>g</td>
-            <td>h</td>
-            <td>a</td>
-            <td>o</td>
-          </tr>
-      </tbody>
-      </table>
-    </div>
+      <div class="text">a</div>
+      <div class="text">s</div>
+      <div class="text">d</div>
+      <div class="text">f</div>
   </div>
 </body>
 </html>

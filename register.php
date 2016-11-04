@@ -35,7 +35,7 @@
 
   <div id="wrapper" class="container">
 
-    <div id="register" class="animate form">
+    <div id="register">
       <span class="head">Registration</span>
       <form name="input" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
     		<table align="center">
