@@ -1,32 +1,53 @@
 .random_eat_button {
-  border-radius: 50%;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 35px;
-  padding: auto;
-  width: 400px;
-  height: 400px;
-  transition: all 0.5s ease-in-out;
-  margin: auto;
-  display: block;
+    border-radius: 50%;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 35px;
+    padding: auto;
+    width: 400px;
+    height: 400px;
+    transition: all 0.5s ease-in-out;
+    margin: auto;
+    display: block;
 }
 
 .random_eat_button:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #random_label {
-  transition: all 0.5s ease-in-out;
-  z-index: 25;
+    transition: all 0.5s ease-in-out;
+    z-index: 25;
 }
 
 #random_label:hover {
-  transform: scale(1.4);
+    transform: scale(1.4);
 }
 
 #wrapper {
-  background-color: transparent;
-  box-shadow: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#bottombar {
+}
+
+.table-responsive>table {
+    min-height: 25%;
+    max-height: 25%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, .9);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 1);
+    vertical-align: middle;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    vertical-align: middle;
+    padding: auto;
+    margin: auto;
 }

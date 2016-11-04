@@ -3,7 +3,7 @@
   <script src="js/css.js"></script>
 </head>
 <body>
-  <?php include_once("navbar.php"); ?>
+  <?php include("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/restaurants.css" />
 
   <div id="wrapper" class="container">

@@ -3,7 +3,7 @@
   <script src="js/css.js"></script>
 </head>
 <body>
-  <?php include_once("navbar.php"); ?>
+  <?php include("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
 
   <div id="wrapper" class="container">
@@ -12,5 +12,19 @@
 
   </div>
 
+  <div id="bottombar">
+    <div class="table-responsive">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>g</td>
+            <td>h</td>
+            <td>a</td>
+            <td>o</td>
+          </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>

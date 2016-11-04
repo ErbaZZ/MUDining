@@ -24,7 +24,7 @@
         <?php
           if (isset($_SESSION['Username'])) { ?>
             <li><a href="#"> Welcome, <?php echo $_SESSION['Username'] ?></a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="logout.php">Log out</a></li>
         <?php
           } else
             include("login-panel.html");

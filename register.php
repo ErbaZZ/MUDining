@@ -1,5 +1,6 @@
 <?php
-  session_start();
+  if (session_id() == '' || !isset($_SESSION))
+    session_start();
   if (isset($_SESSION['Username']))
     header("Location: index.php");
   include_once("dbconnect.php");
@@ -29,7 +30,7 @@
   <script src="js/css.js"></script>
 </head>
 <body>
-  <?php include_once("navbar.php"); ?>
+  <?php include("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/register.css" />
 
   <div id="wrapper" class="container">

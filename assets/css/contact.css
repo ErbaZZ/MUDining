@@ -1,55 +1,55 @@
 .circular {
-  display:inline-block;
-  width: 270px;
-	height: 270px;
-	border-radius: 50%;
-	box-shadow: 0 0 12px rgba(0, 0, 0, .8);
-  transition: all 0.5s ease-in-out;
+    display: inline-block;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .8);
+    transition: all 0.5s ease-in-out;
 }
 
 .circular:hover {
-  box-shadow: 0 0 60px #e0881f;
+    box-shadow: 0 0 60px #e0881f;
 }
 
 #contact {
-  text-align: center;
+    text-align: center;
 }
 
 figure {
-  display: inline-block;
-  margin: 20px;
+    display: inline-block;
+    margin: 20px;
 }
 
 figure img {
-  vertical-align: top;
+    vertical-align: top;
 }
 
 figure figcaption {
-  text-align: center;
-  margin-top: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 figcaption span {
-  display: block;
-  font-size: 150%;
-  color: rgba(.6, .7, .9, .7);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
-  transition: all 0.5s ease-out;
+    display: block;
+    font-size: 150%;
+    color: rgba(.6, .7, .9, .7);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
+    transition: all 0.5s ease-out;
 }
 
-figure:hover > figcaption {
-  color: orange;
-  text-shadow: 0 3px 3px rgba(0, 0, 0, .8);
+figure:hover>figcaption {
+    color: orange;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, .8);
 }
 
 figcaption span#def {
-  opacity: 1;
+    opacity: 1;
 }
 
 figcaption span#new {
-  opacity: 0;
+    opacity: 0;
 }
 
 figcaption:hover span#new {
-  opacity: 1;
+    opacity: 1;
 }
