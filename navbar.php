@@ -1,5 +1,6 @@
 <?php
-  session_start();
+  if (session_id() == '' || !isset($_SESSION))
+    session_start();
   include_once("dbconnect.php");
 ?>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
