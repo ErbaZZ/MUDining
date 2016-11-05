@@ -21,7 +21,8 @@
           RestaurantID int NOT NULL,
           ReviewDate date NOT NULL,
           Depiction text NOT NULL,
-          Rating int
+          Rating int,
+          `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
           );
         ");
         $result = mysqli_query($con, "SELECT * FROM review");

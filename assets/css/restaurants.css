@@ -95,20 +95,3 @@ hgroup h2.lead {
     margin: 0 15px;
     border-bottom: 1px dotted #ccc;
 }
-
-#wrapper {
-    width: 65%;
-    float: left;
-    margin-left: 25px;
-    margin-top: 0px;
-}
-
-#searchbox {
-    margin: 100px 25px auto auto;
-    padding: 30px;
-    width: 30%;
-    height: 45%;
-    background-color: #eeeeee;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px #ddd;
-}

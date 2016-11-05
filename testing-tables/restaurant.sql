@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2016 at 06:03 AM
+-- Generation Time: Nov 05, 2016 at 11:18 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -32,8 +32,7 @@ CREATE TABLE `restaurant` (
   `MinPrice` int(11) NOT NULL,
   `Location` varchar(255) NOT NULL,
   `FoodType` varchar(255) NOT NULL,
-  `OpenTime` int(11) DEFAULT NULL,
-  `CloseTime` int(11) DEFAULT NULL,
+  `OpenTime` text,
   `Promotion` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -41,12 +40,12 @@ CREATE TABLE `restaurant` (
 -- Dumping data for table `restaurant`
 --
 
-INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `Location`, `FoodType`, `OpenTime`, `CloseTime`, `Promotion`) VALUES
-(1, '7-11', 30, 'Front', 'Any', 0, 0, NULL),
-(2, 'Mai Tok Mai Taek', 50, 'Front', 'Main', 9, 20, NULL),
-(3, 'LODIHAM', 60, 'Front', 'Steak', 9, 21, NULL),
-(4, 'Fur', 200, 'Front', 'Buffet', 9, 21, NULL),
-(5, 'Lorem Ipsum Restaurant', 999, 'Back', 'Any', 0, 0, NULL);
+INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `Location`, `FoodType`, `OpenTime`, `Promotion`) VALUES
+(1, '7-11', 30, 'Front', 'Any', 'All day', NULL),
+(2, 'Mai Tok Mai Taek', 50, 'Front', 'Main', '9:00 - 18:00', NULL),
+(3, 'LODIHAM', 60, 'Front', 'Steak', '9:00 - 21:00', NULL),
+(4, 'Fur', 200, 'Front', 'Buffet', '10:00 - 21:00', NULL),
+(5, 'Lorem Ipsum Restaurant', 999, 'Back', 'Any', 'All day', NULL);
 
 --
 -- Indexes for dumped tables

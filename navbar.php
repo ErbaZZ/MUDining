@@ -12,7 +12,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.php">MU<strong>Dining</strong></a>
+      <a class="navbar-brand">MU<strong>Dining</strong></a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav" id="diningmenus">
@@ -24,7 +24,7 @@
       <ul class="nav navbar-nav navbar-right">
         <?php
           if (isset($_SESSION['Username'])) { ?>
-            <li><a href="#"> Welcome, <?php echo $_SESSION['Username'] ?></a></li>
+            <li><a> Welcome, <?php echo $_SESSION['Username'] ?></a></li>
             <li><a href="logout.php">Log out</a></li>
         <?php
           } else
