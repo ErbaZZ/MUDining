@@ -15,7 +15,16 @@
     $gender = $_POST['sex'];
     $email = $_POST['email'];
 
-    $con->query("CREATE TABLE IF NOT EXISTS User (UserID int NOT NULL AUTO_INCREMENT PRIMARY KEY, Username varchar(255) NOT NULL UNIQUE, Password varchar(255) NOT NULL UNIQUE, FirstName varchar(255), LastName varchar(255), Nickname varchar(255), Gender character(1), Email varchar(255));");
+    $con->query("CREATE TABLE IF NOT EXISTS user (
+      UserID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      Username varchar(255) NOT NULL UNIQUE,
+      Password varchar(255) NOT NULL UNIQUE,
+      FirstName varchar(255),
+      LastName varchar(255),
+      Nickname varchar(255),
+      Gender character(1),
+      Email varchar(255));
+    ");
     if (!$con->query("INSERT INTO user(Username, Password, FirstName, LastName, Nickname, Gender, Email) VALUES ('$username','$password','$firstname','$lastname','$nickname','$gender','$email');"))
       $errormsg = "Username is already used.";
     else

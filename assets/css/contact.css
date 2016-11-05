@@ -9,6 +9,8 @@
 
 .circular:hover {
     box-shadow: 0 0 60px orange;
+    background-image: none;
+    background-color: transparent;
 }
 
 #contact {
@@ -52,4 +54,6 @@ figcaption span#new {
 
 figcaption:hover span#new {
     opacity: 1;
+    background-image: none;
+    background-color: transparent;
 }

@@ -1,3 +1,18 @@
+<?php
+  include_once("dbconnect.php");
+
+  $con->query("CREATE TABLE IF NOT EXISTS restaurant (
+    RestaurantID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Name varchar(255) NOT NULL UNIQUE,
+    MinPrice int(11) NOT NULL,
+    Location varchar(255) NOT NULL,
+    FoodType varchar(255) NOT NULL,
+    OpenTime int(11),
+    CloseTime int(11),
+    Promotion varchar(255));
+  ");
+  $con->close();
+?>
 <html>
 <head>
   <script src="js/css.js"></script>
