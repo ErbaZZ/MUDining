@@ -6,7 +6,7 @@
   <?php include("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/contact.css" />
 
-  <div id="wrapper" class="container" style="width:85%;">
+  <div id="wrapper" class="container" style="width:90%;">
 
     <div id="contact">
       <h1>Contact</h1>
