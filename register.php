@@ -65,11 +65,13 @@
     			</td></tr>
           <tr><td class="formLabel">Email:     </td><td><input type="email" name="email" required></td></tr>
     			<tr><td class="formLabel">Food Preferences:   </td><td>
-    										<input type="checkbox" name="foodprefs" value="thai"> Thai
-    										<input type="checkbox" name="foodprefs" value="japan"> Japan
-    										<input type="checkbox" name="foodprefs" value="foo"> Foo
-    										<input type="checkbox" name="foodprefs" value="foo2"> Foo2<br/>
-    										<input type="checkbox" name="foodprefs" value="foo3"> Foo3
+    										<input type="checkbox" name="foodprefs" value="01"> Thai
+    										<input type="checkbox" name="foodprefs" value="02"> Japanese
+    										<input type="checkbox" name="foodprefs" value="03"> Chinese
+    										<input type="checkbox" name="foodprefs" value="04"> European<br/>
+    										<input type="checkbox" name="foodprefs" value="11"> Single Dish
+                        <input type="checkbox" name="foodprefs" value="12"> A la carte
+                        <input type="checkbox" name="foodprefs" value="13"> Buffet
                         <br/>
     		</table>
     		<b id="regisbtn">
