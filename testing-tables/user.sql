@@ -46,8 +46,8 @@ INSERT INTO `user` (`UserID`, `Username`, `Password`, `FirstName`, `LastName`, `
 (1, 'User', '70db798c18bd7ea6ac706864d1d6fad0', 'User', 'User', 'User', 'm', 'Uesr@user.user', NULL),
 (2, 'User2', '305881f2f0a5383cdfa400734b0f1b60', 'T', 'fs', 'fs', 'm', 'fsd@hot.com', NULL),
 (3, 'Expert', 'bdecc7c3f51fda26836d6a5238b600f3', 'T', 'T', 'T', 'm', 'T@YT.T', NULL),
-(4, 'Dummy', 'Dummy', 'Dummy', 'Dummy', 'Dummy', 'M', 'dummy@dummy.dummy', '010203111213'),
-(5, 'Foo', 'Foo', 'Foo', 'Foo', 'Foo', 'F', 'foo@foo.foo', '02031113');
+(4, 'Dummy', 'Dummy', 'Dummy', 'Dummy', 'Dummy', 'M', 'dummy@dummy.dummy', '01,02,03,11,12,13'),
+(5, 'Foo', 'Foo', 'Foo', 'Foo', 'Foo', 'F', 'foo@foo.foo', '02,03,11,13');
 
 --
 -- Indexes for dumped tables

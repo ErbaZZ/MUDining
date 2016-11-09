@@ -15,6 +15,13 @@
       $nickname = $_POST['nickname'];
       $gender = $_POST['sex'];
       $email = $_POST['email'];
+      $foodprefs = "";
+
+      if(!empty($_POST['foodprefs'])) {
+                foreach($_POST['foodprefs'] as $pref) {
+          $foodprefs = $foodprefs . $pref . ",";
+        }
+      }
 
       $con->query("CREATE TABLE IF NOT EXISTS user (
         UserID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -24,14 +31,15 @@
         LastName varchar(255),
         Nickname varchar(255),
         Gender character(1),
-        Email varchar(255));
+        Email varchar(255),
+        FoodPreferences varchar(255));
       ");
-      if (!$con->query("INSERT INTO user(Username, Password, FirstName, LastName, Nickname, Gender, Email) VALUES ('$username','$password','$firstname','$lastname','$nickname','$gender','$email');"))
+      if (!$con->query("INSERT INTO user(Username, Password, FirstName, LastName, Nickname, Gender, Email, FoodPreferences) VALUES ('$username','$password','$firstname','$lastname','$nickname','$gender','$email','$foodprefs');"))
         $errormsg = "Username is already used.";
       else {
         $successmsg = "Successfully Registered. Redirecting to home page.";
         $_SESSION['Username'] = $username;
-        header("refresh:2;url=index.php");
+        header("refresh:3;url=index.php");
       }
     } else
       $errormsg = "Passwords do not match.";
@@ -65,13 +73,13 @@
     			</td></tr>
           <tr><td class="formLabel">Email:     </td><td><input type="email" name="email" required></td></tr>
     			<tr><td class="formLabel">Food Preferences:   </td><td>
-    										<input type="checkbox" name="foodprefs" value="01"> Thai
-    										<input type="checkbox" name="foodprefs" value="02"> Japanese
-    										<input type="checkbox" name="foodprefs" value="03"> Chinese
-    										<input type="checkbox" name="foodprefs" value="04"> European<br/>
-    										<input type="checkbox" name="foodprefs" value="11"> Single Dish
-                        <input type="checkbox" name="foodprefs" value="12"> A la carte
-                        <input type="checkbox" name="foodprefs" value="13"> Buffet
+    										<input type="checkbox" name="foodprefs[]" value="01"> Thai
+    										<input type="checkbox" name="foodprefs[]" value="02"> Japanese
+    										<input type="checkbox" name="foodprefs[]" value="03"> Chinese
+    										<input type="checkbox" name="foodprefs[]" value="04"> European<br/>
+    										<input type="checkbox" name="foodprefs[]" value="11"> Single Dish
+                        <input type="checkbox" name="foodprefs[]" value="12"> A la carte
+                        <input type="checkbox" name="foodprefs[]" value="13"> Buffet
                         <br/>
     		</table>
     		<b id="regisbtn">
