@@ -54,49 +54,96 @@
   <?php include("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/register.css" />
 
-  <div id="wrapper" class="container">
+  <div id="wrapper" class="container" style="width:45%;">
 
-    <div id="register">
-      <span class="head">Registration</span>
-      <form name="input" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-    		<table align="center">
-          <tr><td class="formLabel">Username:</td><td><input type="text" name="username" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required></td></tr>
-          <tr><td class="formLabel">Password:</td><td><input type="password" name="password" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required></td></tr>
-          <tr><td class="formLabel">Confirm:</td><td><input type="password" name="cpassword" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required></td></tr>
-    			<tr><td class="formLabel">First name:</td><td><input type="text" name="firstname" pattern="[A-Za-z]{1,}" title="Letters only" required></td></tr>
-    			<tr><td class="formLabel">Last name:</td><td><input type="text" name="lastname" pattern="[A-Za-z]{1,}" title="Letters only" required></td></tr>
-    			<tr><td class="formLabel">Nickname:</td><td><input type="text" name="nickname" pattern="[A-Za-z]{1,}" title="Letters only"></td></tr>
-    			<tr><td class="formLabel">Gender:</td><td>
-    										<input type="radio" name="sex" value="m" checked> Male
-    										<input type="radio" name="sex" value="f"> Female
-    								<br/>
-    			</td></tr>
-          <tr><td class="formLabel">Email:     </td><td><input type="email" name="email" required></td></tr>
-    			<tr><td class="formLabel">Food Preferences:   </td><td>
-    										<input type="checkbox" name="foodprefs[]" value="01"> Thai
-    										<input type="checkbox" name="foodprefs[]" value="02"> Japanese
-    										<input type="checkbox" name="foodprefs[]" value="03"> Chinese
-    										<input type="checkbox" name="foodprefs[]" value="04"> European<br/>
-    										<input type="checkbox" name="foodprefs[]" value="11"> Single Dish
-                        <input type="checkbox" name="foodprefs[]" value="12"> Set Menu
-                        <input type="checkbox" name="foodprefs[]" value="13"> Buffet
-                        <br/>
-    		</table>
-    		<b id="regisbtn">
-    			<input type="submit" value="Submit" style="font-size:24px;color:blue;">
-    			<input type="reset" value="Reset" style="font-size:24px;color:red;">
-    		</b>
-    		<br/><br/>
-    	</form>
-      <span>
-      <?php
-        if (isset($errormsg))
-          echo $errormsg;
-        else if (isset($successmsg))
-          echo $successmsg;
-      ?>
-      </span>
-    </div>
+  <h1 class="text-center">Registration</h1>
+
+    <form class="form-horizontal" role="form" name="input" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+      <div class="form-group">
+        <label for="username" class="col-xs-2">Username:</label>
+        <div class="col-xs-10">
+          <input class="form-control" type="text" name="username" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-xs-2">Password:</label>
+        <div class="col-xs-10">
+          <input class="form-control" type="password" name="password" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cpassword" class="col-xs-2">Confirm Password:</label>
+        <div class="col-xs-10">
+          <input class="form-control" type="password" name="cpassword" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname" class="col-xs-2">First name:</label>
+        <div class="col-xs-10">
+    		  <input class="form-control" type="text" name="firstname" pattern="[A-Za-z]{1,}" title="Letters only" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastname" class="col-xs-2">Last name:</label>
+        <div class="col-xs-10">
+    		  <input class="form-control" type="text" name="lastname" pattern="[A-Za-z]{1,}" title="Letters only" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username" class="col-xs-2">Nickname:</label>
+        <div class="col-xs-10">
+    		  <input class="form-control" type="text" name="nickname" pattern="[A-Za-z]{1,}" title="Letters only">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="gender" class="col-xs-2">Gender:</label>
+        <div class="col-xs-2">
+          <label class="radio-inline">
+    		  <input type="radio" name="sex" value="m" checked>Male</label>
+        </div>
+        <div class="col-xs-2">
+          <label class="radio-inline">
+    		  <input type="radio" name="sex" value="f">Female</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-xs-2">Email:</label>
+        <div class="col-xs-10">
+          <input class="form-control" type="email" name="email" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="foodpref" class="col-xs-2">Food Preferences:</label>
+        <div class="col-xs-10 text-center">
+            <label class="btn btn-primary">Thai
+              <input type="checkbox" class="badgebox" name="foodprefs[]" value="01"><span class="badge">&check;</span></label>
+            <label class="btn btn-default">Japanese
+              <input type="checkbox" class="badgebox" name="foodprefs[]" value="02"><span class="badge">&check;</span></label>
+            <label class="btn btn-warning">Chinese
+              <input type="checkbox" class="badgebox" name="foodprefs[]" value="03"><span class="badge">&check;</span></label>
+            <label class="btn btn-success">European
+              <input type="checkbox" class="badgebox" name="foodprefs[]" value="04"><span class="badge">&check;</span></label>
+            <label class="btn btn-info">Single Dish
+              <input type="checkbox" class="badgebox" name="foodprefs[]" value="11"><span class="badge">&check;</span></label>
+            <label class="btn btn-default" style="background-color:#ddd;">Set Menu
+              <input type="checkbox" class="badgebox" name="foodprefs[]" value="12"><span class="badge">&check;</span></label>
+            <label class="btn btn-danger">Buffet
+              <input type="checkbox" class="badgebox" name="foodprefs[]" value="13"><span class="badge">&check;</span></label>
+          </div>
+      </div>
+  		<div class="text-center">
+  			<input type="submit" class="btn btn-success" value="Register">
+        <input type="reset" class="btn btn-danger" value="Clear">
+  		</div>
+  	</form>
+    <span>
+    <?php
+      if (isset($errormsg))
+        echo $errormsg;
+      else if (isset($successmsg))
+        echo $successmsg;
+    ?>
+    </span>
   </div>
 </body>
 </html>
