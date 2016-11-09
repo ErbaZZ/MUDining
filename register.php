@@ -78,7 +78,7 @@
     										<input type="checkbox" name="foodprefs[]" value="03"> Chinese
     										<input type="checkbox" name="foodprefs[]" value="04"> European<br/>
     										<input type="checkbox" name="foodprefs[]" value="11"> Single Dish
-                        <input type="checkbox" name="foodprefs[]" value="12"> A la carte
+                        <input type="checkbox" name="foodprefs[]" value="12"> Set Menu
                         <input type="checkbox" name="foodprefs[]" value="13"> Buffet
                         <br/>
     		</table>
