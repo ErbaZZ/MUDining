@@ -18,24 +18,26 @@
 
         $con->query("CREATE TABLE IF NOT EXISTS review (
           ReviewID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+          UserID int NOT NULL,
           RestaurantID int NOT NULL,
           ReviewDate date NOT NULL,
-          Depiction text NOT NULL,
-          Rating int,
+          Content text NOT NULL,
           `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
           );
         ");
         $result = mysqli_query($con, "SELECT * FROM review");
         while ($row = mysqli_fetch_array($result)) {
           echo "<div class=\"col-md-4\">";
+          echo '<a style="text-decoration:none;color:black;" href="#">';
           echo "<div>";
           $url = "http://lorempixel.com/200/200/abstract/" . $row['ReviewID'];
           echo "<img src=" . $url . '/ class="img-circle img-thumbnail">';
-          $name = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID']))['Name'];
-          echo "<h2>" . $name . "</h2>";
-          echo "<p>" . $row['Depiction'] . "</p>";
-          echo "<a href=\"#\" class=\"btn btn-primary\" title=\"Read more\">Read more</a>";
+          $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID']))['Name'];
+          echo "<h2>" . $resname . "</h2>";
+          $name = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM user WHERE user.UserID = " . $row['UserID']))['Username'];
+          echo "<p>By " . $name . "</p>";
           echo "</div>";
+          echo "</a>";
           echo "</div>";
         }
         mysqli_close($con);

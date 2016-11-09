@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2016 at 11:18 AM
+-- Generation Time: Nov 09, 2016 at 08:08 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -28,22 +28,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `review` (
   `ReviewID` int(11) NOT NULL,
+  `UserID` int(11) NOT NULL,
   `RestaurantID` int(11) NOT NULL,
   `ReviewDate` date NOT NULL,
-  `Depiction` text NOT NULL,
-  `Rating` int(11) DEFAULT NULL
+  `Content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `review`
 --
 
-INSERT INTO `review` (`ReviewID`, `RestaurantID`, `ReviewDate`, `Depiction`, `Rating`) VALUES
-(1, 1, '2016-11-02', 'The last choice for all. Ineffective, however.', 8),
-(2, 2, '2016-11-04', 'Never break any single dish.', 9),
-(3, 3, '2016-11-01', 'System.out.println((new StringBuilder("MAHIDOL")).reverse())', 7),
-(4, 4, '2016-11-05', 'Huh?', 3),
-(5, 5, '2016-11-02', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n            tempor incididunt ut labore et dolore magna aliqua.', 9);
+INSERT INTO `review` (`ReviewID`, `UserID`, `RestaurantID`, `ReviewDate`, `Content`) VALUES
+(1, 4, 1, '2016-11-02', 'The last choice for all. Ineffective, however.'),
+(2, 1, 2, '2016-11-04', 'Never break any single dish.'),
+(3, 3, 3, '2016-11-01', 'System.out.println((new StringBuilder("MAHIDOL")).reverse())'),
+(4, 2, 4, '2016-11-05', 'Huh?'),
+(5, 4, 5, '2016-11-02', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n            tempor incididunt ut labore et dolore magna aliqua.');
 
 --
 -- Indexes for dumped tables

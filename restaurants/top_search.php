@@ -16,7 +16,7 @@
 			echo '<div class="col-xs-12 col-sm-12 col-md-2">';
 				echo '<ul class="meta-search">';
 					echo '<li><i class="glyphicon glyphicon-time"></i> <span>' . $result['OpenTime'] . '</span></li>';
-					echo '<li><i class="glyphicon glyphicon-tags"></i> <span>' . $result['FoodType'] . '</span></li>';
+					echo '<li><i class="glyphicon glyphicon-tags"></i> <span>' . $result['Type'] . '</span></li>'; // TODO: Interpretation
 				echo '</ul>';
 			echo '</div>';
 			echo '<div class="col-xs-12 col-sm-12 col-md-7 excerpet">';

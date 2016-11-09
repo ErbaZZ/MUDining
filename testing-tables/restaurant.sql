@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2016 at 11:18 AM
+-- Generation Time: Nov 09, 2016 at 08:08 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -31,7 +31,7 @@ CREATE TABLE `restaurant` (
   `Name` varchar(255) NOT NULL,
   `MinPrice` int(11) NOT NULL,
   `Location` varchar(255) NOT NULL,
-  `FoodType` varchar(255) NOT NULL,
+  `Type` varchar(255) NOT NULL,
   `OpenTime` text,
   `Promotion` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -40,7 +40,7 @@ CREATE TABLE `restaurant` (
 -- Dumping data for table `restaurant`
 --
 
-INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `Location`, `FoodType`, `OpenTime`, `Promotion`) VALUES
+INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `Location`, `Type`, `OpenTime`, `Promotion`) VALUES
 (1, '7-11', 30, 'Front', 'Any', 'All day', NULL),
 (2, 'Mai Tok Mai Taek', 50, 'Front', 'Main', '9:00 - 18:00', NULL),
 (3, 'LODIHAM', 60, 'Front', 'Steak', '9:00 - 21:00', NULL),
