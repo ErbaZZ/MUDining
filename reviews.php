@@ -38,15 +38,19 @@
         }
         mysqli_close($con);
       ?>
-      <div class="col-md-4">
-        <a style="text-decoration:none;color:blue;" href="#">
-          <div>
-            <img src="http://lorempixel.com/200/200/abstract/10/" class="img-thumbnail">
-            <h2>New review</h2>
-            <p>Create your own review here</p>
+      <?php
+        if (isset($_SESSION['Username'])) { ?>
+          <div class="col-md-4">
+            <a style="text-decoration:none;color:blue;" href="review-editor.php">
+              <div>
+                <img src="http://lorempixel.com/200/200/abstract/10/" class="img-thumbnail">
+                <h2>New review</h2>
+                <p>Create your own review here</p>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
+      <?php
+     } else; ?>
     </div>
   </div>
 
