@@ -33,10 +33,10 @@
           <span id="new">You weak</span>
         </figcaption>
       </figure>
-      <figure id="neko">
-        <img class="circular" src="assets/img/admin/neko.jpg" alt="neko" />
+      <figure id="poomsmart">
+        <img class="circular" src="assets/img/admin/poomsmart.jpg" alt="poomsmart" />
         <figcaption>
-          <span id="def">Neko</span>
+          <span id="def">PSX</span>
           <span id="new">Thatchapon Unprasert</span>
           <span id="new">Thinking algorithmically</span>
         </figcaption>
