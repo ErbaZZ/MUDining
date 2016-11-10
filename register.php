@@ -60,86 +60,108 @@
   <h1 class="text-center">Registration</h1>
 
     <form class="form-horizontal" role="form" name="input" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-      <div class="form-group">
-        <label for="username" class="col-xs-2">Username:</label>
-        <div class="col-xs-10">
-          <input class="form-control" type="text" name="username" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="password" class="col-xs-2">Password:</label>
-        <div class="col-xs-10">
-          <input class="form-control" type="password" name="password" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="cpassword" class="col-xs-2">Confirm Password:</label>
-        <div class="col-xs-10">
-          <input class="form-control" type="password" name="cpassword" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="firstname" class="col-xs-2">First name:</label>
-        <div class="col-xs-10">
-    		  <input class="form-control" type="text" name="firstname" pattern="[A-Za-z]{1,}" title="Letters only" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="lastname" class="col-xs-2">Last name:</label>
-        <div class="col-xs-10">
-    		  <input class="form-control" type="text" name="lastname" pattern="[A-Za-z]{1,}" title="Letters only" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="username" class="col-xs-2">Nickname:</label>
-        <div class="col-xs-10">
-    		  <input class="form-control" type="text" name="nickname" pattern="[A-Za-z]{1,}" title="Letters only">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="gender" class="col-xs-2">Gender:</label>
-        <div class="col-xs-2">
-          <label class="radio-inline">
-    		  <input type="radio" name="sex" value="m" checked>Male</label>
-        </div>
-        <div class="col-xs-2">
-          <label class="radio-inline">
-    		  <input type="radio" name="sex" value="f">Female</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email" class="col-xs-2">Email:</label>
-        <div class="col-xs-10">
-          <input class="form-control" type="email" name="email" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="foodpref" class="col-xs-2">Food Preferences:</label>
-        <div id="foodpref" class="col-xs-10">
-          <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary">
-                <input type="checkbox" name="foodprefs[]" value="01">Thai
-            </label>
-            <label class="btn btn-default">
-                <input type="checkbox" name="foodprefs[]" value="02">Japanese
-            </label>
-            <label class="btn btn-warning">
-                <input type="checkbox" name="foodprefs[]" value="03">Chinese
-            </label>
-            <label class="btn btn-success">
-                <input type="checkbox" name="foodprefs[]" value="04">European
-            </label>
+      <div class="row">
+        <div class="form-group">
+          <label for="username" class="col-xs-3">Username:</label>
+          <div class="col-xs-9">
+            <input class="form-control" type="text" name="username" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
           </div>
-          <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-info">
-              <input type="checkbox" name="foodprefs[]" value="11">Single Dish
-            </label>
-            <label class="btn btn-default" style="background-color:#ddd;">
-              <input type="checkbox" name="foodprefs[]" value="12">Set Menu
-            </label>
-            <label class="btn btn-danger">
-              <input type="checkbox" name="foodprefs[]" value="13">Buffet
-            </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="password" class="col-xs-3">Password:</label>
+          <div class="col-xs-9">
+            <input class="form-control" type="password" name="password" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="cpassword" class="col-xs-3">Confirm Password:</label>
+          <div class="col-xs-9">
+            <input class="form-control" type="password" name="cpassword" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="firstname" class="col-xs-3">First name:</label>
+          <div class="col-xs-9">
+      		  <input class="form-control" type="text" name="firstname" pattern="[A-Za-z]{1,}" title="Letters only" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="lastname" class="col-xs-3">Last name:</label>
+          <div class="col-xs-9">
+      		  <input class="form-control" type="text" name="lastname" pattern="[A-Za-z]{1,}" title="Letters only" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="username" class="col-xs-3">Nickname:</label>
+          <div class="col-xs-9">
+      		  <input class="form-control" type="text" name="nickname" pattern="[A-Za-z]{1,}" title="Letters only">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="gender" class="col-xs-3">Gender:</label>
+          <div class="col-xs-2">
+            <label class="radio-inline">
+      		  <input type="radio" name="sex" value="m" checked>Male</label>
+          </div>
+          <div class="col-xs-2">
+            <label class="radio-inline">
+      		  <input type="radio" name="sex" value="f">Female</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="email" class="col-xs-3">Email:</label>
+          <div class="col-xs-9">
+            <input class="form-control" type="email" name="email" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="foodpref" class="col-xs-3">Food Preferences:</label>
+          <div id="foodpref" class="col-xs-9">
+            <div class="row">
+              <div class="btn-group col-xs-12" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" name="foodprefs[]" value="01">Thai
+                </label>
+                <label class="btn btn-default">
+                    <input type="checkbox" name="foodprefs[]" value="02">Japanese
+                </label>
+                <label class="btn btn-warning">
+                    <input type="checkbox" name="foodprefs[]" value="03">Chinese
+                </label>
+                <label class="btn btn-success">
+                    <input type="checkbox" name="foodprefs[]" value="04">European
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="btn-group col-xs-12" data-toggle="buttons">
+                <label class="btn btn-info">
+                  <input type="checkbox" name="foodprefs[]" value="11">Single Dish
+                </label>
+                <label class="btn btn-default" style="background-color:#ddd;">
+                  <input type="checkbox" name="foodprefs[]" value="12">Set Menu
+                </label>
+                <label class="btn btn-danger">
+                  <input type="checkbox" name="foodprefs[]" value="13">Buffet
+                </label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
