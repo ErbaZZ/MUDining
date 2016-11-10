@@ -13,7 +13,7 @@
 
   </div>
 
-  <div id="bottombar-wrapper">
+  <div id="bottombar-wrapper" class="navbar-fixed-bottom">
     <div id="bottombar">
         <div class="text">a</div>
         <div class="text">s</div>

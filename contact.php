@@ -14,7 +14,7 @@
         <figcaption>
           <span id="def">Book</span>
           <span id="new">Thitiwut Chamornmarn</span>
-          <span id="new">Handsome guy</span>
+          <span id="new">Handsome?</span>
         </figcaption>
       </figure>
       <figure id="erbazz">

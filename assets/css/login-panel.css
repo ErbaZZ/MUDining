@@ -10,7 +10,8 @@
 .navbar-nav>li>a, .navbar-brand {
     padding-top: 25px !important;
     padding-bottom: 0 !important;
-    height: 75px;
+    height: 75px !important;
+    max-height: 75px !important;
 }
 
 .navbar {
@@ -57,12 +58,6 @@
     color: yellow;
     background-color: rgba(237, 235, 23, 0.85);
     border-radius: 5px;
-}
-
-#diningmenus {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
 }
 
 #login-dp {
