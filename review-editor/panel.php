@@ -23,9 +23,10 @@
         <h1>
           <?php
             include_once("dbconnect.php");
-            if (isset($_GET['RestaurantID']))
+            if (isset($_GET['RestaurantID'])) {
               echo $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM restaurant WHERE restaurant.RestaurantID = " . $_GET['RestaurantID']))['Name'];
-            else
+              $_SESSION['CurrentReviewResID'] = $_GET['RestaurantID']; // TODO: Better way?
+            } else
               echo "New Restaurant?";
           ?>
         <br/>
