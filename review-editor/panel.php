@@ -149,9 +149,14 @@
             </div>
         </div>
 
-        <div id="editor">
-            Go ahead&hellip;
-        </div>
+        <form action="review-editor/send.php" method="post" enctype="multipart/form-data" id='submitForm'>
+          <div id="editor">
+              Describe your restaurant here&hellip;
+          </div>
+          <br/>
+					<a class="btn btn-large btn-default jumbo" href="#!" onClick="$('#mySubmission').val($('#editor').cleanHtml(true));$('#submitForm').submit();">Submit</a>
+				  <input type='hidden' name='formSubmission' id='mySubmission'/>
+			  </form>
     </body>
     <script>
         $(function() {
