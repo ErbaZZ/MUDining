@@ -115,7 +115,7 @@
       </div>
       <div class="form-group">
         <label for="foodpref" class="col-xs-2">Food Preferences:</label>
-        <div class="col-xs-10 text-center">
+        <div class="col-xs-10">
             <label class="btn btn-primary">Thai
               <input type="checkbox" class="badgebox" name="foodprefs[]" value="01"><span class="badge">&check;</span></label>
             <label class="btn btn-default">Japanese
