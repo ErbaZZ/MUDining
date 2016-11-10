@@ -7,10 +7,6 @@
   <link rel="stylesheet" type="text/css" href="assets/css/reviews.css" />
 
   <div id="wrapper" class="container" style="width:85%;">
-    <div class="page-header">
-      <h1 class="text-center">Reviews</h1>
-    </div>
-  <p class="lead text-center">Know how people think about restaurants.</p>
   <div class="container">
     <div class="row stylish-panel">
       <?php
@@ -31,7 +27,7 @@
           echo '<a style="text-decoration:none;color:black;" href="#">';
           echo "<div>";
           $url = "http://lorempixel.com/200/200/abstract/" . $row['ReviewID'];
-          echo "<img src=" . $url . '/ class="img-circle img-thumbnail">';
+          echo "<img src=" . $url . '/ class="img-thumbnail">';
           $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID']))['Name'];
           echo "<h2>" . $resname . "</h2>";
           $name = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM user WHERE user.UserID = " . $row['UserID']))['Username'];
@@ -42,6 +38,15 @@
         }
         mysqli_close($con);
       ?>
+      <div class="col-md-4">
+        <a style="text-decoration:none;color:blue;" href="#">
+          <div>
+            <img src="http://lorempixel.com/200/200/abstract/10/" class="img-thumbnail">
+            <h2>New review</h2>
+            <p>Create your own review here</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 

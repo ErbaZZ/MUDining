@@ -9,7 +9,6 @@
   <div id="wrapper" class="container" style="width:90%;">
 
     <div id="contact">
-      <h1>Contact</h1>
       <figure id="book">
         <img class="circular" src="assets/img/admin/book.jpg" alt="book" />
         <figcaption>
