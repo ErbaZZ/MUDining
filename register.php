@@ -115,22 +115,33 @@
       </div>
       <div class="form-group">
         <label for="foodpref" class="col-xs-2">Food Preferences:</label>
-        <div class="col-xs-10">
-            <label class="btn btn-primary">Thai
-              <input type="checkbox" class="badgebox" name="foodprefs[]" value="01"><span class="badge">&check;</span></label>
-            <label class="btn btn-default">Japanese
-              <input type="checkbox" class="badgebox" name="foodprefs[]" value="02"><span class="badge">&check;</span></label>
-            <label class="btn btn-warning">Chinese
-              <input type="checkbox" class="badgebox" name="foodprefs[]" value="03"><span class="badge">&check;</span></label>
-            <label class="btn btn-success">European
-              <input type="checkbox" class="badgebox" name="foodprefs[]" value="04"><span class="badge">&check;</span></label>
-            <label class="btn btn-info">Single Dish
-              <input type="checkbox" class="badgebox" name="foodprefs[]" value="11"><span class="badge">&check;</span></label>
-            <label class="btn btn-default" style="background-color:#ddd;">Set Menu
-              <input type="checkbox" class="badgebox" name="foodprefs[]" value="12"><span class="badge">&check;</span></label>
-            <label class="btn btn-danger">Buffet
-              <input type="checkbox" class="badgebox" name="foodprefs[]" value="13"><span class="badge">&check;</span></label>
+        <div id="foodpref" class="col-xs-10">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="checkbox" name="foodprefs[]" value="01">Thai
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox" name="foodprefs[]" value="02">Japanese
+            </label>
+            <label class="btn btn-warning">
+                <input type="checkbox" name="foodprefs[]" value="03">Chinese
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox" name="foodprefs[]" value="04">European
+            </label>
           </div>
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-info">
+              <input type="checkbox" name="foodprefs[]" value="11">Single Dish
+            </label>
+            <label class="btn btn-default" style="background-color:#ddd;">
+              <input type="checkbox" name="foodprefs[]" value="12">Set Menu
+            </label>
+            <label class="btn btn-danger">
+              <input type="checkbox" name="foodprefs[]" value="13">Buffet
+            </label>
+          </div>
+        </div>
       </div>
   		<div class="text-center">
   			<input type="submit" class="btn btn-success" value="Register">
