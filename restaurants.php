@@ -10,12 +10,12 @@
   <div id="wrapper" class="container" style="width:70%;">
     <section class="col-xs-12 col-sm-6 col-md-12 page-header">
       <div class="row">
-    		<div class="col-xs-6">
+    		<div class="col-lg-6 col-sm-12 col-xs-12">
   				<form class="form-horizontal" name="search" role="form" method="POST" onkeypress="return event.keyCode != 13;">
   						<input id="searchbox" name="searchbox" type="text" class="form-control" placeholder="Search by name..." autocomplete="off"/>
   				</form>
     		</div>
-        <div class="col-xs-6">
+        <div class="col-lg-6 col-sm-12 col-xs-12">
           <label class="btn btn-default">Thai
             <input type="checkbox" class="badgebox" name="foo" value="foo"><span class="badge">&check;</span>
           </label>
@@ -31,7 +31,7 @@
     		</div>
     	</div>
       <div class="row">
-        <div class="col-xs-6 col-xs-offset-6">
+        <div class="col-lg-6 col-sm-12 col-xs-12 col-lg-offset-6">
           <label class="btn btn-primary">Single Dish
             <input type="checkbox" class="badgebox" name="foo" value="foo"><span class="badge">&check;</span>
           </label>
