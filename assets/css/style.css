@@ -16,8 +16,8 @@ body {
 
 #wrapper {
     margin: 100px auto auto auto;
+    width: 55%;
     padding: 20px;
-    width: 50%;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 5px 5px 10px #ddd;

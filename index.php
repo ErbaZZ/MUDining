@@ -4,7 +4,7 @@
   <script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
 </head>
 <body>
-  <?php include("navbar.php"); ?>
+  <?php include_once("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
 
   <div id="wrapper" class="container">

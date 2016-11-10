@@ -3,7 +3,7 @@
   <script src="js/css.js"></script>
 </head>
 <body>
-  <?php include("navbar.php"); ?>
+  <?php include_once("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/restaurants.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
 
