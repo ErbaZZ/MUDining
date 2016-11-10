@@ -5,24 +5,3 @@ input:focus:invalid {
 input:required:valid {
   box-shadow: 0 0 5px green;
 }
-
-.badgebox {
-    opacity: 0;
-}
-
-.badgebox+.badge {
-    text-indent: -999999px;
-    width: 25px;
-}
-
-.badgebox:focus+.badge {
-    box-shadow: inset 0px 0px 5px;
-}
-
-.badgebox:checked+.badge {
-    text-indent: 0;
-}
-
-.btn {
-  margin-bottom: 5px !important;
-}

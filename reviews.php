@@ -8,8 +8,8 @@
 
   <div id="wrapper" class="container" style="width:85%;">
     <div class="page-header">
-    <h1 class="text-center">Reviews</h1>
-  </div>
+      <h1 class="text-center">Reviews</h1>
+    </div>
   <p class="lead text-center">Know how people think about restaurants.</p>
   <div class="container">
     <div class="row stylish-panel">
