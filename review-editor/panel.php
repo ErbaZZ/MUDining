@@ -13,21 +13,24 @@
         <link rel="shortcut icon" href="http://mindmup.s3.amazonaws.com/lib/img/favicon.ico">
         <link href="review-editor/google-code-prettify/prettify.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+        <script src="js/bootstrap-select.min.js"></script>
         <script type="text/javascript" src="review-editor/bootstrap-wysiwyg.js"></script>
         <script type="text/javascript" src="review-editor/jquery.hotkeys.js"></script>
         <script type="text/javascript" src="review-editor/google-code-prettify/prettify.js"></script>
         <link href="assets/css/review-editor.css" rel="stylesheet">
     </head>
     <body>
-
         <h1>
           <?php
             include_once("dbconnect.php");
-            if (isset($_GET['RestaurantID'])) {
-              echo $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM restaurant WHERE restaurant.RestaurantID = " . $_GET['RestaurantID']))['Name'];
-              $_SESSION['CurrentReviewResID'] = $_GET['RestaurantID']; // TODO: Better way?
-            } else
-              echo "New Restaurant?";
+            $restaurants = $con->query("SELECT RestaurantID, Name FROM restaurant");
+            echo "Restaurant: ";
+            echo "<select class=\"selectpicker\" data-live-search=\"true\" title=\"Choose the restaurant...\">";
+            while ($row = mysqli_fetch_array($restaurants)) {
+              echo "<option>".$row['Name']."</option>";
+          	}
+            echo "</select>";
           ?>
         <br/>
             <small>
