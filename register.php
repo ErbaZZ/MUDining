@@ -17,10 +17,10 @@
       $email = $_POST['email'];
       $foodprefs = "";
 
-      if(!empty($_POST['foodprefs'])) {
-                foreach($_POST['foodprefs'] as $pref) {
-          $foodprefs = $foodprefs . $pref . ",";
-        }
+      if (!empty($_POST['foodprefs'])) {
+          foreach($_POST['foodprefs'] as $pref) {
+            $foodprefs .= $pref . ",";
+          }
       }
 
       $con->query("CREATE TABLE IF NOT EXISTS user (
