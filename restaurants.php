@@ -35,7 +35,7 @@
           <label class="btn btn-primary">Single Dish
             <input type="checkbox" class="badgebox" name="foo" value="foo"><span class="badge">&check;</span>
           </label>
-          <label class="btn btn-primary">À la carte
+          <label class="btn btn-primary">Set Menu
             <input type="checkbox" class="badgebox" name="foo" value="foo"><span class="badge">&check;</span>
           </label>
           <label class="btn btn-primary">Buffet
