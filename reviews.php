@@ -28,9 +28,9 @@
           echo "<div>";
           $url = "http://lorempixel.com/200/200/abstract/" . $row['ReviewID'];
           echo "<img src=" . $url . '/ class="img-thumbnail">';
-          $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID']))['Name'];
+          $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID'] . " LIMIT 1"))['Name'];
           echo "<h2>" . $resname . "</h2>";
-          $name = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM user WHERE user.UserID = " . $row['UserID']))['Username'];
+          $name = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM user WHERE user.UserID = " . $row['UserID'] . " LIMIT 1"))['Username'];
           echo "<p>By " . $name . "</p>";
           echo "</div>";
           echo "</a>";
