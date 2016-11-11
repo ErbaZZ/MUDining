@@ -41,11 +41,10 @@ CREATE TABLE `restaurant` (
 --
 
 INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `Location`, `Type`, `OpenTime`, `Promotion`) VALUES
-(1, '7-11', 30, 'Front', 'Any', 'All day', NULL),
-(2, 'Mai Tok Mai Taek', 50, 'Front', 'Main', '9:00 - 18:00', NULL),
-(3, 'LODIHAM', 60, 'Front', 'Steak', '9:00 - 21:00', NULL),
-(4, 'Fur', 200, 'Front', 'Buffet', '10:00 - 21:00', NULL),
-(5, 'Lorem Ipsum Restaurant', 999, 'Back', 'Any', 'All day', NULL);
+(1, '7-11', 30, 'Front', '01,11,', 'All day', NULL),
+(2, 'Mai Tok Mai Taek', 50, 'Front', '02,11,12,', '9:00 - 18:00', NULL),
+(3, 'LODIHAM', 60, 'Front', '01,13,', '9:00 - 21:00', NULL),
+(4, 'Fur', 200, 'Front', '03,11,', '10:00 - 21:00', NULL),
 
 --
 -- Indexes for dumped tables
