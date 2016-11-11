@@ -45,6 +45,7 @@ INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `Location`, `Type`
 (2, 'Mai Tok Mai Taek', 50, 'Front', '02,11,12,', '9:00 - 18:00', NULL),
 (3, 'LODIHAM', 60, 'Front', '01,13,', '9:00 - 21:00', NULL),
 (4, 'Fur', 200, 'Front', '03,11,', '10:00 - 21:00', NULL),
+(5, 'Lorem Ipsum Restaurant', 999, 'Back', '04,12', 'All day', NULL);
 
 --
 -- Indexes for dumped tables
