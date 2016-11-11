@@ -20,27 +20,32 @@ $(document).ready(function() {
         return false;
     }
 
+    function useSearchTable($use) {
+      clearTimeout($.data(this, 'timer'));
+      if (!$use) {
+          $(".tablesearch").fadeOut(300);
+          $(".populated").fadeIn(300);
+      } else {
+          $(".tablesearch").fadeIn(300);
+          $(".populated").fadeOut(300);
+          $(this).data('timer', setTimeout(search, 100));
+      };
+    }
+
     $('#filter1').on('change', function() {
         search();
+        useSearchTable($(this).serialize() != '');
     });
 
     $('#filter2').on('change', function() {
         search();
+        useSearchTable($(this).serialize() != '');
     });
 
     $('body').on('keyup', 'input#searchbox', function(e) {
         clearTimeout($.data(this, 'timer'));
-        // Set Search String
         var search_string = $(this).val();
-        // Do Search
-        if (search_string == '') {
-            $(".tablesearch").fadeOut(300);
-            $(".populated").fadeIn(300);
-        } else {
-            $(".tablesearch").fadeIn(300);
-            $(".populated").fadeOut(300);
-            $(this).data('timer', setTimeout(search, 100));
-        };
+        useSearchTable(search_string != '');
     });
 
 });
