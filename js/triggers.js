@@ -3,19 +3,19 @@ $(document).ready(function() {
     // Search
     function search() {
         //if (query_value !== '') {
-            $.ajax({
-                type: "POST",
-                url: "restaurants/search.php",
-                data: {
-                    query: $('input#searchbox').val(),
-                    filter1: $("#filter1").serialize(),
-                    filter2: $("#filter2").serialize()
-                },
-                cache: false,
-                success: function(html) {
-                    $(".tablesearch").html(html);
-                }
-            });
+        $.ajax({
+            type: "POST",
+            url: "restaurants/search.php",
+            data: {
+                query: $('input#searchbox').val(),
+                filter1: $('#filter1').serialize(),
+                filter2: $('#filter2').serialize()
+            },
+            cache: false,
+            success: function(html) {
+                $(".tablesearch").html(html);
+            }
+        });
         //}
         return false;
     }
