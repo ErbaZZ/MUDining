@@ -25,13 +25,13 @@
             include_once("dbconnect.php");
             $restaurants = $con->query("SELECT RestaurantID, Name FROM restaurant");
             echo "Restaurant: ";
-            echo "<select class=\"selectpicker\" data-live-search=\"true\" title=\"Choose the restaurant...\">";
+            echo "<select class=\"selectpicker\" id=\"restaurant\"data-live-search=\"true\" title=\"Choose the restaurant...\">";
             while ($row = mysqli_fetch_array($restaurants)) {
               if (isset($_GET['ID']) && $_GET['ID'] == $row['RestaurantID'])
-                echo "<option selected>";
+                echo "<option selected ";
               else
-                echo "<option>";
-              echo $row['Name']."</option>";
+                echo "<option ";
+              echo "value='".$row['Name']."'>".$row['Name']."</option>";
           	}
             echo "</select>";
           ?>
@@ -51,8 +51,8 @@
 	* to create a custom toolbar with the options and functions that are good for your particular use. This toolbar
 	* is just an example - don't just copy it and force yourself to use the demo styling. Create your own. Read
 	* this page to understand how to customise it:
-    * https://github.com/mindmup/bootstrap-wysiwyg/blob/master/README.md#customising-
-	--->
+    * https://github.com/mindmup/bootstrap-wysiwyg/blob/master/README.md#customising
+    ---->
         <div id="alerts"></div>
         <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
             <div class="btn-group">
@@ -157,12 +157,13 @@
         </div>
 
         <form action="review-editor/send.php" method="post" enctype="multipart/form-data" id='submitForm'>
-          <div id="editor">
-              Describe your restaurant here&hellip;
+          <div id="editor">Describe your restaurant here&hellip;
           </div>
           <br/>
-					<a class="btn btn-large btn-default jumbo" href="#!" onClick="$('#mySubmission').val($('#editor').cleanHtml(true));$('#submitForm').submit();">Submit</a>
-				  <input type='hidden' name='formSubmission' id='mySubmission'/>
+					<a class="btn btn-large btn-default jumbo" href="#!" onClick="$('#mySubmission').val($('#editor').cleanHtml(true));$('#restaurantSubmission').val($('#restaurant option:selected').cleanHtml(true));$('#submitForm').submit();">Submit</a>
+                    <input type='hidden' name='username' id='usernameSubmission' value=<?php echo "'".$_SESSION['Username']."'"?>/>
+                    <input type='hidden' name='restaurantName' id='restaurantSubmission'/>
+				    <input type='hidden' name='formData' id='mySubmission'/>  
 			  </form>
     </body>
     <script>
