@@ -28,7 +28,8 @@
       echo '<div class="col-xs-12 col-sm-12 col-md-7 excerpet">';
         echo '<h3><a href="#" title="">' . $name . '</a></h3>';
         echo '<p>Description</p>';
-            echo '<span class="plus"><a href="#" title=""><i class="glyphicon glyphicon-plus"></i></a></span>';
+        $reviewURL = "review-editor.php?ID=" . $result['RestaurantID'];
+            echo '<span class="plus"><a href="' .$reviewURL. '" title=""><i class="glyphicon glyphicon-plus"></i></a></span>';
       echo '</div>';
       echo '<span class="clearfix borda"></span>';
     echo '</article>';

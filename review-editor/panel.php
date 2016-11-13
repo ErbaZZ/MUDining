@@ -28,7 +28,11 @@
             echo "Restaurant: ";
             echo "<select class=\"selectpicker\" data-live-search=\"true\" title=\"Choose the restaurant...\">";
             while ($row = mysqli_fetch_array($restaurants)) {
-              echo "<option>".$row['Name']."</option>";
+              if (isset($_GET['ID']) && $_GET['ID'] == $row['RestaurantID'])
+                echo "<option selected>";
+              else
+                echo "<option>";
+              echo $row['Name']."</option>";
           	}
             echo "</select>";
           ?>
