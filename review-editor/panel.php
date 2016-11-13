@@ -8,7 +8,6 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Tiny, opensource, Bootstrap WYSIWYG rich text editor from MindMup</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="shortcut icon" href="http://mindmup.s3.amazonaws.com/lib/img/favicon.ico">
         <link href="review-editor/google-code-prettify/prettify.css" rel="stylesheet">
