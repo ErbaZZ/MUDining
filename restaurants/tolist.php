@@ -1,7 +1,7 @@
 <?php
   function totime($input) {
     $minutes = $input - floor($input);
-    return gmdate("H:i", $minutes * 60 + floor($input) * 3600);
+    return gmdate("H:i", $minutes * 6000 + floor($input) * 3600);
   }
   function tolist($result) {
     echo '<article class="search-result row">';
