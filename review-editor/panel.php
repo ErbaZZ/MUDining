@@ -160,10 +160,12 @@
           <div id="editor">Describe your restaurant here&hellip;
           </div>
           <br/>
-					<a class="btn btn-large btn-default jumbo" href="#!" onClick="$('#mySubmission').val($('#editor').cleanHtml(true));$('#restaurantSubmission').val($('#restaurant option:selected').cleanHtml(true));$('#submitForm').submit();">Submit</a>
-                    <input type='hidden' name='username' id='usernameSubmission' value=<?php echo "'".$_SESSION['Username']."'"?>/>
-                    <input type='hidden' name='restaurantName' id='restaurantSubmission'/>
-				    <input type='hidden' name='formData' id='mySubmission'/>  
+					<a class="btn btn-large btn-default jumbo" href="#" onClick="$('#mySubmission').val($('#editor').cleanHtml(true));
+                                                                        $('#restaurantSubmission').val($('#restaurant option:selected').cleanHtml(true));
+                                                                        $('#submitForm').submit();">Submit</a>
+            <input type='hidden' name='username' id='usernameSubmission' value=<?php echo "'".$_SESSION['Username']."'"?>/>
+            <input type='hidden' name='restaurantName' id='restaurantSubmission'/>
+				    <input type='hidden' name='formData' id='mySubmission'/>
 			  </form>
     </body>
     <script>
