@@ -27,7 +27,7 @@
           if ($count == 0 || ($count > 1 && $count % 3 == 0))
             echo "<div class=\"row\">";
           echo "<div class=\"col-md-4 col-xs-4\">";
-          echo '<a style="text-decoration:none;color:black;" href="#">';
+          echo "<a style='text-decoration:none;color:black;' href='view-review.php?id=" . $row["ReviewID"] . "'>";
           echo "<div>";
           $url = "http://lorempixel.com/200/200/abstract/" . $row['ReviewID'];
           echo "<img src=" . $url . '/ class="img-thumbnail">';
