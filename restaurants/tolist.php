@@ -3,7 +3,7 @@
     echo '<article class="search-result row">';
       echo '<div class="col-xs-12 col-sm-12 col-md-3">';
         $name = $result['Name'];
-        $url = "view-restaurant.php?ID=" . $result['RestaurantID'];
+        $url = "view-restaurant.php?id=" . $result['RestaurantID'];
         echo '<a href="'. $url . '" title="' . $name .'" class="thumbnail"><img src="http://lorempixel.com/250/140/food" /></a>';
       echo '</div>';
       echo '<div class="col-xs-12 col-sm-12 col-md-2">';
@@ -29,7 +29,7 @@
       echo '<div class="col-xs-12 col-sm-12 col-md-7 excerpet">';
         echo '<h3><a href="' . $url . '" title="">' . $name . '</a></h3>';
         echo '<p>Description</p>';
-        $reviewURL = "review-editor.php?ID=" . $result['RestaurantID'];
+        $reviewURL = "review-editor.php?id=" . $result['RestaurantID'];
             echo '<span class="plus"><a href="' .$reviewURL. '" title=""><i class="glyphicon glyphicon-plus"></i></a></span>';
       echo '</div>';
       echo '<span class="clearfix borda"></span>';

@@ -55,6 +55,7 @@
           RestaurantID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
           Name varchar(255) NOT NULL UNIQUE,
           MinPrice int(11) NOT NULL,
+          MaxPrice int(11),
           Location varchar(255) NOT NULL,
           Type varchar(255) NOT NULL,
           OpenTime text,

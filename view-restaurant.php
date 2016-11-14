@@ -1,8 +1,8 @@
 <?php
   include_once('dbconnect.php');
-  if (!isset($_GET['ID']))
+  if (!isset($_GET['id']))
     header('Location: index.php');
-  $ID = $_GET['ID'];
+  $ID = $_GET['id'];
   $res = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant where RestaurantID = '$ID' LIMIT 1")) or header('Location: index.php');
 ?>
 <html>
@@ -11,7 +11,6 @@
 </head>
 <body>
   <?php include_once("navbar.php"); ?>
-  <link rel="stylesheet" type="text/css" href="assets/css/reviews.css" />
 
   <div id="wrapper" class="container" style="width:85%;">
     <div class="container">
