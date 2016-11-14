@@ -2,63 +2,67 @@
  * of the key things about the widget is that it allows you to do your own styling!
  */
 
-
 #editor {
-	max-height: 250px;
-	height: 250px;
-	background-color: white;
-	border-collapse: separate;
-  	border: 1px solid rgb(204, 204, 204);
- 	padding: 4px;
- 	box-sizing: content-box;
- 	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0 1px 1px 0 inset;
- 	box-shadow: rgba(0, 0, 0, 0.0745098) 0 1px 1px 0 inset;
-	border-top-right-radius: 3px; border-bottom-right-radius: 3px;
-	border-bottom-left-radius: 3px; border-top-left-radius: 3px;
-	overflow: scroll;
-	outline: none;
+    resize: vertical;
+		height: 500px;
+		min-height:250px;
+    background-color: white;
+    border-collapse: separate;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 4px;
+    box-sizing: content-box;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0 1px 1px 0 inset;
+    box-shadow: rgba(0, 0, 0, 0.0745098) 0 1px 1px 0 inset;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    overflow: scroll;
+    outline: none;
 }
-#editor:focus{
-    border-color:rgba(82, 168, 236, 0.8);
-    outline:0;
-    outline:thin dotted \9;
-    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
-    -moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
-    box-shadow:inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+
+#editor:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
 }
 
 div[data-role="editor-toolbar"] {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .dropdown-menu a {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 .btn-toolbar {
-	padding: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 .icon-text-height {
-	height: 100%;
+    height: 100%;
 }
 
 [contentEditable=true]:empty:not(:focus):before {
-	content:attr(data-placeholder)
+    content: attr(data-placeholder)
 }
 
 .placeholderText {
-	color: #777;
+    color: #777;
 }
 
-.imgUpload
-{
-	width: 0;
-	height: 0;
-	position:absolute
+.imgUpload {
+    width: 0;
+    height: 0;
+    position: absolute
 }
+
 
 /*
 	Font Sizes
@@ -67,20 +71,23 @@ div[data-role="editor-toolbar"] {
 */
 
 .fs-One {
-	font-size: x-small;
+    font-size: x-small;
 }
 
 .fs-Three {
-	font-size: medium;
+    font-size: medium;
 }
 
 .fs-Five {
-	font-size: x-large;
+    font-size: x-large;
 }
+
 
 /* Font Color */
 
+
 /* Black */
+
 a[data-edit="foreColor #000000"]::before {
     content: "\f0c8  ";
     font-family: FontAwesome;
@@ -92,9 +99,10 @@ a[data-edit="foreColor #000000"]::before {
     left: 0;
 }
 
+
 /* Blue */
-a[data-edit="foreColor #0000FF"]::before,
-a[data-edit="backColor #00FFFF"]::before {
+
+a[data-edit="foreColor #0000FF"]::before, a[data-edit="backColor #00FFFF"]::before {
     content: "\f0c8  ";
     font-family: FontAwesome;
     font-style: normal;
@@ -105,9 +113,10 @@ a[data-edit="backColor #00FFFF"]::before {
     left: 0;
 }
 
+
 /* Green */
-a[data-edit="foreColor #30AD23"]::before,
-a[data-edit="backColor #00FF00"]::before {
+
+a[data-edit="foreColor #30AD23"]::before, a[data-edit="backColor #00FF00"]::before {
     content: "\f0c8  ";
     font-family: FontAwesome;
     font-style: normal;
@@ -120,8 +129,8 @@ a[data-edit="backColor #00FF00"]::before {
 
 
 /* Orange */
-a[data-edit="foreColor #FF7F00"]::before,
-a[data-edit="backColor #FF7F00"]::before {
+
+a[data-edit="foreColor #FF7F00"]::before, a[data-edit="backColor #FF7F00"]::before {
     content: "\f0c8  ";
     font-family: FontAwesome;
     font-style: normal;
@@ -132,9 +141,10 @@ a[data-edit="backColor #FF7F00"]::before {
     left: 0;
 }
 
+
 /* Red */
-a[data-edit="foreColor #FF0000"]::before,
-a[data-edit="backColor #FF0000"]::before {
+
+a[data-edit="foreColor #FF0000"]::before, a[data-edit="backColor #FF0000"]::before {
     content: "\f0c8  ";
     font-family: FontAwesome;
     font-style: normal;
@@ -145,9 +155,10 @@ a[data-edit="backColor #FF0000"]::before {
     left: 0;
 }
 
+
 /* Yellow */
-a[data-edit="foreColor #FFFF00"]::before,
-a[data-edit="backColor #FFFF00"]::before  {
+
+a[data-edit="foreColor #FFFF00"]::before, a[data-edit="backColor #FFFF00"]::before {
     content: "\f0c8  ";
     font-family: FontAwesome;
     font-style: normal;
