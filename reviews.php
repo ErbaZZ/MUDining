@@ -22,8 +22,11 @@
           );
         ");
         $result = mysqli_query($con, "SELECT * FROM review");
+        $count = 0;
         while ($row = mysqli_fetch_array($result)) {
-          echo "<div class=\"col-md-4\">";
+          if ($count == 0 || ($count > 1 && $count % 3 == 0))
+            echo "<div class=\"row\">";
+          echo "<div class=\"col-md-4 col-xs-4\">";
           echo '<a style="text-decoration:none;color:black;" href="#">';
           echo "<div>";
           $url = "http://lorempixel.com/200/200/abstract/" . $row['ReviewID'];
@@ -35,19 +38,29 @@
           echo "</div>";
           echo "</a>";
           echo "</div>";
+          if (++$count % 3 == 0)
+            echo "</div>";
         }
         mysqli_close($con);
       ?>
       <?php
-        if (isset($_SESSION['Username'])) { ?>
-          <div class="col-md-4">
-            <a style="text-decoration:none;color:blue;" href="review-editor.php">
-              <div>
-                <img src="http://lorempixel.com/200/200/abstract/10/" class="img-thumbnail">
-                <h2>New review</h2>
-                <p>Create your own review here</p>
+        if (isset($_SESSION['Username'])) {
+          if ($count % 3 == 0) { ?>
+          <div class="row">
+            <?php } ?>
+            <div class="col-md-4 col-xs-4">
+              <a style="text-decoration:none;color:blue;" href="review-editor.php">
+                <div>
+                  <img src="http://lorempixel.com/200/200/abstract/10/" class="img-thumbnail">
+                  <h2>New review</h2>
+                  <p>Create your own review here</p>
+                </div>
+              </a>
+            </div>
+            <?php
+            if (++$count % 3 == 0) { ?>
               </div>
-            </a>
+            <?php } ?>
           </div>
       <?php
      } else; ?>
