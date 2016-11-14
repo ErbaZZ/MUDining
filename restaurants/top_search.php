@@ -3,7 +3,7 @@
 	require_once("tolist.php");
 
 	// The search
-	$result = $con->query("SELECT * FROM restaurant ORDER BY RestaurantID DESC LIMIT 5");
+	$result = $con->query("SELECT * FROM restaurant ORDER BY RestaurantID DESC");
 	while ($results = $result->fetch_array()) {
 		$result_array[] = $results;
 	}

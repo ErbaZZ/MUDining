@@ -54,11 +54,12 @@
         $con->query("CREATE TABLE IF NOT EXISTS restaurant (
           RestaurantID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
           Name varchar(255) NOT NULL UNIQUE,
-          MinPrice int(11) NOT NULL,
-          MaxPrice int(11),
+          MinPrice int NOT NULL,
+          MaxPrice int,
           Location varchar(255) NOT NULL,
           Type varchar(255) NOT NULL,
-          OpenTime text,
+          OpenTime double NOT NULL,
+          CloseTime double NOT NULL,
           Promotion varchar(255));
         ");
         include 'restaurants/top_search.php'
