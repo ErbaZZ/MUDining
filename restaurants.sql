@@ -1,6 +1,7 @@
 -- F = Front
 -- R = Rear
 -- I = Inside
+ALTER TABLE restaurant AUTO_INCREMENT = 1;
 INSERT INTO restaurant (Name, MinPrice, MaxPrice, Location, Type, OpenTime, CloseTime) VALUES
   ('Mai Tok Mai Taek',0,100,'F','01,11,12',10.3,21),
   ('Steak Lung Nhuad',0,100,'F','04,11',17,23.3),
