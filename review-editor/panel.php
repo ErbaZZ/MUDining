@@ -27,7 +27,7 @@
             echo "Restaurant: ";
             echo "<select class=\"selectpicker\" id=\"restaurant\"data-live-search=\"true\" title=\"Choose the restaurant...\">";
             while ($row = mysqli_fetch_array($restaurants)) {
-              if (isset($_GET['ID']) && $_GET['ID'] == $row['RestaurantID'])
+              if (isset($_GET['id']) && $_GET['id'] == $row['RestaurantID'])
                 echo "<option selected ";
               else
                 echo "<option ";
@@ -44,15 +44,6 @@
            </small>
         </h1>
         <hr/>
-        <!---
-	Please read this before copying the toolbar:
-
-	* One of the best things about this widget is that it does not impose any styling on you, and that it allows you
-	* to create a custom toolbar with the options and functions that are good for your particular use. This toolbar
-	* is just an example - don't just copy it and force yourself to use the demo styling. Create your own. Read
-	* this page to understand how to customise it:
-    * https://github.com/mindmup/bootstrap-wysiwyg/blob/master/README.md#customising
-    ---->
         <div id="alerts"></div>
         <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
             <div class="btn-group">

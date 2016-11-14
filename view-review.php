@@ -17,20 +17,26 @@
   <div id="wrapper" class="container" style="width:90%;">
     <div class="container">
       <h1>
-        <?php
-          $resname = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant, review where review.ReviewID = '$ID' and restaurant.RestaurantID = review.RestaurantID LIMIT 1"))['Name'];
-          echo $resname;
-        ?>
+        <b>
+          <?php
+            $resname = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant, review where review.ReviewID = '$ID' and restaurant.RestaurantID = review.RestaurantID LIMIT 1"))['Name'];
+            echo $resname;
+          ?>
+        </b>
       <br/>
-            <?php
-              if (isset($_SESSION['Username'])) {
-                $userID = mysqli_fetch_assoc(mysqli_query($con, 'select * from user where Username = "' . $_SESSION['Username'] . '" LIMIT 1'))['UserID'];
-                $result = mysqli_query($con, "select UserID from review where UserID = '$userID' and ReviewID = '$ID'");
-                if ($result->num_rows) {
-                  echo "<small><a href=\"delete-review.php\">Delete</a></small>";
-                }
+        <small>
+          By <?php
+            $username = mysqli_fetch_assoc(mysqli_query($con, "select * from user, review where review.ReviewID = '$ID' and user.UserID = review.UserID LIMIT 1"))['Username'];
+            echo $username;
+            if (isset($_SESSION['Username'])) {
+              $userID = mysqli_fetch_assoc(mysqli_query($con, 'select * from user where Username = "' . $_SESSION['Username'] . '" LIMIT 1'))['UserID'];
+              $result = mysqli_query($con, "select UserID from review where UserID = '$userID' and ReviewID = '$ID'");
+              if ($result->num_rows) {
+                echo " - <a href=\"delete-review.php?id=$ID\">Delete</a>";
               }
-            ?>
+            }
+          ?>
+        </small>
       </h1>
       <hr/>
       <div>

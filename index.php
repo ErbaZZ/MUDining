@@ -29,6 +29,7 @@
               echo '<div class="caption col-xs-7">';
                 echo "<h3>" . mysqli_fetch_assoc(mysqli_query($con, 'select * from restaurant where RestaurantID = ' . $res['RestaurantID'] . ' LIMIT 1'))['Name'] . "</h3>";
                 echo "<p>By " . mysqli_fetch_assoc(mysqli_query($con, 'select * from user where UserID = ' . $res['UserID'] . ' LIMIT 1'))['Username'] . "</p>";
+                echo "<p>" . $res['ReviewDate'] . "</p>";
                 $url = "view-review.php?id=" . $res['ReviewID'];
                 echo "<p><a href=\"$url\" class=\"btn btn-default\" role=\"button\">Read</a></p>";
               echo '</div>';
