@@ -35,15 +35,15 @@ CREATE TABLE `restaurant` (
   `Type` varchar(255) NOT NULL,
   `OpenTime` double NOT NULL,
   `CloseTime` double NOT NULL,
-  `Promotion` varchar(255) DEFAULT NULL
-  `Description` text NOT NULL,
+  `Promotion` varchar(255) DEFAULT NULL,
+  `Description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=tis620;
 
 --
 -- Dumping data for table `restaurant`
 --
 
-INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `MaxPrice`, `Location`, `Type`, `OpenTime`, `CloseTime`, `Promotion`) VALUES
+INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `MaxPrice`, `Location`, `Type`, `OpenTime`, `CloseTime`, `Promotion`, `Description`) VALUES
 (1, 'Mai Tok Mai Tae(ไม่ตกไม่แตก)', 51, 100, 'F', '01,04,11,12', 10.3, 21, NULL, ""),
 (2, 'Steak-lung-nhuad(สเต็กลุงหนวด)', 0, 100, 'F', '04,11', 17, 23.3, NULL, ""),
 (3, 'J-Class Vegetarian', 51, 100, 'R', '01,03,11', 8, 20, NULL, ""),
