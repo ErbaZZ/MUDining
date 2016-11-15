@@ -30,8 +30,9 @@
           echo "<div class=\"col-md-4 col-xs-4\">";
           echo "<a style='text-decoration:none;color:black;' href='view-review.php?id=" . $row["ReviewID"] . "'>";
           echo "<div>";
-          $url = "http://lorempixel.com/200/200/abstract/" . $row['ReviewID']%11;
-          echo "<img src=" . $url . '/ class="img-thumbnail">';
+          $imgname = sprintf("%04d", $row['RestaurantID']);
+          $imgurl = "Picture/" . $imgname . "/" . $imgname . '-1.jpg';
+          echo "<img src=" . $imgurl . ' class="img-thumbnail">';
           $revtitle = $row['Title'];
           echo "<h3>" . $revtitle . "</h3>";
           $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT Name FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID'] . " LIMIT 1"))['Name'];
@@ -68,6 +69,5 @@
      } else; ?>
     </div>
   </div>
-
 </body>
 </html>

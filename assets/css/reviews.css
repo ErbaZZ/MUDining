@@ -1,5 +1,5 @@
 h3 {
-  word-wrap:break-word;
+    word-wrap: break-word;
 }
 
 .stylish-panel {
@@ -25,4 +25,6 @@ h3 {
 
 .stylish-panel>div img {
     border-radius: 35%;
+    width: 15vw;
+    height: 15vw;
 }

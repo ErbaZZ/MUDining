@@ -5,10 +5,12 @@
   }
   function tolist($result) {
     echo '<article class="search-result row">';
-      echo '<div class="col-xs-12 col-sm-12 col-md-3">';
+      echo '<div class="col-xs-12 col-sm-12 col-md-3" id="search-row">';
         $name = $result['Name'];
         $url = "view-restaurant.php?id=" . $result['RestaurantID'];
-        echo '<a href="'. $url . '" title="' . $name .'" class="thumbnail"><img src="http://lorempixel.com/250/140/food" /></a>';
+        $imgname = sprintf("%04d", $result['RestaurantID']);
+        $imgurl = "Picture/" . $imgname . "/" . $imgname;
+        echo '<a style="width:100%;" href="'. $url . '" title="' . $name .'" class="thumbnail"><img src="' . $imgurl .'-1.jpg" /></a>';
       echo '</div>';
       echo '<div class="col-xs-12 col-sm-12 col-md-2">';
         echo '<ul class="meta-search">';
