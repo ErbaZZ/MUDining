@@ -10,7 +10,7 @@
 <html>
 <head>
   <script src="js/css.js"></script>
-  <link rel="stylesheet" type="text/css" href="assets/css/view-reviews.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/view-review.css" />
 </head>
 <body>
   <?php include_once("navbar.php"); ?>

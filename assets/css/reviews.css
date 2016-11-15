@@ -27,4 +27,6 @@ h3 {
     border-radius: 35%;
     width: 15vw;
     height: 15vw;
+    object-fit: cover;
+    overflow: hidden;
 }

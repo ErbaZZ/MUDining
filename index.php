@@ -23,7 +23,7 @@
             echo '<div class="row">';
               echo '<div class="col-xs-5">';
                 echo '<div class="thumbnail">';
-                  echo '<img src="'. imgurl($res['RestaurantID']).'"> style="height:auto;"';
+                  echo '<img id="latest-review-img" src='. imgurl($res['RestaurantID']).'>';
                 echo '</div>';
               echo '</div>';
               echo '<div class="caption col-xs-7">';

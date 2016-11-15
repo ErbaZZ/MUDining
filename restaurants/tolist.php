@@ -8,7 +8,7 @@
       echo '<div class="col-xs-12 col-sm-12 col-md-3" id="search-row">';
         $name = $result['Name'];
         $url = "view-restaurant.php?id=" . $result['RestaurantID'];
-        echo '<a style="width:100%;" href="'.$url.'" title="'.$name .'" class="thumbnail"><img src="' .imgurl($result['RestaurantID']).'" /></a>';
+        echo '<a style="width:100%;" href="'.$url.'" title="'.$name .'" class="thumbnail"><img id="restaurant-img" src="' .imgurl($result['RestaurantID']).'" /></a>';
       echo '</div>';
       echo '<div class="col-xs-12 col-sm-12 col-md-2">';
         echo '<ul class="meta-search">';
