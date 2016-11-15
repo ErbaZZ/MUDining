@@ -163,7 +163,7 @@
           </div>
           <br/>
 					<a class="btn btn-large btn-default jumbo" href="#" onClick= "$('#mySubmission').val($('#editor').cleanHtml(true));
-                                                                        $('#titleSubmission').val($('#titleForm').cleanHtml(true));
+                                                                        $('#titleSubmission').val($('#titleForm').val());
                                                                         $('#restaurantSubmission').val($('#restaurant option:selected').cleanHtml(true));
                                                                         $('#submitForm').submit();">Submit</a>
             <input type='hidden' name='title' id='titleSubmission'/>

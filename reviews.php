@@ -30,7 +30,7 @@
           echo "<div class=\"col-md-4 col-xs-4\">";
           echo "<a style='text-decoration:none;color:black;' href='view-review.php?id=" . $row["ReviewID"] . "'>";
           echo "<div>";
-          $url = "http://lorempixel.com/200/200/abstract/" . $row['ReviewID'];
+          $url = "http://lorempixel.com/200/200/abstract/" . $row['ReviewID']%11;
           echo "<img src=" . $url . '/ class="img-thumbnail">';
           $revtitle = $row['Title'];
           echo "<h3>" . $revtitle . "</h3>";

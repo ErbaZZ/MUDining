@@ -32,7 +32,7 @@ CREATE TABLE `review` (
   `RestaurantID` int(11) NOT NULL,
   `ReviewDate` date NOT NULL,
   `Title` varchar(64) NOT NULL,
-  `Content` text NOT NULL
+  `Content` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
