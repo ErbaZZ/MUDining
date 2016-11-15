@@ -67,7 +67,8 @@
           Type varchar(255) NOT NULL,
           OpenTime double NOT NULL,
           CloseTime double NOT NULL,
-          Promotion varchar(255));
+          Promotion varchar(255),
+          Description text);
         ");
         include 'restaurants/top_search.php'
       ?>

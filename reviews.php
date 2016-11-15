@@ -27,7 +27,7 @@
         while ($row = mysqli_fetch_array($result)) {
           if ($count == 0 || ($count > 1 && $count % 3 == 0))
             echo "<div class=\"row\">";
-          echo "<div class=\"col-md-4 col-xs-4\">";
+          echo "<div class=\"col-md-4 col-lg-4 col-sm-4 col-xs-4\">";
           echo "<a style='text-decoration:none;color:black;' href='view-review.php?id=" . $row["ReviewID"] . "'>";
           echo "<div>";
           echo "<img src=".imgurl($row['RestaurantID']).' class="img-thumbnail">';
