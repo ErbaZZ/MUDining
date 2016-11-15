@@ -18,6 +18,11 @@
         <link href="assets/css/review-editor.css" rel="stylesheet">
     </head>
     <body>
+      <?php
+        if(isset($_SESSION['errormsg'])) {
+        echo "<p style='color:red'>".$_SESSION['errormsg']."</p>";
+        unset($_SESSION['errormsg']);
+      } ?>
       <h2>
       <label for="restaurant">Restaurant</label></br>
           <?php

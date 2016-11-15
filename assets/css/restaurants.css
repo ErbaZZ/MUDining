@@ -2,6 +2,14 @@
     margin-bottom: 20px;
 }
 
+p {
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100px;
+	line-height: 25px;
+}
+
 hgroup {
     padding-left: 15px;
     border-bottom: 1px solid #ccc;
