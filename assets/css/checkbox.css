@@ -1,4 +1,12 @@
-.btn {
-  margin-bottom: 5px !important;
-  width: 25%;
+.btn-group>.btn {
+    margin-bottom: 5px !important;
+    width: 25%;
+}
+
+.btn.active:after {
+  content: ' \2713';
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+    outline: none !important;
 }

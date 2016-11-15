@@ -1,14 +1,16 @@
 <html>
 <head>
   <script src="js/css.js"></script>
+  <script type="text/javascript" src="js/nouislider.min.js"></script>
 </head>
 <body>
   <?php include_once("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/restaurants.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/nouislider/nouislider.min.css" />
 
   <div id="wrapper" class="container" style="width:70%;">
-    <section class="col-xs-12 col-sm-6 col-md-12 page-header">
+    <section class="col-xs-12 col-sm-12 col-md-12 page-header">
       <div class="row">
     		<div class="col-lg-6 col-sm-12 col-xs-12">
   				<form class="form-horizontal" name="search" role="form" method="POST" onkeypress="return event.keyCode != 13;">
@@ -47,6 +49,11 @@
           </div>
         </form>
       </div>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 col-xs-12 col-lg-offset-6">
+          <div id="slider"></div>
+        </div>
+      </div>
     </section>
     <section class="col-xs-12 col-sm-6 col-md-12 populated">
       <?php
@@ -70,7 +77,7 @@
        </div>
  	   </section>
   </div>
-
+  <script type="text/javascript" src="js/slider.js"></script>
   <script type="text/javascript" src="js/triggers.js"></script>
 </body>
 </html>

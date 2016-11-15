@@ -17,6 +17,9 @@
 		$filter1 = $_POST['filter1'];
 	if (isset($_POST['filter2']))
 		$filter2 = $_POST['filter2'];
+	if (isset($_POST['filter3'])) {
+		echo $_POST['filter3'];
+	}
 	$query = 'SELECT * FROM restaurant WHERE ';
 	if (!empty($search_string))
 		$query .= 'Name LIKE "%'.$search_string.'%"';

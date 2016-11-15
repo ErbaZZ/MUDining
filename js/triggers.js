@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     $(".tablesearch").hide();
     // Search
     function search() {
@@ -9,7 +9,8 @@ $(document).ready(function() {
             data: {
                 query: $('input#searchbox').val(),
                 filter1: $('#filter1').serialize(),
-                filter2: $('#filter2').serialize()
+                filter2: $('#filter2').serialize(),
+                filter3: $('#slider').val()
             },
             cache: false,
             success: function(html) {
@@ -40,6 +41,11 @@ $(document).ready(function() {
     $('#filter2').on('change', function() {
         search();
         useSearchTable($(this).serialize() != '');
+    });
+
+    $('#slider').on('update', function() {
+        search();
+        $(this).fade(100);
     });
 
     $('body').on('keyup', 'input#searchbox', function(e) {
