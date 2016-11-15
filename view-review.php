@@ -19,13 +19,18 @@
       <h1>
         <b>
           <?php
-            $resname = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant, review where review.ReviewID = '$ID' and restaurant.RestaurantID = review.RestaurantID LIMIT 1"))['Name'];
-            echo $resname;
+            $title = mysqli_fetch_assoc(mysqli_query($con, "select * from review where review.ReviewID = '$ID' LIMIT 1"))['Title'];
+            echo $title;
           ?>
         </b>
-      <br/>
+      </h1>
+      <h2>
         <small>
-          By <?php
+          <?php
+          $resname = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant, review where review.ReviewID = '$ID' and restaurant.RestaurantID = review.RestaurantID LIMIT 1"))['Name'];
+          echo "@".$resname;
+          ?>
+          by <?php
             $username = mysqli_fetch_assoc(mysqli_query($con, "select * from user, review where review.ReviewID = '$ID' and user.UserID = review.UserID LIMIT 1"))['Username'];
             echo $username;
             if (isset($_SESSION['Username'])) {
@@ -37,7 +42,7 @@
             }
           ?>
         </small>
-      </h1>
+      </h2>
       <hr/>
       <div>
         <?php echo $res['Content']; ?>
