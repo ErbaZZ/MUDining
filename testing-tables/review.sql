@@ -31,6 +31,7 @@ CREATE TABLE `review` (
   `UserID` int(11) NOT NULL,
   `RestaurantID` int(11) NOT NULL,
   `ReviewDate` date NOT NULL,
+  `Title` varchar(64) NOT NULL,
   `Content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -38,12 +39,12 @@ CREATE TABLE `review` (
 -- Dumping data for table `review`
 --
 
-INSERT INTO `review` (`ReviewID`, `UserID`, `RestaurantID`, `ReviewDate`, `Content`) VALUES
-(1, 4, 1, '2016-11-02', 'The last choice for all. Ineffective, however.'),
-(2, 1, 2, '2016-11-04', 'Never break any single dish.'),
-(3, 3, 3, '2016-11-01', 'System.out.println((new StringBuilder("MAHIDOL")).reverse())'),
-(4, 2, 4, '2016-11-05', 'Huh?'),
-(5, 4, 5, '2016-11-02', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n            tempor incididunt ut labore et dolore magna aliqua.');
+INSERT INTO `review` (`ReviewID`, `UserID`, `RestaurantID`, `ReviewDate`, `Title`, `Content`) VALUES
+(1, 4, 1, '2016-11-02', 'Superb Review', 'The last choice for all. Ineffective, however.'),
+(2, 1, 2, '2016-11-04', 'Dummy Title', 'Never break any single dish.'),
+(3, 3, 3, '2016-11-01', 'Dummy Title2','System.out.println((new StringBuilder("MAHIDOL")).reverse())'),
+(4, 2, 4, '2016-11-05', 'Most comprehensive review of this restaurant ever','Huh?'),
+(5, 4, 5, '2016-11-02', 'Titled Review','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n            tempor incididunt ut labore et dolore magna aliqua.');
 
 --
 -- Indexes for dumped tables

@@ -17,6 +17,7 @@
           UserID int NOT NULL,
           RestaurantID int NOT NULL,
           ReviewDate date NOT NULL,
+          Title varchar(64) NOT NULL,
           Content text NOT NULL,
           `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
           );
@@ -31,10 +32,11 @@
           echo "<div>";
           $url = "http://lorempixel.com/200/200/abstract/" . $row['ReviewID'];
           echo "<img src=" . $url . '/ class="img-thumbnail">';
-          $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID'] . " LIMIT 1"))['Name'];
-          echo "<h2>" . $resname . "</h2>";
-          $name = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM user WHERE user.UserID = " . $row['UserID'] . " LIMIT 1"))['Username'];
-          echo "<p>By " . $name . "</p>";
+          $revtitle = $row['Title'];
+          echo "<h3>" . $revtitle . "</h3>";
+          $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT Name FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID'] . " LIMIT 1"))['Name'];
+          $name = mysqli_fetch_assoc(mysqli_query($con, "SELECT Username FROM user WHERE user.UserID = " . $row['UserID'] . " LIMIT 1"))['Username'];
+          echo "<p>@" . $resname . " By " . $name . "</p>";
           echo "</div>";
           echo "</a>";
           echo "</div>";

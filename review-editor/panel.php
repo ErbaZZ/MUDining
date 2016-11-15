@@ -18,11 +18,11 @@
         <link href="assets/css/review-editor.css" rel="stylesheet">
     </head>
     <body>
-        <h1>
+      <h2>
+      <label for="restaurant">Restaurant</label></br>
           <?php
             include_once("dbconnect.php");
             $restaurants = $con->query("SELECT RestaurantID, Name FROM restaurant");
-            echo "Restaurant: ";
             $options = "";
             $selected = false;
             while ($row = mysqli_fetch_array($restaurants)) {
@@ -43,13 +43,17 @@
             echo "</select>";
           ?>
         <br/>
-            <small>
-              By
-              <?php
-                echo $_SESSION['Username'];
-              ?>
-           </small>
-        </h1>
+        <div class="form-group">
+          <label for="titleForm">Title</label>
+          <input class="form-control" id="titleForm" type="text" maxlength="50" placeholder="Review Title">
+        </div>
+        <small>
+          By
+          <?php
+            echo $_SESSION['Username'];
+          ?>
+       </small>
+     </h2>
         <hr/>
         <div id="alerts"></div>
         <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
@@ -158,9 +162,11 @@
           <div id="editor">Describe your restaurant here&hellip;
           </div>
           <br/>
-					<a class="btn btn-large btn-default jumbo" href="#" onClick="$('#mySubmission').val($('#editor').cleanHtml(true));
+					<a class="btn btn-large btn-default jumbo" href="#" onClick= "$('#mySubmission').val($('#editor').cleanHtml(true));
+                                                                        $('#titleSubmission').val($('#titleForm').cleanHtml(true));
                                                                         $('#restaurantSubmission').val($('#restaurant option:selected').cleanHtml(true));
                                                                         $('#submitForm').submit();">Submit</a>
+            <input type='hidden' name='title' id='titleSubmission'/>
             <input type='hidden' name='username' id='usernameSubmission' value=<?php echo "'".$_SESSION['Username']."'"?>/>
             <input type='hidden' name='restaurantName' id='restaurantSubmission'/>
 				    <input type='hidden' name='formData' id='mySubmission'/>
