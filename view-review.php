@@ -10,12 +10,30 @@
 <html>
 <head>
   <script src="js/css.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/view-reviews.css" />
 </head>
 <body>
   <?php include_once("navbar.php"); ?>
-
   <div id="wrapper" class="container" style="width:90%;">
     <div class="container">
+      <!--Modal-->
+      <div class="modal fade" id="deleteModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+              <p>Do you really want to delete your review?</p>
+            </div>
+            <div class="modal-footer">
+              <a class="btn btn-default" href="delete-review.php?id=<?php echo $ID ?>">Delete</a>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <h1>
         <b>
           <?php
@@ -37,7 +55,8 @@
               $userID = mysqli_fetch_assoc(mysqli_query($con, 'select * from user where Username = "' . $_SESSION['Username'] . '" LIMIT 1'))['UserID'];
               $result = mysqli_query($con, "select UserID from review where UserID = '$userID' and ReviewID = '$ID'");
               if ($result->num_rows) {
-                echo " - <a href=\"delete-review.php?id=$ID\">Delete</a>";
+                echo " - <a href=\"edit-review.php?id=$ID\">Edit</a>";
+                echo " <a href='#deleteModal' role='button' data-toggle='modal'>Delete</a>";
               }
             }
           ?>
@@ -49,6 +68,5 @@
       </div>
     </div>
   </div>
-
 </body>
 </html>
