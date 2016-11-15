@@ -36,6 +36,7 @@ CREATE TABLE `restaurant` (
   `OpenTime` double NOT NULL,
   `CloseTime` double NOT NULL,
   `Promotion` varchar(255) DEFAULT NULL
+  `Description` text NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=tis620;
 
 --
@@ -48,11 +49,11 @@ INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `MaxPrice`, `Locat
 (3, 'J-Class Vegetarian', 51, 100, 'R', '01,03,11', 8, 20, NULL),
 (4, 'พุทธรักษา เรสเทรอง', 251, 500, 'F', '01,03,04,11', 10, 20, NULL),
 (5, 'LODIHAM', 50, 100, 'F', '01,04,11,12', 10, 21, NULL),
-(6, 'Music Square', 101, 250, 'I', '01,04,11,12', 7.3, 20, NULL),
-(7, 'Anya''s Place', 251, 500, 'F', '01,04,11', 11, 23, NULL),
-(8, 'Buta Grill', 251, 500, 'F', '02,04,11,12,13', 11.3, 21.3, NULL),
-(9, 'Hua Seng Hong', 501, 1000, 'F', '01,03,11,12', 10, 22, NULL),
-(10, 'ธนัญธรก๋วยเตี๋ยวไก่มะระ', 0, 100, 'R', '01,11', 18.3, 1, NULL),
+(6, 'Music Square', 101, 250, 'I', '01,04,11,12', 7.3, 20, NULL, "Restaurant looks cute and full of nature. It is located in College of Music, Mahidol Salaya. This restaurant has both Thai food and European food with great service for lunch and dinner."),
+(7, 'Anya''s Place', 251, 500, 'F', '01,04,11', 11, 23, NULL, "Anya’s Place is one of the restaurants in Nakornpathom. Food is high quality and very delicious with fair price. The service is very nice as they service their family."),
+(8, 'Buta Grill', 251, 500, 'F', '02,04,11,12,13', 11.3, 21.3, NULL, "It is a Grill restaurant that worth to go and it is suitable for sea food lover because of high quality. It provides great service and fresh food with tasty sauce in 199 Bath and 299 for sea food. These price include the soft drink."),
+(9, 'Hua Seng Hong', 501, 1000, 'F', '01,03,11,12', 10, 22, NULL, "Hua Seng Hong is located in the opposite side of Mahidol University. In front of the restaurant has outstanding red label. Parking is available at in front of the restaurant and both sides of the restaurant. Hua Seng Hong is the Chinese food restaurant that has set and single dish, but the set is cheaper. The price has from hundred to thousand."),
+(10, 'ธนัญธรก๋วยเตี๋ยวไก่มะระ', 0, 100, 'R', '01,11', 18.3, 1, NULL, "This the most interesting restaurant for Kai Mara Noodle love, but it opens quite late around 18.30 "),
 (11, 'Koh Lanta Pizzeria', 101, 250, 'F', '04,11,12', 11, 22, NULL),
 (12, 'ปู๊ตี่บะหมี่เกี๊ยวกุ้ง', 0, 50, 'F', '03,11', 17, 23.59, NULL),
 (13, 'ศรีไทยขาหมู', 0, 100, 'S', '03,11', 9, 15, NULL),
