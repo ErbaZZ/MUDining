@@ -3,6 +3,7 @@
     session_start();
   if (!isset($_SESSION['Username']))
     header("Location: index.php");
+  include_once("dbconnect.php");
 ?>
 <!DOCTYPE html>
     <head>
@@ -20,13 +21,22 @@
     <body>
       <?php
         if(isset($_SESSION['errormsg'])) {
-        echo "<p style='color:red'>".$_SESSION['errormsg']."</p>";
-        unset($_SESSION['errormsg']);
-      } ?>
+          echo "<p style='color:red'>".$_SESSION['errormsg']."</p>";
+          unset($_SESSION['errormsg']);
+        }
+        if (isset($_GET['id'])) {
+          $resID = $_GET['id'];
+          $userID = mysqli_fetch_assoc(mysqli_query($con, "SELECT UserID FROM user WHERE user.Username = '". $_SESSION['Username'] ."' LIMIT 1"))['UserID'];
+          $dupe = mysqli_fetch_assoc(mysqli_query($con, "SELECT ReviewID FROM review WHERE review.UserID = '". $userID ."' AND review.RestaurantID = '". $resID ."' LIMIT 1"))['ReviewID'];
+          if (!is_null($dupe)) {
+            echo "<p style='color:red'>You have already reviewed this restaurant, redirecting to your review..</p>";
+            header('refresh:3;view-review.php?id='.$dupe);
+          }
+        }
+       ?>
       <h2>
       <label for="restaurant">Restaurant</label></br>
           <?php
-            include_once("dbconnect.php");
             $restaurants = $con->query("SELECT RestaurantID, Name FROM restaurant");
             $options = "";
             $selected = false;
