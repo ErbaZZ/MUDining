@@ -8,9 +8,7 @@
       echo '<div class="col-xs-12 col-sm-12 col-md-3" id="search-row">';
         $name = $result['Name'];
         $url = "view-restaurant.php?id=" . $result['RestaurantID'];
-        $imgname = sprintf("%04d", $result['RestaurantID']);
-        $imgurl = "Picture/" . $imgname . "/" . $imgname;
-        echo '<a style="width:100%;" href="'. $url . '" title="' . $name .'" class="thumbnail"><img src="' . $imgurl .'-1.jpg" /></a>';
+        echo '<a style="width:100%;" href="'.$url.'" title="'.$name .'" class="thumbnail"><img src="' .imgurl($result['RestaurantID']).'" /></a>';
       echo '</div>';
       echo '<div class="col-xs-12 col-sm-12 col-md-2">';
         echo '<ul class="meta-search">';

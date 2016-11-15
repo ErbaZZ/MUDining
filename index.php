@@ -23,7 +23,7 @@
             echo '<div class="row">';
               echo '<div class="col-xs-5">';
                 echo '<div class="thumbnail">';
-                  echo '<img src='."http://lorempixel.com/200/200/abstract/5/".'> style="height:auto;"';
+                  echo '<img src="'. imgurl($res['RestaurantID']).'"> style="height:auto;"';
                 echo '</div>';
               echo '</div>';
               echo '<div class="caption col-xs-7">';
