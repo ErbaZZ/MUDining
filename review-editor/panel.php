@@ -5,11 +5,9 @@
     header("Location: index.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="shortcut icon" href="http://mindmup.s3.amazonaws.com/lib/img/favicon.ico">
         <link href="review-editor/google-code-prettify/prettify.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
@@ -25,14 +23,23 @@
             include_once("dbconnect.php");
             $restaurants = $con->query("SELECT RestaurantID, Name FROM restaurant");
             echo "Restaurant: ";
-            echo "<select class=\"selectpicker\" id=\"restaurant\"data-live-search=\"true\" title=\"Choose the restaurant...\">";
+            $options = "";
+            $selected = false;
             while ($row = mysqli_fetch_array($restaurants)) {
-              if (isset($_GET['id']) && $_GET['id'] == $row['RestaurantID'])
-                echo "<option selected ";
+              if (isset($_GET['id']) && $_GET['id'] == $row['RestaurantID']) {
+                $options .= "<option selected ";
+                $selected = true;
+              }
               else
-                echo "<option ";
-              echo "value='".$row['Name']."'>".$row['Name']."</option>";
+                $options .= "<option ";
+              $options .= "value='".$row['Name']."'>".$row['Name']."</option>";
           	}
+            if ($selected && isset($_GET['id']))
+              echo "<select disabled ";
+            else
+              echo "<select ";
+            echo "class=\"selectpicker\" id=\"restaurant\"data-live-search=\"true\" title=\"Choose the restaurant...\">";
+            echo $options;
             echo "</select>";
           ?>
         <br/>

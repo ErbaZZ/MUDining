@@ -9,7 +9,7 @@
 	if (!$con->query("INSERT INTO review (UserID, RestaurantID, ReviewDate, Content) VALUES ('$userID','$restaurantID','$reviewDate','$data');"))
 		$errormsg = "You already reviewed"; // ?
 	else {
-		header("refresh:0;url=../reviews.php");
+		header("Location: ../reviews.php");
 	}
 
 ?>

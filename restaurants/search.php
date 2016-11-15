@@ -1,5 +1,5 @@
 <?php
-	include_once("../dbconnect.php");
+	include_once("dbconnect.php");
 	require_once("tolist.php");
 
 	$search_string = "";
