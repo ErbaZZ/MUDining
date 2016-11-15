@@ -44,7 +44,7 @@
         echo '<h3><a href="' . $url . '" title="">' . $name . '</a></h3>';
         echo '<p>Description</p>';
         $reviewURL = "review-editor.php?id=" . $result['RestaurantID'];
-            echo '<span class="plus"><a href="' .$reviewURL. '" title="Review this restaurant"><i class="glyphicon glyphicon-plus"></i></a></span>';
+            echo '<span class="plus"><a style="border-radius:25%;" href="' .$reviewURL. '" title="Review this restaurant"><i class="glyphicon glyphicon-plus"></i></a></span>';
       echo '</div>';
       echo '<span class="clearfix borda"></span>';
     echo '</article>';
