@@ -155,6 +155,25 @@
 		options = $.extend({}, $.fn.wysiwyg.defaults, userOptions);
 		toolbarBtnSelector = 'a[data-' + options.commandRole + '],button[data-' + options.commandRole + '],input[type=button][data-' + options.commandRole + ']';
 		bindHotkeys(options.hotKeys);
+
+		// Support placeholder attribute on the DIV
+		if ($(this).attr('placeholder') != '') {
+			$(this).addClass('placeholderText');
+			$(this).html($(this).attr('placeholder'));
+			$(this).bind('focus',function(e) {
+				if ( $(this).attr('placeholder') != '' && $(this).text() == $(this).attr('placeholder') ) {
+					$(this).removeClass('placeholderText');
+					$(this).html('');
+				}
+			});
+			$(this).bind('blur',function(e) {
+				if ( $(this).attr('placeholder') != '' && $(this).text() == '' ) {
+					$(this).addClass('placeholderText');
+					$(this).html($(this).attr('placeholder'));
+				}
+			})
+		}
+
 		if (options.dragAndDropImages) {
 			initFileDrops();
 		}

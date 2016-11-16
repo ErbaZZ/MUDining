@@ -172,7 +172,7 @@
         </div>
 
         <form action="review-editor/send.php" method="post" enctype="multipart/form-data" id='submitForm'>
-          <div id="editor">Describe your restaurant here&hellip;
+          <div class="placeholder" placeholder="Describe your restaurant here&hellip;" id="editor">
           </div>
           <br/>
 					<a class="btn btn-large btn-default jumbo" href="#" onClick= "$('#mySubmission').val($('#editor').cleanHtml(true));

@@ -46,10 +46,6 @@ div[data-role="editor-toolbar"] {
     height: 100%;
 }
 
-[contentEditable=true]:empty:not(:focus):before {
-    content: attr(data-placeholder)
-}
-
 .placeholderText {
     color: #777;
 }
