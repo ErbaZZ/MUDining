@@ -1,57 +1,39 @@
-$(function() {
-    $(".tablesearch").hide();
-    // Search
-    function search() {
-        //if (query_value !== '') {
-        $.ajax({
-            type: "POST",
-            url: "restaurants/search.php",
-            data: {
-                query: $('input#searchbox').val(),
-                filter1: $('#filter1').serialize(),
-                filter2: $('#filter2').serialize(),
-                filter3: $('#slider').val()
-            },
-            cache: false,
-            success: function(html) {
-                $(".tablesearch").html(html);
-            }
+$.getScript('js/shared-trigger.js', function() {
+    $(function() {
+        $(".tablesearch").hide();
+        // Search
+        function search() {
+            $.ajax({
+                type: "POST",
+                url: "restaurants/search.php",
+                data: {
+                    query: $('input#searchbox').val(),
+                    filter1: $('#filter1').serialize(),
+                    filter2: $('#filter2').serialize()
+                },
+                cache: false,
+                success: function(html) {
+                    $(".tablesearch").html(html);
+                }
+            });
+            return false;
+        }
+
+        $('#filter1').on('change', function() {
+            search();
+            useSearchTable($(this).serialize() != '');
         });
-        //}
-        return false;
-    }
 
-    function useSearchTable($use) {
-      clearTimeout($.data(this, 'timer'));
-      if (!$use) {
-          $(".tablesearch").fadeOut(300);
-          $(".populated").fadeIn(300);
-      } else {
-          $(".tablesearch").fadeIn(300);
-          $(".populated").fadeOut(300);
-          $(this).data('timer', setTimeout(search, 100));
-      };
-    }
+        $('#filter2').on('change', function() {
+            search();
+            useSearchTable($(this).serialize() != '');
+        });
 
-    $('#filter1').on('change', function() {
-        search();
-        useSearchTable($(this).serialize() != '');
+        $('body').on('keyup', 'input#searchbox', function(e) {
+            clearTimeout($.data(this, 'timer'));
+            var search_string = $(this).val();
+            useSearchTable(search_string != '');
+        });
+
     });
-
-    $('#filter2').on('change', function() {
-        search();
-        useSearchTable($(this).serialize() != '');
-    });
-
-    $('body').on('keyup', '#slider', function(e) {
-        document.write("fooooooo");
-        search();
-    });
-
-    $('body').on('keyup', 'input#searchbox', function(e) {
-        clearTimeout($.data(this, 'timer'));
-        var search_string = $(this).val();
-        useSearchTable(search_string != '');
-    });
-
 });
