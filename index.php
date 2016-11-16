@@ -21,17 +21,15 @@
         while ($res = mysqli_fetch_assoc($result)) {
           echo '<div class="text">';
             echo '<div class="row">';
-              echo '<div class="col-xs-5">';
-                echo '<div class="thumbnail">';
-                  echo '<img id="latest-review-img" src='. imgurl($res['RestaurantID']).'>';
-                echo '</div>';
+              echo '<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">';
+                  echo '<img class="thumbnail" id="latest-review-img" src='. imgurl($res['RestaurantID']).'>';
               echo '</div>';
-              echo '<div class="caption col-xs-7">';
+              echo '<div class="caption col-lg-6 col-md-12 col-sm-12 col-xs-12">';
                 echo "<h3>" . mysqli_fetch_assoc(mysqli_query($con, 'select * from restaurant where RestaurantID = ' . $res['RestaurantID'] . ' LIMIT 1'))['Name'] . "</h3>";
                 echo "<p>By " . mysqli_fetch_assoc(mysqli_query($con, 'select * from user where UserID = ' . $res['UserID'] . ' LIMIT 1'))['Username'] . "</p>";
                 echo "<p>" . $res['ReviewDate'] . "</p>";
                 $url = "view-review.php?id=" . $res['ReviewID'];
-                echo "<p><a href=\"$url\" class=\"btn btn-default\" role=\"button\">Read</a></p>";
+                echo "<a href=\"$url\" class=\"btn btn-default\" role=\"button\">Read</a>";
               echo '</div>';
             echo '</div>';
           echo '</div>';
