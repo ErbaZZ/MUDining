@@ -43,7 +43,7 @@
       echo '<div class="col-xs-6 col-sm-6 col-md-6">';
       echo '<h3><a href="'.$url.'" title="">'.$name.'</a> ';
       $reviewURL = "review-editor.php?id=" . $result['RestaurantID'];
-      echo '<span class="plus"><a style="border-radius:25%;" href="' .$reviewURL. '" title="Review this restaurant"><i class="glyphicon glyphicon-plus"></i></a></span>';
+      echo '<span class="plus"><a href="' .$reviewURL. '" title="Review this restaurant"><i class="glyphicon glyphicon-plus"></i></a></span>';
       echo '</h3></div>';
       echo '<div class="col-xs-6 col-sm-6 col-md-6 excerpet">';
       echo '<p>'.$result['Description'].'</p>';

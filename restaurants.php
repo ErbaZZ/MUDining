@@ -79,6 +79,7 @@
        </div>
  	   </section>
   </div>
+  <script type="text/javascript" src="js/shared-triggers.js"></script>
   <script type="text/javascript" src="js/slider.js"></script>
   <script type="text/javascript" src="js/triggers.js"></script>
 </body>

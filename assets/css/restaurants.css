@@ -98,6 +98,7 @@ hgroup h2.lead {
     background-color: #248dc1;
     padding: 4px;
     font-size: 0.5em;
+    border-radius: 25%;
 }
 
 .search-result span.plus a:hover {
