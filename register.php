@@ -49,12 +49,11 @@
 <html>
 <head>
   <script src="js/css.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/register.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
 </head>
 <body>
   <?php include("navbar.php"); ?>
-  <link rel="stylesheet" type="text/css" href="assets/css/register.css" />
-  <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
-
   <div id="wrapper" class="container" style="width:45%;">
 
   <h1 class="text-center">Registration</h1>
