@@ -56,14 +56,14 @@
               $result = mysqli_query($con, "select UserID from review where UserID = '$userID' and ReviewID = '$ID'");
               if ($result->num_rows) {
                 echo " - <a href=\"edit-review.php?id=$ID\">Edit</a>";
-                echo " <a href='#deleteModal' role='button' data-toggle='modal'>Delete</a>";
+                echo " - <a href='#deleteModal' role='button' data-toggle='modal'>Delete</a>";
               }
             }
           ?>
         </small>
       </h2>
       <hr/>
-      <div>
+      <div id="content">
         <?php echo $res['Content']; ?>
       </div>
     </div>

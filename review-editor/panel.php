@@ -20,7 +20,7 @@
     </head>
     <body>
       <?php
-        if(isset($_SESSION['errormsg'])) {
+        if (isset($_SESSION['errormsg'])) {
           echo "<p style='color:red'>".$_SESSION['errormsg']."</p>";
           unset($_SESSION['errormsg']);
         }
@@ -34,8 +34,7 @@
           }
         }
        ?>
-      <h2>
-      <label for="restaurant">Restaurant</label></br>
+      <label for="restaurant"><h2><b>Restaurant</b></h2></label></br>
           <?php
             $restaurants = $con->query("SELECT RestaurantID, Name FROM restaurant");
             $options = "";
@@ -59,16 +58,15 @@
           ?>
         <br/>
         <div class="form-group">
-          <label for="titleForm">Title</label>
+          <label for="titleForm"><h3><b>Title</b></h3></label>
           <input class="form-control" id="titleForm" type="text" maxlength="50" placeholder="Review Title">
         </div>
-        <small>
+        <h2><small>
           By
           <?php
             echo $_SESSION['Username'];
           ?>
-       </small>
-     </h2>
+       </small></h2>
         <hr/>
         <div id="alerts"></div>
         <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
