@@ -8,6 +8,8 @@
 <html>
 <head>
   <script src="js/css.js"></script>
+  <script src="js/star-rating.min.js" type="text/javascript"></script>
+  <link href="assets/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="assets/css/view-restaurant.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
 </head>

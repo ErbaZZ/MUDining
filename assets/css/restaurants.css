@@ -6,8 +6,8 @@ p {
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
-    min-height: 0px;
-    max-height: 100px;
+    min-height: 75px;
+    max-height: 75px;
     line-height: 25px;
 }
 
@@ -111,4 +111,18 @@ hgroup h2.lead {
 .search-result span.border {
     margin: 10px;
     border-bottom: 1px dotted #ccc;
+}
+
+.rater {
+  padding-right: 0;
+}
+
+.star i {
+  color: yellow !important;
+}
+
+.caption {
+  margin-right: 2%;
+  width: 5vw;
+  font-size: 2vw;
 }

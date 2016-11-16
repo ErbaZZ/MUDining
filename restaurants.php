@@ -2,13 +2,14 @@
 <head>
   <script src="js/css.js"></script>
   <script type="text/javascript" src="js/nouislider.min.js"></script>
-</head>
-<body>
-  <?php include_once("navbar.php"); ?>
+  <script src="js/star-rating.min.js" type="text/javascript"></script>
+  <link href="assets/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="assets/css/restaurants.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/nouislider/nouislider.min.css" />
-
+</head>
+<body>
+  <?php include_once("navbar.php"); ?>
   <div id="wrapper" class="container" style="width:70%;">
     <section class="col-xs-12 col-sm-12 col-md-12 page-header">
       <div class="row">
