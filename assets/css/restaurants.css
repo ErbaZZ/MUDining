@@ -59,7 +59,7 @@ hgroup h2.lead {
 
 .search-result .col-md-3 {
     border-right: 1px dotted #ccc;
-    min-height: 140px;
+    height: 140px;
 }
 
 .search-result ul {
