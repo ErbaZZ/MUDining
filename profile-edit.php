@@ -103,16 +103,30 @@
               <div id="foodpref" class="col-xs-9">
                 <div class="row">
                   <div class="btn-group col-xs-12" data-toggle="buttons">
+                    <label class="btn btn-primary <?php if (strpos("x".$row['FoodPreferences'], '01') !== false) {echo 'active';} ?>">
+                        <input type="checkbox" name="foodprefs[]" value="01" <?php if (strpos("x".$row['FoodPreferences'], '01') !== false) {echo 'checked';} ?>>Thai
                     </label>
+                    <label class="btn btn-default <?php if (strpos("x".$row['FoodPreferences'], '02') !== false) {echo 'active';} ?>">
+                        <input type="checkbox" name="foodprefs[]" value="02 <?php if (strpos("x".$row['FoodPreferences'], '02') !== false) {echo 'checked';} ?>">Japanese
                     </label>
+                    <label class="btn btn-warning <?php if (strpos("x".$row['FoodPreferences'], '03') !== false) {echo 'active';} ?>">
+                        <input type="checkbox" name="foodprefs[]" value="03" <?php if (strpos("x".$row['FoodPreferences'], '03') !== false) {echo 'checked';} ?>>Chinese
                     </label>
+                    <label class="btn btn-success <?php if (strpos("x".$row['FoodPreferences'], '04') !== false) {echo 'active';} ?>">
+                        <input type="checkbox" name="foodprefs[]" value="04" <?php if (strpos("x".$row['FoodPreferences'], '04') !== false) {echo 'checked';} ?>>European
                     </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="btn-group col-xs-12" data-toggle="buttons">
+                    <label class="btn btn-info <?php if (strpos("x".$row['FoodPreferences'], '11') !== false) {echo 'active';} ?>">
+                      <input type="checkbox" name="foodprefs[]" value="11" <?php if (strpos("x".$row['FoodPreferences'], '11') !== false) {echo 'checked';} ?>>Single Dish
                     </label>
+                    <label class="btn btn-default <?php if (strpos("x".$row['FoodPreferences'], '12') !== false) {echo 'active';} ?>" style="background-color:#ddd;">
+                      <input type="checkbox" name="foodprefs[]" value="12" <?php if (strpos("x".$row['FoodPreferences'], '12') !== false) {echo 'checked';} ?>>Set Menu
                     </label>
+                    <label class="btn btn-danger <?php if (strpos("x".$row['FoodPreferences'], '13') !== false) {echo 'active';} ?>">
+                      <input type="checkbox" name="foodprefs[]" value="13" <?php if (strpos("x".$row['FoodPreferences'], '13') !== false) {echo 'checked';} ?>>Buffet
                     </label>
                   </div>
                 </div>
