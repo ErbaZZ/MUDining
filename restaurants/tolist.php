@@ -8,7 +8,7 @@
       echo '<div class="col-xs-12 col-sm-12 col-md-3" id="search-row">';
         $name = $result['Name'];
         $url = "view-restaurant.php?id=" . $result['RestaurantID'];
-        echo '<a style="width:100%;" href="'.$url.'" title="'.$name .'" class="thumbnail"><img id="restaurant-img" src="' .imgurl($result['RestaurantID']).'" /></a>';
+        echo '<a href="'.$url.'" title="'.$name .'" class="thumbnail"><img id="restaurant-img" src="' .imgurl($result['RestaurantID']).'" /></a>';
       echo '</div>';
       echo '<div class="col-xs-6 col-lg-3 col-sm-6 col-md-3">';
         echo '<ul class="meta-search">';
@@ -40,11 +40,13 @@
           echo '<li><i class="glyphicon glyphicon-modal-window"></i> <span>' . $dishtypes . '</span></li>';
         echo '</ul>';
       echo '</div>';
+      echo '<div class="col-xs-6 col-sm-6 col-md-6">';
+      echo '<h3><a href="'.$url.'" title="">'.$name.'</a> ';
+      $reviewURL = "review-editor.php?id=" . $result['RestaurantID'];
+      echo '<span class="plus"><a style="border-radius:25%;" href="' .$reviewURL. '" title="Review this restaurant"><i class="glyphicon glyphicon-plus"></i></a></span>';
+      echo '</h3></div>';
       echo '<div class="col-xs-6 col-sm-6 col-md-6 excerpet">';
-        echo '<h3><a href="'.$url.'" title="">'.$name.'</a></h3>';
-        echo '<p>'.$result['Description'].'</p>';
-        $reviewURL = "review-editor.php?id=" . $result['RestaurantID'];
-            echo '<span class="plus"><a style="border-radius:25%;" href="' .$reviewURL. '" title="Review this restaurant"><i class="glyphicon glyphicon-plus"></i></a></span>';
+      echo '<p>'.$result['Description'].'</p>';
       echo '</div>';
       echo '<span class="clearfix borda"></span>';
     echo '</article>';

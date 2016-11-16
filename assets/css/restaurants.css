@@ -94,15 +94,10 @@ hgroup h2.lead {
     font: normal normal 1.125em;
 }
 
-.search-result span.plus {
-    position: absolute;
-    right: 0;
-    top: 126px;
-}
-
 .search-result span.plus a {
     background-color: #248dc1;
-    padding: 5px 5px 3px 5px;
+    padding: 4px;
+    font-size: 0.5em;
 }
 
 .search-result span.plus a:hover {
@@ -114,8 +109,6 @@ hgroup h2.lead {
 }
 
 .search-result span.border {
-    display: block;
-    width: 97%;
-    margin: 0 15px;
+    margin: 10px;
     border-bottom: 1px dotted #ccc;
 }
