@@ -57,7 +57,7 @@ hgroup h2.lead {
     margin-top: 20px;
 }
 
-.search-result .col-md-2 {
+.search-result .col-md-3 {
     border-right: 1px dotted #ccc;
     min-height: 140px;
 }
