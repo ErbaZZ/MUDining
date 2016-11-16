@@ -7,7 +7,6 @@
   <link rel="stylesheet" type="text/css" href="assets/css/reviews.css" />
 
   <div id="wrapper" class="container" style="width:85%;">
-  <div class="container">
     <div class="row stylish-panel">
       <?php
         include_once("dbconnect.php");
@@ -65,7 +64,6 @@
           </div>
       <?php
      } else; ?>
-    </div>
   </div>
 </body>
 </html>
