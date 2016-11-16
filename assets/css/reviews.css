@@ -14,6 +14,15 @@ h3 {
     transition: 0.2s;
 }
 
+/* review name */
+.stylish-panel>.row>div>a>div>h3 {
+    font-size: 2vw;
+}
+/* review short description */
+.stylish-panel>.row>div>a>div>p {
+    font-size: 1.5vw;
+}
+
 .stylish-panel>.row>div:hover>a>div {
     border: 1px solid rgb(200, 200, 200);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;

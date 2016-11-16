@@ -49,11 +49,10 @@
           <div class="row">
             <?php } ?>
             <div class="col-md-4 col-xs-4">
-              <a style="text-decoration:none;color:blue;" href="review-editor.php">
+              <a style="text-decoration:none;color:gray;" href="review-editor.php">
                 <div>
-                  <img src="http://lorempixel.com/200/200/abstract/10/" class="img-thumbnail">
-                  <h2>New review</h2>
-                  <p>Create your own review here</p>
+                  <img style="background-color:lightgray;" class="img-thumbnail">
+                  <h3>New review</h3>
                 </div>
               </a>
             </div>
