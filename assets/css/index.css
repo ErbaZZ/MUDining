@@ -15,6 +15,7 @@ body {
     transition: all 0.5s ease-in-out;
     margin: auto;
     display: block;
+    outline: none;
 }
 
 .random_eat_button:hover {
