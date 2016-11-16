@@ -4,10 +4,40 @@
   if (!isset($_SESSION['Username']))
     header("Location: index.php");
   include_once("dbconnect.php");
+
+  if (isset($_POST['firstname'])) {
+    $username = $_SESSION['Username'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $nickname = $_POST['nickname'];
+    $email = $_POST['email'];
+    $foodprefs = "";
+
+    if (!empty($_POST['foodprefs'])) {
+        foreach($_POST['foodprefs'] as $pref) {
+          $foodprefs .= $pref . ",";
+        }
+    }
+
+    if (!$con->query("UPDATE user SET
+                        FirstName='$firstname',
+                        LastName='$lastname',
+                        Nickname='$nickname',
+                        Email='$email',
+                        FoodPreferences='$foodprefs'
+                        WHERE Username='$username';")) {
+        $_SESSION['msg'] = "Something's wrong";
+      }
+    else {
+      $_SESSION['msg'] = "Changes saved";
+    }
+  }
 ?>
 <html>
 <head>
   <script src="js/css.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/profile-edit.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
 </head>
 <body>
   <?php
@@ -16,37 +46,15 @@
     $user = mysqli_query($con, "SELECT * FROM user WHERE Username='$username'");
     $row = mysqli_fetch_assoc($user);
   ?>
-  <link rel="stylesheet" type="text/css" href="assets/css/contact.css" />
     <div id="profile">
-      <link rel="stylesheet" type="text/css" href="assets/css/register.css" />
-      <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
-
       <div id="wrapper" class="container" style="width:45%;">
-
       <h1 class="text-center">Edit Profile</h1>
-
         <form class="form-horizontal" role="form" name="input" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
           <div class="row">
             <div class="form-group">
               <label for="username" class="col-xs-3">Username:</label>
               <div class="col-xs-9">
-                <label><?php echo $row['Username']; ?></label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group">
-              <label for="password" class="col-xs-3">New Password:</label>
-              <div class="col-xs-9">
-                <input class="form-control" type="password" name="password" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group">
-              <label for="cpassword" class="col-xs-3">Confirm</br>New Password:</label>
-              <div class="col-xs-9">
-                <input class="form-control" type="password" name="cpassword" pattern="[A-Za-z0-9]{1,}" title="Letters or numbers only" required>
+                <p><?php echo $row['Username']; ?></p>
               </div>
             </div>
           </div>
@@ -80,10 +88,10 @@
               <div class="col-xs-9">
                 <?php
                   if ($row['Gender'] == 'm') {
-                    echo "<label>Male</label>";
+                    echo "<p>Male</p>";
                   }
                   else {
-                    echo "<label>Female</label>";
+                    echo "<p>Female</p>";
                   }
                 ?>
               </div>
@@ -134,7 +142,13 @@
             </div>
       		<div class="text-center">
       			<input type="submit" class="btn btn-default" value="Save changes">
+            <?php
+              if (isset($_SESSION['msg'])) {
+                echo "</br><label style='color: green'>".$_SESSION['msg']."</label>";
+                unset($_SESSION['msg']);
+              }?>
       		</div>
+
       	</form>
     </div>
   </div>
