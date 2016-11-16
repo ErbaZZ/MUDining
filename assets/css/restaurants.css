@@ -57,9 +57,11 @@ hgroup h2.lead {
     margin-top: 20px;
 }
 
-.search-result .col-md-3 {
-    border-right: 1px dotted #ccc;
-    height: 140px;
+@media(min-width:992px) {
+    .search-result .col-md-3 {
+        border-right: 1px dotted #ccc;
+        height: 140px;
+    }
 }
 
 .search-result ul {
@@ -115,15 +117,15 @@ hgroup h2.lead {
 }
 
 .rater {
-  padding-right: 0;
+    padding-right: 0;
 }
 
 .star i {
-  color: yellow !important;
+    color: yellow !important;
 }
 
 .caption {
-  margin-right: 2%;
-  width: 5vw;
-  font-size: 2vw;
+    margin-right: 2%;
+    width: 5vw;
+    font-size: 2vw;
 }
