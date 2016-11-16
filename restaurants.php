@@ -55,7 +55,7 @@
         </div>
       </div>
     </section>
-    <section class="col-xs-12 col-sm-6 col-md-12 populated">
+    <section class="col-xs-12 col-sm-12 col-md-12 populated">
       <?php
         include_once("dbconnect.php");
         $con->query("CREATE TABLE IF NOT EXISTS restaurant (
@@ -73,7 +73,7 @@
         include 'restaurants/top_search.php'
       ?>
 	   </section>
-     <section class="col-xs-12 col-sm-6 col-md-12">
+     <section class="col-xs-12 col-sm-12 col-md-12">
        <div class="tablesearch">
        </div>
  	   </section>

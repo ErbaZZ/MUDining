@@ -6,7 +6,8 @@ p {
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 100px;
+    min-height: 0px;
+    max-height: 100px;
     line-height: 25px;
 }
 

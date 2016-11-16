@@ -43,9 +43,9 @@ $(function() {
         useSearchTable($(this).serialize() != '');
     });
 
-    $('#slider').on('update', function() {
+    $('body').on('keyup', '#slider', function(e) {
+        document.write("fooooooo");
         search();
-        $(this).fade(100);
     });
 
     $('body').on('keyup', 'input#searchbox', function(e) {

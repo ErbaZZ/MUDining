@@ -17,6 +17,9 @@ noUiSlider.create(range, {
 });
 
 $(function() {
+    // range.noUiSlider.on('end', function() {
+    //
+    // });
     $('.noUi-value-large').filter(function() {
         return $(this).text() == '550';
     }).html('&infin;');
