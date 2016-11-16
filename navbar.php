@@ -24,7 +24,7 @@
       <ul class="nav navbar-nav navbar-right">
         <?php
           if (isset($_SESSION['Username'])) { ?>
-            <li><a style="cursor:default;"> Welcome, <?php echo $_SESSION['Username'] ?></a></li>
+            <li><a href="profile-edit.php"> Welcome, <?php echo $_SESSION['Username'] ?></a></li>
             <li><a href="logout.php">Log out</a></li>
         <?php
           } else
