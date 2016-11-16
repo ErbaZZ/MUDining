@@ -60,7 +60,7 @@ hgroup h2.lead {
 @media(min-width:992px) {
     .search-result .col-md-3 {
         border-right: 1px dotted #ccc;
-        height: 140px;
+        height: 150px;
     }
 }
 
