@@ -5,6 +5,8 @@ h3 {
 .stylish-panel {
     text-align: center;
     width: 100%;
+    margin-right: inherit !important;
+    margin-left: inherit !important;
 }
 
 .stylish-panel>.row>div>a>div {
