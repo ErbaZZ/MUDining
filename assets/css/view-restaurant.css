@@ -4,3 +4,21 @@
     object-fit: cover;
     overflow: hidden;
 }
+
+#foodtype, #dishtype {
+    width: 50%;
+}
+
+#foodtype>.btn, #dishtype>.btn {
+    cursor: default;
+}
+
+#carousel {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+#description {
+    margin: 20px;
+}
