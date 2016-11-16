@@ -105,6 +105,7 @@
   <script>
     $(function() {
       $('#foodtype').prop('disabled', true);
+      $('#dishtype').prop('disabled', true);
     });
   </script>
 </body>
