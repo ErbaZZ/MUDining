@@ -11,9 +11,9 @@
 <body>
   <?php include_once("navbar.php"); ?>
   <div id="wrapper" class="container" style="width:70%;">
-    <section class="col-xs-12 col-sm-12 col-md-12 page-header">
+    <section class="col-lg-12 col-xs-12 col-sm-12 col-md-12 page-header">
       <div class="row">
-    		<div class="col-lg-6 col-sm-12 col-xs-12">
+    		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
   				<form class="form-horizontal" name="search" role="form" method="POST" onkeypress="return event.keyCode != 13;">
   						<input id="searchbox" name="searchbox" type="text" class="form-control" placeholder="Search by name..." autocomplete="off"/>
   				</form>
@@ -51,30 +51,30 @@
         </form>
       </div>
       <div class="row">
-        <div class="col-lg-6 col-sm-12 col-xs-12 col-lg-offset-6">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-lg-offset-6">
           <div id="slider"></div>
         </div>
       </div>
     </section>
-    <section class="col-xs-12 col-sm-12 col-md-12 populated">
-      <?php
-        include_once("dbconnect.php");
-        $con->query("CREATE TABLE IF NOT EXISTS restaurant (
-          RestaurantID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-          Name varchar(255) NOT NULL UNIQUE,
-          MinPrice int NOT NULL,
-          MaxPrice int,
-          Location varchar(255) NOT NULL,
-          Type varchar(255) NOT NULL,
-          OpenTime double NOT NULL,
-          CloseTime double NOT NULL,
-          Promotion varchar(255),
-          Description text);
-        ");
-        include 'restaurants/top_search.php'
-      ?>
-	   </section>
-     <section class="col-xs-12 col-sm-12 col-md-12">
+     <section class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+       <div class="populated">
+         <?php
+           include_once("dbconnect.php");
+           mysqli_query($con, "CREATE TABLE IF NOT EXISTS restaurant (
+             RestaurantID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+             Name varchar(255) NOT NULL UNIQUE,
+             MinPrice int NOT NULL,
+             MaxPrice int,
+             Location varchar(255) NOT NULL,
+             Type varchar(255) NOT NULL,
+             OpenTime double NOT NULL,
+             CloseTime double NOT NULL,
+             Promotion varchar(255),
+             Description text);
+           ");
+           include_once('restaurants-top-search.php');
+         ?>
+       </div>
        <div class="tablesearch">
        </div>
  	   </section>

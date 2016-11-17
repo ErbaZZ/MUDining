@@ -5,7 +5,7 @@
   }
   function tolist($result) {
     echo '<article class="search-result row">';
-      echo '<div class="col-xs-12 col-sm-12 col-md-3" id="search-row">';
+      echo '<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="search-row">';
         $name = $result['Name'];
         $url = "view-restaurant.php?id=" . $result['RestaurantID'];
         echo '<a href="'.$url.'" title="'.$name .'" class="thumbnail"><img id="restaurant-img" src="' .imgurl($result['RestaurantID']).'" /></a>';
@@ -40,15 +40,15 @@
           echo '<li><i class="glyphicon glyphicon-modal-window"></i> <span>' . $dishtypes . '</span></li>';
         echo '</ul>';
       echo '</div>';
-      echo '<div class="col-xs-6 col-sm-6 col-md-6">';
+      echo '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">';
       echo '<h3><a href="'.$url.'" title="">'.$name.'</a> ';
       $reviewURL = "review-editor.php?id=" . $result['RestaurantID'];
       echo '<span class="plus"><a href="' .$reviewURL. '" title="Review this restaurant"><i class="glyphicon glyphicon-plus"></i></a></span>';
       echo '</h3></div>';
-      echo '<div class="col-xs-6 col-sm-6 col-md-6 excerpet">';
+      echo '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 excerpet">';
       echo '<p>'.$result['Description'].'</p>';
       echo '</div>';
-      echo '<div class="col-xs-12 col-sm-12 col-md-6">';
+      echo '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">';
       echo "<input id='input-7-xs' class='rating' value='0' data-min='0' data-max='5' data-step='1' data-size='xs'>";
       echo '</div>';
       echo '<span class="clearfix borda"></span>';
