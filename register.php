@@ -134,29 +134,29 @@
           <div id="foodpref" class="col-xs-9">
             <div class="row">
               <div class="btn-group col-xs-12" data-toggle="buttons">
-                <label class="btn btn-primary">
+                <label class="btn btn-success">
                     <input type="checkbox" name="foodprefs[]" value="01">Thai
                 </label>
-                <label class="btn btn-default">
+                <label class="btn btn-warning">
                     <input type="checkbox" name="foodprefs[]" value="02">Japanese
                 </label>
-                <label class="btn btn-warning">
+                <label class="btn btn-danger">
                     <input type="checkbox" name="foodprefs[]" value="03">Chinese
                 </label>
-                <label class="btn btn-success">
+                <label class="btn btn-primary">
                     <input type="checkbox" name="foodprefs[]" value="04">European
                 </label>
               </div>
             </div>
             <div class="row">
               <div class="btn-group col-xs-12" data-toggle="buttons">
-                <label class="btn btn-info">
+                <label class="btn btn-default">
                   <input type="checkbox" name="foodprefs[]" value="11">Single Dish
                 </label>
-                <label class="btn btn-default" style="background-color:#ddd;">
+                <label class="btn btn-default">
                   <input type="checkbox" name="foodprefs[]" value="12">Set Menu
                 </label>
-                <label class="btn btn-danger">
+                <label class="btn btn-default">
                   <input type="checkbox" name="foodprefs[]" value="13">Buffet
                 </label>
               </div>

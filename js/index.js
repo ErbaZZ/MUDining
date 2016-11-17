@@ -10,12 +10,18 @@ $(function() {
         $('.random_eat_button').animate({
             opacity: 1
         });
+        // $('#bottombar-wrapper').animate({
+        //     opacity: 1
+        // });
     }
 
     $('.random_eat_button').click(function() {
         $(this).animate({
             opacity: 0
         });
+        // $('#bottombar-wrapper').animate({
+        //     opacity: 0
+        // });
         modal.style.display = "block";
     });
 
