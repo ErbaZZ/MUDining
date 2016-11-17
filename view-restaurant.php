@@ -12,20 +12,22 @@
   <link href="assets/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="assets/css/view-restaurant.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
+  <script>$("#input-id").rating();</script>
 </head>
 <body>
   <?php include_once("navbar.php"); ?>
-
   <div id="wrapper" class="container" style="width:85%;">
     <div class="container" style="width:100%;">
       <h1>
         <?php echo $res['Name']; ?>
-      <br/>
-          <small>
-            Rating: x.x
-         </small>
       </h1>
+      <div class='row' style='position:relative'><div class='col-xs-1'><label id='avrLabel'>Rating:</label></div><div class='col-xs-5'><input id="input-id" name="rating" value="4" class="rating-loading" data-size='xs' data-show-clear='false'></div></div>
       <hr/>
+      <script>
+        $(document).on('ready', function(){
+            $('.rating').rating({displayOnly: true, step: 0.5});
+        });
+      </script>
       <div>
         <div id="carousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -78,7 +80,7 @@
       </div>
       <?php include('food-type.php'); ?>
       <div class="row text-center page-header">
-        <input id='input-7-xs' class='rating' value='0' data-min='0' data-max='5' data-step='1' data-size='xs'>
+        <input id='rater' class='rating' value='0' data-min='0' data-max='5' data-step='1' data-size='xs'>
       </div>
       <div class="row" id="description">
         <?php echo $res['Description']; ?>

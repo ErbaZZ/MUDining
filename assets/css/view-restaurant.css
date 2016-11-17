@@ -5,6 +5,10 @@
     overflow: hidden;
 }
 
+#avrLabel {
+  font-size: 1.5em;
+}
+
 #foodtype, #dishtype {
     width: 50%;
 }
