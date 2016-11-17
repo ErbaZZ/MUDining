@@ -11,7 +11,7 @@
       <?php
         include_once("dbconnect.php");
 
-        $con->query("CREATE TABLE IF NOT EXISTS review (
+        mysqli_query($con, "CREATE TABLE IF NOT EXISTS review (
           ReviewID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
           UserID int NOT NULL,
           RestaurantID int NOT NULL,

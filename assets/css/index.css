@@ -47,6 +47,7 @@ body {
     text-align: left;
     width: 33.33%;
     height: 100%;
+    transition: all 0.2s ease-in-out;
 }
 
 #bottombar .text>.row {
