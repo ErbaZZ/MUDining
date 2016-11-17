@@ -8,11 +8,10 @@
 <html>
 <head>
   <script src="js/css.js"></script>
-  <script src="js/star-rating.min.js" type="text/javascript"></script>
-  <link href="assets/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="js/star-rating.js" type="text/javascript"></script>
+  <link href="assets/css/star-rating.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="assets/css/view-restaurant.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
-  <script>$("#input-id").rating();</script>
 </head>
 <body>
   <?php include_once("navbar.php"); ?>
@@ -21,13 +20,8 @@
       <h1>
         <?php echo $res['Name']; ?>
       </h1>
-      <div class='row' style='position:relative'><div class='col-xs-1'><label id='avrLabel'>Rating:</label></div><div class='col-xs-5'><input id="input-id" name="rating" value="4" class="rating-loading" data-size='xs' data-show-clear='false'></div></div>
+      <div class='row'><div class='col-xs-1'><label id='avrLabel'>Rating:</label></div><div class='col-xs-5'><input id="rater" name="rating" value="4" data-size='xs' data-show-caption='true'></div></div>
       <hr/>
-      <script>
-        $(document).on('ready', function(){
-            $('.rating').rating({displayOnly: true, step: 0.5});
-        });
-      </script>
       <div>
         <div id="carousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -90,3 +84,8 @@
   </div>
 </body>
 </html>
+<script>
+  $(document).ready(function(){
+    $("#rater").rating({displayOnly: true});
+  });
+</script>
