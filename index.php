@@ -5,12 +5,13 @@
 </head>
 <body>
   <?php include_once("navbar.php"); ?>
+  <link rel="stylesheet" type="text/css" href="assets/css/recommend.css" />
+  <?php include_once("recommend.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
 
+
   <div id="wrapper" class="container text-center">
-
     <button class="random_eat_button"><div id="random_label">Where to eat?</div></button>
-
   </div>
 
   <div id="bottombar-wrapper" class="navbar-fixed-bottom">
@@ -38,13 +39,5 @@
   </div>
 
 </body>
-<script>
-  $(document).ready(function () {
-     $("#bottombar-wrapper").mousewheel(function(event, delta) {
-       this.scrollLeft -= (delta * 80);
-       this.scrollRight -= (delta * 80);
-       event.preventDefault();
-     });
-  });
-</script>
+<script src="js/index.js"></script>
 </html>

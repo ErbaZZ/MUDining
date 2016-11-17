@@ -23,7 +23,7 @@
           }
       }
 
-      $con->query("CREATE TABLE IF NOT EXISTS user (
+      mysqli_query($con, "CREATE TABLE IF NOT EXISTS user (
         UserID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
         Username varchar(255) NOT NULL UNIQUE,
         Password varchar(255) NOT NULL UNIQUE,
@@ -34,7 +34,7 @@
         Email varchar(255),
         FoodPreferences varchar(255));
       ");
-      if (!$con->query("INSERT INTO user(Username, Password, FirstName, LastName, Nickname, Gender, Email, FoodPreferences) VALUES ('$username','$password','$firstname','$lastname','$nickname','$gender','$email','$foodprefs');"))
+      if (!mysqli_query($con, "INSERT INTO user(Username, Password, FirstName, LastName, Nickname, Gender, Email, FoodPreferences) VALUES ('$username','$password','$firstname','$lastname','$nickname','$gender','$email','$foodprefs');"))
         $errormsg = "Username is already used.";
       else {
         $successmsg = "Successfully Registered. Redirecting to home page.";
@@ -43,7 +43,7 @@
       }
     } else
       $errormsg = "Passwords do not match.";
-    $con->close();
+    mysqli_close($con);
   }
 ?>
 <html>
