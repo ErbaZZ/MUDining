@@ -16,13 +16,13 @@
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <img class="thumbnail" id="latest-review-img" src=<?php echo imgurl($res['RestaurantID']) ?>>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div id="restaurant-name" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h1><?php echo $res['Name'] ?><b><small> is your choice</small></b></h1>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
         <p><?php echo $res['Description'] ?></p>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
         <?php $combine = 1; include('food-type.php'); ?>
       </div>
     </div>

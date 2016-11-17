@@ -18,11 +18,14 @@ $(function() {
     $('.random_eat_button').click(function() {
         $(this).animate({
             opacity: 0
+        }, {
+            complete: function() {
+                modal.style.display = "block";
+            }
         });
         // $('#bottombar-wrapper').animate({
         //     opacity: 0
         // });
-        modal.style.display = "block";
     });
 
     // Get the button that opens the modal
