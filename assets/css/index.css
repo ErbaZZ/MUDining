@@ -7,14 +7,10 @@ body {
     background-color: #f4511e;
     border: none;
     color: #FFFFFF;
-    text-align: center;
     font-size: 35px;
-    padding: auto;
     width: 50vh;
     height: 50vh;
     transition: all 0.5s ease-in-out;
-    margin: auto;
-    display: block;
     outline: none;
 }
 

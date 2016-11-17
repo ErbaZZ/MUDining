@@ -22,7 +22,7 @@
         <?php echo $res['Name']; ?>
       <br/>
           <small>
-            test
+            Rating: x.x
          </small>
       </h1>
       <hr/>
@@ -60,7 +60,22 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <br/>
+      <div class="row text-center">
+        <h3><small>
+        <?php
+          $location = "";
+          switch ($res['Location']) {
+            case "F":
+              $location = "In front of your university"; break;
+            case "R":
+              $location = "At the back of your university"; break;
+            case "I";
+              $location = "Just inside your university"; break;
+          }
+          echo 'Where: '.$location;
+        ?>
+      </small></h3>
+      </div>
       <div class="row text-center">
         <div class="btn-group" id="foodtype" data-toggle="buttons">
           <?php if (strpos($res['Type'], '01') !== false) { ?>

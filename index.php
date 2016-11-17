@@ -7,7 +7,7 @@
   <?php include_once("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
 
-  <div id="wrapper" class="container">
+  <div id="wrapper" class="container text-center">
 
     <button class="random_eat_button"><div id="random_label">Where to eat?</div></button>
 
