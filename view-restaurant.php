@@ -97,7 +97,9 @@
           </label>
         </div>
       </div>
-      <div class="page-header"></div>
+      <div class="row text-center page-header">
+        <input id='input-7-xs' class='rating' value='0' data-min='0' data-max='5' data-step='1' data-size='xs'>
+      </div>
       <div class="row" id="description">
         <?php echo $res['Description']; ?>
       </div>

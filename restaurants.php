@@ -2,8 +2,6 @@
 <head>
   <script src="js/css.js"></script>
   <script type="text/javascript" src="js/nouislider.min.js"></script>
-  <script src="js/star-rating.min.js" type="text/javascript"></script>
-  <link href="assets/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="assets/css/restaurants.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/nouislider/nouislider.min.css" />

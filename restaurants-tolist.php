@@ -48,9 +48,6 @@
       echo '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 excerpet">';
       echo '<p>'.$result['Description'].'</p>';
       echo '</div>';
-      echo '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">';
-      echo "<input id='input-7-xs' class='rating' value='0' data-min='0' data-max='5' data-step='1' data-size='xs'>";
-      echo '</div>';
       echo '<span class="clearfix borda"></span>';
     echo '</article>';
   }
