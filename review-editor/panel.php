@@ -36,7 +36,7 @@
        ?>
       <label for="restaurant"><h2><b>Restaurant</b></h2></label></br>
           <?php
-            $restaurants = $con->query("SELECT RestaurantID, Name FROM restaurant");
+            $restaurants = mysqli_query($con, "SELECT RestaurantID, Name FROM restaurant");
             $options = "";
             $selected = false;
             while ($row = mysqli_fetch_array($restaurants)) {

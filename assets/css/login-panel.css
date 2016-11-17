@@ -19,6 +19,16 @@
     max-height: 75px !important;
 }
 
+/*.navbar-collapse {
+  background-color: orange;
+}*/
+
+@media (max-width: 260px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
 .navbar-toggle {
     padding: 16px;
 }

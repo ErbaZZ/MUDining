@@ -55,7 +55,7 @@
               $userID = mysqli_fetch_assoc(mysqli_query($con, 'select * from user where Username = "' . $_SESSION['Username'] . '" LIMIT 1'))['UserID'];
               $result = mysqli_query($con, "select UserID from review where UserID = '$userID' and ReviewID = '$ID'");
               if ($result->num_rows) {
-//                echo " - <a href=\"edit-review.php?id=$ID\">Edit</a>"; // TODO : Implement if there's enough time
+//                echo " - <a href=\"edit-review.php?id=$ID\" role='button'>Edit</a>"; // TODO : Implement if there's enough time
                 echo " - <a href='#deleteModal' role='button' data-toggle='modal'>Delete</a>";
               }
             }
