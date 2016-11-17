@@ -18,11 +18,8 @@ $(function() {
     $('.random_eat_button').click(function() {
         $(this).animate({
             opacity: 0
-        }, {
-            complete: function() {
-                modal.style.display = "block";
-            }
         });
+        modal.style.display = "block";
         // $('#bottombar-wrapper').animate({
         //     opacity: 0
         // });
