@@ -90,6 +90,7 @@ hgroup h2.lead {
 
 .search-result h3>a, .search-result i {
     color: #248dc1 !important;
+    text-decoration: none;
 }
 
 .search-result p {
