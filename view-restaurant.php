@@ -4,6 +4,7 @@
     header('Location: index.php');
   $ID = $_GET['id'];
   $res = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant where RestaurantID = '$ID' LIMIT 1")) or header('Location: index.php');
+  $av = mysqli_fetch_assoc(mysqli_query($con, "select AVG(Rating) as avr from rating where RestaurantID = '$ID'"))
 ?>
 <html>
 <head>
@@ -20,7 +21,7 @@
       <h1>
         <?php echo $res['Name']; ?>
       </h1>
-      <div class='row'><div class='col-xs-1'><label id='avrLabel'>Rating:</label></div><div class='col-xs-5'><input id="rater" name="rating" value="4" data-size='xs' data-show-caption='true'></div></div>
+      <div class='row'><div class='col-xs-1'><label id='avrLabel'>Rating:</label></div><div class='col-xs-5'><input id="rater" name="rating" value="<?php echo $av['avr'];?>" data-size='xs' data-show-caption='true'></div></div>
       <hr/>
       <div>
         <div id="carousel" class="carousel slide" data-ride="carousel">
