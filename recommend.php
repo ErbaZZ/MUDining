@@ -3,8 +3,18 @@
     session_start();
   include_once("dbconnect.php");
   $loggedin = isset($_SESSION['Username']);
-  $ID = rand() % 20;
-  $res = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant where RestaurantID = '$ID' LIMIT 1"));
+  if (!$loggedin) {
+    // A simple algorithm to predict desire restaurant just from ratings
+    $range = 5;
+    $revs = mysqli_query($con, "select RestaurantID, avg(Rating) as avr from rating group by RestaurantID order by avr desc limit ".$range);
+    $ids = array();
+    while ($rev = mysqli_fetch_assoc($revs))
+      array_push($ids, $rev['RestaurantID']);
+    $ID = $ids[rand() % $range];
+  } else {
+    $ID = rand() % 20;
+  }
+  $res = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant where RestaurantID = '$ID' limit 1"));
 ?>
 
 <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
