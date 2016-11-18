@@ -8,13 +8,12 @@ h1 {
 }
 
 .btn {
-  font-size: 2.0vmin;
+    font-size: 2.0vmin;
 }
 
 .form-horizontal {
     padding: 0% 5%;
 }
-
 
 input:focus:invalid {
     box-shadow: 0 0 5px red;
@@ -22,4 +21,8 @@ input:focus:invalid {
 
 input:required:valid {
     box-shadow: 0 0 5px green;
+}
+
+#usernamebox, #passwordbox {
+    box-shadow: inherit;
 }
