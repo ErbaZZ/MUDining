@@ -1,3 +1,7 @@
+#contact-container {
+  margin: 0;
+}
+
 .circular {
     display: inline-block;
     width: 17vw;
@@ -13,19 +17,6 @@
     background-color: transparent;
 }
 
-#contact {
-    text-align: center;
-}
-
-figure {
-    display: inline-block;
-    margin: 20px;
-}
-
-figure img {
-    vertical-align: top;
-}
-
 figure figcaption {
     text-align: center;
     margin-top: 20px;
@@ -33,7 +24,7 @@ figure figcaption {
 
 figcaption span {
     display: block;
-    font-size: 150%;
+    font-size: 1.9vw;
     color: rgba(.6, .7, .9, .7);
     text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
     transition: opacity 0.5s ease-out;
