@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2016 at 05:13 AM
+-- Generation Time: Nov 18, 2016 at 08:42 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -33,7 +33,7 @@ CREATE TABLE `rating` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rating`
+-- Indexes for dumped tables
 --
 
 INSERT INTO `rating` (`RestaurantID`, `UserID`, `Rating`) VALUES
@@ -137,6 +137,12 @@ INSERT INTO `rating` (`RestaurantID`, `UserID`, `Rating`) VALUES
 (18, 8, 2),
 (12, 5, 4),
 (3, 2, 2);
+
+--
+-- Indexes for table `rating`
+--
+ALTER TABLE `rating`
+  ADD PRIMARY KEY (`RestaurantID`,`UserID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -4,7 +4,7 @@
     header('Location: index.php');
   $ID = $_GET['id'];
   $res = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant where RestaurantID = '$ID' LIMIT 1")) or header('Location: index.php');
-  $av = mysqli_fetch_assoc(mysqli_query($con, "select AVG(Rating) as avr from rating where RestaurantID = '$ID'"))
+  $av = mysqli_fetch_assoc(mysqli_query($con, "select AVG(Rating) as avr from rating where RestaurantID = '$ID'"));
 ?>
 <html>
 <head>
@@ -13,6 +13,13 @@
   <link href="assets/css/star-rating.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="assets/css/view-restaurant.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/checkbox.css" />
+  <script>
+    function rate(rate,rid,uid) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "rate.php?rid=" + rid + "&uid=" + uid + "&rate=" + rate, true);
+        xmlhttp.send();
+    }
+</script>
 </head>
 <body>
   <?php include_once("navbar.php"); ?>
@@ -75,7 +82,14 @@
       </div>
       <?php include('food-type.php'); ?>
       <div class="row text-center page-header">
-        <input id='rater' class='rating' value='0' data-min='0' data-max='5' data-step='1' data-size='xs'>
+        <?php
+          if (isset($_SESSION['Username'])) {
+          $username = $_SESSION['Username'];
+          $uid = mysqli_fetch_assoc(mysqli_query($con, "select UserID from user where Username = '$username'"))['UserID'];
+          $userRate = mysqli_fetch_assoc(mysqli_query($con, "select Rating from rating where RestaurantID = '$ID' AND UserID = '$uid'"))['Rating'];
+          ?>
+        <input id='rater' class='rating' value='<?php echo $userRate ?>' data-min='0' data-max='5' data-step='1' data-size='xs' onchange="rate(this.value,<?php echo $ID.",".$uid?>)">
+        <?php }?>
       </div>
       <div class="row" id="description">
         <?php echo $res['Description']; ?>
