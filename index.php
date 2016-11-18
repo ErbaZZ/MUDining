@@ -9,9 +9,12 @@
   <?php include_once("recommend.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
 
-
-  <div id="wrapper" class="container text-center">
-    <button class="random_eat_button"><div id="random_label">Where to eat?</div></button>
+  <div class="container container-table text-center">
+    <div class="row vertical-center-row">
+      <button class="random_eat_button">
+        <div id="random_label">Where to eat?</div>
+      </button>
+    </div>
   </div>
 
   <div id="bottombar-wrapper" class="navbar-fixed-bottom">

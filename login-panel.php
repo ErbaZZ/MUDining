@@ -1,3 +1,8 @@
+<?php
+  if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
+    header("Location: lauth.php?auto=1");
+  }
+?>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log in <span class="caret"></span></a>
   <ul id="login-dp" class="dropdown-menu">
@@ -19,7 +24,7 @@
                 </div>
                 <div class="checkbox">
                    <label>
-                   <input type="checkbox" name="keeplogin">Keep me logged in
+                     <input type="checkbox" name="keeplogin">Keep me logged in
                    </label>
                 </div>
              </form>

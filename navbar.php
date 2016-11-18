@@ -28,7 +28,7 @@
             <li><a href="logout.php">Log out</a></li>
         <?php
           } else
-            include("login-panel.html");
+            include("login-panel.php");
         ?>
       </ul>
     </div>

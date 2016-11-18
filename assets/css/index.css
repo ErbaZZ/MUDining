@@ -2,6 +2,19 @@ body {
     overflow: hidden;
 }
 
+.container-table {
+    height: 100%;
+}
+
+.container-table {
+    display: table;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .random_eat_button {
     border-radius: 50%;
     background-color: #f4511e;
@@ -12,6 +25,7 @@ body {
     height: 50vh;
     transition: all 0.5s ease-in-out;
     outline: none;
+    margin-top: -15vh;
 }
 
 .random_eat_button:hover {
@@ -20,7 +34,6 @@ body {
 
 #random_label {
     transition: all 0.5s ease-in-out;
-    z-index: 5;
     margin: auto;
 }
 
@@ -37,6 +50,7 @@ body {
     overflow: hidden;
     background-color: #333333;
     width: 100%;
+    max-height: 200px;
     height: 27vh;
     white-space: nowrap;
 }

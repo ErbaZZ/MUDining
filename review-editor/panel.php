@@ -26,7 +26,7 @@
         }
         if (isset($_GET['id'])) {
           $resID = $_GET['id'];
-          $userID = mysqli_fetch_assoc(mysqli_query($con, "SELECT UserID FROM user WHERE user.Username = '". $_SESSION['Username'] ."' LIMIT 1"))['UserID'];
+          $userID = $_SESSION['ID'];
           $dupe = mysqli_fetch_assoc(mysqli_query($con, "SELECT ReviewID FROM review WHERE review.UserID = '". $userID ."' AND review.RestaurantID = '". $resID ."' LIMIT 1"))['ReviewID'];
           if (!is_null($dupe)) {
             echo "<p style='color:red'>You have already reviewed this restaurant, redirecting to your review..</p>";
