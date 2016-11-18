@@ -6,11 +6,12 @@
 }
 
 #avrLabel {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 #foodtype, #dishtype {
     width: 50%;
+    min-width: 400px;
 }
 
 #foodtype>.btn, #dishtype>.btn {
@@ -19,6 +20,7 @@
 
 #carousel {
     width: 50%;
+    min-width: 400px;
     display: block;
     margin: auto;
 }

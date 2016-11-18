@@ -50,6 +50,11 @@
     cursor: pointer;
 }
 
+#restaurant-name>a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (max-width: 991px) {
     #restaurant-name {
         z-index: 2;
@@ -58,5 +63,8 @@
         margin: 20px;
         color: white;
         text-shadow: 0 2px 3px rgba(0, 0, 0, .8);
+    }
+    #restaurant-name>a>h1>b>small {
+      display: none;
     }
 }

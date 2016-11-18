@@ -28,7 +28,14 @@
       <h1>
         <?php echo $res['Name']; ?>
       </h1>
-      <div class='row'><div class='col-xs-1'><label id='avrLabel'>Rating:</label></div><div class='col-xs-5'><input id="rater" name="rating" value="<?php echo $av['avr'];?>" data-size='xs' data-show-caption='true'></div></div>
+      <div class='row'>
+        <div class='col-lg-1 hidden-sm hidden-md hidden-xs'>
+          <label id='avrLabel'>Rating:</label>
+        </div>
+        <div class='col-lg-5'>
+          <input id="rater" name="rating" value="<?php echo $av['avr'];?>" data-size='xs' data-show-caption='true'>
+        </div>
+      </div>
       <hr/>
       <div>
         <div id="carousel" class="carousel slide" data-ride="carousel">

@@ -23,7 +23,7 @@
           <div class="text">
             <div class="row">
               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <img class="thumbnail" id="latest-review-img" src=<?php echo imgurl($res['RestaurantID']) ?>>
+                <img class="thumbnail" id="latest-review-img" src=<?php echo imgurl($res['RestaurantID']) ?>>
               </div>
               <div class="caption col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <h3><?php echo mysqli_fetch_assoc(mysqli_query($con, 'select * from restaurant where RestaurantID = ' . $res['RestaurantID'] . ' LIMIT 1'))['Name'] ?></h3>
