@@ -3,18 +3,20 @@
     $minutes = $input - floor($input);
     return gmdate("H:i", $minutes * 6000 + floor($input) * 3600);
   }
-  function tolist($result) {
-    echo '<article class="search-result row">';
-      echo '<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="search-row">';
-        $name = $result['Name'];
-        $url = "view-restaurant.php?id=" . $result['RestaurantID'];
-        echo '<a href="'.$url.'" title="'.$name .'" class="thumbnail"><img id="restaurant-img" src="' .imgurl($result['RestaurantID']).'" /></a>';
-      echo '</div>';
-      echo '<div class="col-xs-6 col-lg-3 col-sm-6 col-md-3">';
-        echo '<ul class="meta-search">';
+  function tolist($result) { ?>
+    <article class="search-result row">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="search-row">
+        <?php $name = $result['Name'];
+        $url = "view-restaurant.php?id=" . $result['RestaurantID']; ?>
+        <a href=<?php echo $url ?> title=<?php echo $name ?> class="thumbnail">
+          <img id="restaurant-img" src=<?php echo imgurl($result['RestaurantID']) ?> />
+        </a>
+      </div>
+      <div class="col-xs-6 col-lg-3 col-sm-6 col-md-3">
+        <ul class="meta-search"> <?php
           $opentime = totime($result['OpenTime']);
-          $closetime = totime($result['CloseTime']);
-          echo '<li><i class="glyphicon glyphicon-time"></i> <span>' . $opentime . ' - ' . $closetime . '</span></li>';
+          $closetime = totime($result['CloseTime']); ?>
+          <li><i class="glyphicon glyphicon-time"></i> <span><?php echo $opentime . ' - ' . $closetime ?></span></li> <?php
           $foodtypes = $dishtypes = "";
           foreach (explode(",", $result['Type']) as $subtype) {
             switch ($subtype) {
@@ -35,20 +37,24 @@
             }
           }
           $foodtypes = rtrim($foodtypes, ", ");
-          $dishtypes = rtrim($dishtypes, ", ");
-          echo '<li><i class="glyphicon glyphicon-tags"></i> <span>' . $foodtypes . '</span></li>';
-          echo '<li><i class="glyphicon glyphicon-modal-window"></i> <span>' . $dishtypes . '</span></li>';
-        echo '</ul>';
-      echo '</div>';
-      echo '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">';
-      echo '<h3><a href="'.$url.'" title="">'.$name.'</a> ';
-      $reviewURL = "review-editor.php?id=" . $result['RestaurantID'];
-      echo '<span class="plus"><a href="' .$reviewURL. '" title="Review this restaurant"><i class="glyphicon glyphicon-plus"></i></a></span>';
-      echo '</h3></div>';
-      echo '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 excerpet">';
-      echo '<p>'.$result['Description'].'</p>';
-      echo '</div>';
-      echo '<span class="clearfix borda"></span>';
-    echo '</article>';
-  }
+          $dishtypes = rtrim($dishtypes, ", "); ?>
+          <li><i class="glyphicon glyphicon-tags"></i> <span><?php echo $foodtypes ?></span></li>
+          <li><i class="glyphicon glyphicon-modal-window"></i><span><?php echo $dishtypes ?></span></li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <h3><a href=<?php echo $url ?> title=""><?php echo $name ?></a>
+          <span class="plus">
+            <a href=review-editor.php?id=<?php echo $result['RestaurantID'] ?> title="Review this restaurant">
+              <i class="glyphicon glyphicon-plus"></i>
+            </a>
+          </span>
+        </h3>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 excerpet">
+        <p><?php echo $result['Description'] ?></p>
+      </div>
+      <span class="clearfix borda"></span>
+    </article>
+  <?php }
 ?>

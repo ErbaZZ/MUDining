@@ -19,22 +19,21 @@
       <?php
         include_once("dbconnect.php");
         $result = mysqli_query($con, "select * from review order by ReviewID desc limit 5");
-        while ($res = mysqli_fetch_assoc($result)) {
-          echo '<div class="text">';
-            echo '<div class="row">';
-              echo '<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">';
-                  echo '<img class="thumbnail" id="latest-review-img" src='. imgurl($res['RestaurantID']).'>';
-              echo '</div>';
-              echo '<div class="caption col-lg-6 col-md-12 col-sm-12 col-xs-12">';
-                echo "<h3>" . mysqli_fetch_assoc(mysqli_query($con, 'select * from restaurant where RestaurantID = ' . $res['RestaurantID'] . ' LIMIT 1'))['Name'] . "</h3>";
-                echo "<p>By " . mysqli_fetch_assoc(mysqli_query($con, 'select * from user where UserID = ' . $res['UserID'] . ' LIMIT 1'))['Username'] . "</p>";
-                echo "<p>" . $res['ReviewDate'] . "</p>";
-                $url = "view-review.php?id=" . $res['ReviewID'];
-                echo "<a href=\"$url\" class=\"btn btn-default\" role=\"button\">Read</a>";
-              echo '</div>';
-            echo '</div>';
-          echo '</div>';
-        }?>
+        while ($res = mysqli_fetch_assoc($result)) { ?>
+          <div class="text">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <img class="thumbnail" id="latest-review-img" src=<?php echo imgurl($res['RestaurantID']) ?>>
+              </div>
+              <div class="caption col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <h3><?php echo mysqli_fetch_assoc(mysqli_query($con, 'select * from restaurant where RestaurantID = ' . $res['RestaurantID'] . ' LIMIT 1'))['Name'] ?></h3>
+                <p>By <?php echo mysqli_fetch_assoc(mysqli_query($con, 'select * from user where UserID = ' . $res['UserID'] . ' LIMIT 1'))['Username'] ?></p>
+                <p><?php echo $res['ReviewDate'] ?></p>
+                <a href=view-review.php?id=<?php echo $res['ReviewID'] ?> class="btn btn-default" role="button">Read</a>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
     </div>
   </div>
 
