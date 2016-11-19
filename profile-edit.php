@@ -147,6 +147,7 @@
                 echo "</br><label style='color: green'>".$_SESSION['msg']."</label>";
                 unset($_SESSION['msg']);
               }?>
+              <a href="logout.php"><input type="button" class="btn btn-danger" value="Log out"></input></a>
       		</div>
 
       	</form>

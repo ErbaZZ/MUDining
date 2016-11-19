@@ -1,7 +1,7 @@
 document.write('\
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">\
 <script src="js/jquery.min.js"></script>\
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">\
+<link rel="stylesheet" href="assets/css/bootstrap.css">\
 <script src="js/bootstrap.min.js"></script>\
 <script src="js/menus.js" type="text/javascript"></script>\
 <link rel="stylesheet" type="text/css" href="assets/css/login-panel.css" />\

@@ -16,18 +16,17 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav" id="diningmenus">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="restaurants.php">Restaurants</a></li>
-        <li><a href="reviews.php">Reviews</a></li>
-        <li><a href="contact.php">Contact Us</a></li>
+        <li><a href="index.php"><span>Home </span><i class="glyphicon glyphicon-home"></i></a></li>
+        <li><a href="restaurants.php"><span>Restaurants </span><i class="glyphicon glyphicon-cutlery"></i></a></li>
+        <li><a href="reviews.php"><span>Reviews </span><i class="glyphicon glyphicon-pencil"></i></a></li>
+        <li><a href="contact.php"><span>Contact Us </span><i class="glyphicon glyphicon-envelope"></i></a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" id="usermenus">
         <?php
           if (isset($_SESSION['Username'])) { ?>
-            <li><a href="profile-edit.php"> Welcome, <?php echo $_SESSION['Username'] ?></a></li>
-            <li><a href="logout.php">Log out</a></li>
+            <li><a href="profile-edit.php"><span>Welcome, <?php echo $_SESSION['Username'] ?> </span><i class="glyphicon glyphicon-user"></i></a></li>
         <?php
-          } else
+        } else
             include("login-panel.php");
         ?>
       </ul>
