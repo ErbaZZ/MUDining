@@ -21,6 +21,11 @@
     return $imgs[rand() % sizeof($imgs)];
   }
 
+  function totime($input) {
+    $minutes = $input - floor($input);
+    return gmdate("H:i", $minutes * 6000 + floor($input) * 3600);
+  }
+
   function isresopen($opentime, $closetime) {
     $currenttime = doubleval(date('H.i'));
     return $opentime <= $currenttime && $currenttime <= $closetime;

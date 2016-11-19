@@ -51,8 +51,8 @@
 }
 
 #restaurant-name>a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 @media (max-width: 991px) {
@@ -64,7 +64,13 @@
         color: white;
         text-shadow: 0 2px 3px rgba(0, 0, 0, .8);
     }
+    #recommend>.modal-content {
+        padding-top: 10px;
+    }
     #restaurant-name>a>h1>b>small {
-      display: none;
+        display: none;
+    }
+    #recommend {
+        max-height: 95%;
     }
 }

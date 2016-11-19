@@ -1,8 +1,4 @@
 <?php
-  function totime($input) {
-    $minutes = $input - floor($input);
-    return gmdate("H:i", $minutes * 6000 + floor($input) * 3600);
-  }
   function tolist($result) { ?>
     <article class="search-result row">
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="search-row">

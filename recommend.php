@@ -42,8 +42,20 @@
     <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
       <p><?php echo $res['Description'] ?></p>
     </div>
-    <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+    <div class="col-lg-6 col-md-6">
       <?php $combine = 1; include('food-type.php'); ?>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <?php
+        $opentime = totime($res['OpenTime']);
+        $closetime = totime($res['CloseTime']);
+        $minprice = $res['MinPrice'].' THB';
+        $maxprice = $res['MaxPrice'].' THB';
+      ?>
+      <ul class="pager">
+        <li><i class="glyphicon glyphicon-time"></i> <span><?php echo $opentime . ' - ' . $closetime ?></span></li>
+        <li><i class="glyphicon glyphicon-usd"></i> <span><?php echo $minprice . ' - ' . $maxprice ?></span></li>
+      </ul>
     </div>
   </div>
 </div>
