@@ -14,8 +14,7 @@
 </head>
 <body>
   <?php include_once("navbar.php"); ?>
-  <div id="wrapper" class="container" style="width:90%;">
-    <div class="container">
+  <div id="wrapper" class="container" style="width:90%;padding:30px;">
       <!--Modal-->
       <div class="modal fade" id="deleteModal" role="dialog">
         <div class="modal-dialog modal-sm">
@@ -67,6 +66,5 @@
         <?php echo $res['Content']; ?>
       </div>
     </div>
-  </div>
 </body>
 </html>

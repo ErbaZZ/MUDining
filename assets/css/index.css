@@ -55,6 +55,10 @@ body {
     white-space: nowrap;
 }
 
+#bottombar {
+    height: 97%;
+}
+
 #bottombar .text {
     display: inline-block;
     color: white;

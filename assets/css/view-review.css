@@ -1,24 +1,27 @@
 .modal {
-  text-align: center;
-  padding: 0!important;
-  vertical-align: middle;
+    text-align: center;
+    padding: 0!important;
+    vertical-align: middle;
 }
 
 .modal:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -4px; /* Adjusts for spacing */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+    /* Adjusts for spacing */
 }
 
 .modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
 }
 
+
 /* Dealing with images somehow? */
-/*#content>img {
-  width: 60%;
-}*/
+
+#content>div>img {
+    max-width: 100%;
+}

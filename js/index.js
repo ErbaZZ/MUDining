@@ -37,4 +37,6 @@ $(function() {
         $(this).removeData('bs.modal');
     });
 
+    $('#bottombar-wrapper').niceScroll();
+
 });

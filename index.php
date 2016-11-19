@@ -2,6 +2,7 @@
 <head>
   <script src="js/css.js"></script>
   <script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
+  <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
 </head>
 <body>
   <?php include_once("navbar.php"); ?>
