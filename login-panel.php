@@ -4,7 +4,7 @@
   }
 ?>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log in <span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>Log in </span><i class="glyphicon glyphicon-lock"></i></a>
   <ul id="login-dp" class="dropdown-menu">
     <li>
        <div class="row">
