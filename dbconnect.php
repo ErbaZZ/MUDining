@@ -15,7 +15,7 @@
   }
 
   function isresopen($opentime, $closetime) {
-    $currenttime = doubleval(date('h.i'));
+    $currenttime = doubleval(date('H.i'));
     return $opentime <= $currenttime && $currenttime <= $closetime;
   }
 

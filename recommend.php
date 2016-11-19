@@ -18,7 +18,8 @@
         continue;
       array_push($ids, $myres['RestaurantID']);
     }
-    $ID = $ids[rand() % min($range, sizeof($ids))];
+    $rsize = sizeof($ids);
+    $ID = $rsize != 0 ? $ids[rand() % min($range, $rsize)] : -1;
   }
   $res = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant where RestaurantID = '$ID' limit 1"));
 ?>
