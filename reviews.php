@@ -28,7 +28,13 @@
               <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
                 <a style='text-decoration:none;color:black;' href=view-review.php?id=<?php echo $row["ReviewID"] ?>>
                   <div>
-                    <img src=<?php echo imgurl($row['RestaurantID']) ?> class="img-thumbnail">
+                    <?php
+                      require_once('fetch-img-review.php');
+                      $imgs = getimages($con, $row['ReviewID']);
+                      array_push($imgs, imgurl($row['RestaurantID']));
+                      $src = $imgs[rand() % sizeof($imgs)];
+                     ?>
+                    <img src=<?php echo $src ?> class="img-thumbnail">
                     <h3><?php echo $row['Title'] ?></h3>
                     <?php
                       $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT Name FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID'] . " LIMIT 1"))['Name'];
