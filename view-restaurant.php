@@ -44,18 +44,19 @@
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
           <li data-target="#carousel" data-slide-to="1"></li>
           <li data-target="#carousel" data-slide-to="2"></li>
+          <li data-target="#carousel" data-slide-to="3"></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <?php
-            for ($i = 1; $i <= 3; $i++) {
+            for ($i = 1; $i <= 4; $i++) {
               echo '<div class=';
               if ($i == 1)
                 echo '"item active"';
               else
                 echo '"item"';
-              echo '><img src='._imgurl($ID, $i).'>';
+              echo '><img src='._imgurl($ID, $i).' onerror="imgerror(this);"/>';
               echo '</div>';
             }
           ?>
