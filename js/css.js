@@ -9,3 +9,15 @@ document.write('\
 <meta http-equiv="Content-Language" content="th">\
 <meta http-equiv="Content-Type" content="text/html; charset=windows-874">\
 ');
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function imgerror(image) {
+    image.onerror = "";
+    image.src = image.src.replace("4.jpg", getRandomInt(1, 3) + ".jpg");
+    return true;
+}

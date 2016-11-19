@@ -28,7 +28,7 @@
               <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
                 <a style='text-decoration:none;color:black;' href=view-review.php?id=<?php echo $row["ReviewID"] ?>>
                   <div>
-                    <img src=<?php echo getrevimage($con, $row) ?> class="img-thumbnail">
+                    <img src=<?php echo getrevimage($con, $row) ?> class="img-thumbnail" onerror="imgerror(this);" />
                     <h3><?php echo $row['Title'] ?></h3>
                     <?php
                       $resname = mysqli_fetch_assoc(mysqli_query($con, "SELECT Name FROM restaurant WHERE restaurant.RestaurantID = " . $row['RestaurantID'] . " LIMIT 1"))['Name'];

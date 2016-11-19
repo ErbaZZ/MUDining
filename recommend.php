@@ -30,7 +30,7 @@
   <span class="close">×</span>
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <img class="thumbnail" id="latest-review-img" src=<?php echo imgurl($res['RestaurantID']) ?>>
+      <img class="thumbnail" id="latest-review-img" src=<?php echo imgurl($res['RestaurantID']) ?> onerror="imgerror(this);" />
     </div>
     <div id="restaurant-name" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
       <a href=view-restaurant.php?id=<?php echo $ID ?>>

@@ -11,13 +11,16 @@
   }
 
   function imgurl($id) {
-    return _imgurl($id, 1 + (rand() % 3));
+    return _imgurl($id, 1 + (rand() % 4));
   }
 
   function getrevimage($con, $rev) {
     require_once('fetch-img-review.php');
     $imgs = getimages($con, $rev['ReviewID']);
-    array_push($imgs, imgurl($rev['RestaurantID']));
+    array_push($imgs, _imgurl($rev['RestaurantID'], 1));
+    array_push($imgs, _imgurl($rev['RestaurantID'], 2));
+    array_push($imgs, _imgurl($rev['RestaurantID'], 3));
+    array_push($imgs, _imgurl($rev['RestaurantID'], 4));
     return $imgs[rand() % sizeof($imgs)];
   }
 

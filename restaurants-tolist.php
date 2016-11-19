@@ -5,7 +5,7 @@
         <?php $name = $result['Name'];
         $url = "view-restaurant.php?id=" . $result['RestaurantID']; ?>
         <a href=<?php echo $url ?> title=<?php echo $name ?> class="thumbnail">
-          <img id="restaurant-img" src=<?php echo imgurl($result['RestaurantID']) ?> />
+          <img id="restaurant-img" src=<?php echo imgurl($result['RestaurantID']) ?> onerror="imgerror(this);"/>
         </a>
       </div>
       <div class="col-xs-6 col-lg-3 col-sm-6 col-md-3">
