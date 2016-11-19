@@ -10,39 +10,31 @@ $(function() {
         $('.random_eat_button').animate({
             opacity: 1
         });
-        // $('#bottombar-wrapper').animate({
-        //     opacity: 1
-        // });
     }
 
     $('.random_eat_button').click(function() {
         $(this).animate({
             opacity: 0
         });
-        modal.style.display = "block";
-        // $('#bottombar-wrapper').animate({
-        //     opacity: 0
-        // });
+        $('#recommend').modal('show');
     });
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-        modal.style.display = "none";
+        $('#recommend').modal('hide');
         bringback();
     }
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = "none";
+            $('#recommend').modal('hide');
             bringback();
         }
     }
+
+    $('.modal').on('hidden.bs.modal', function() {
+        $(this).removeData('bs.modal');
+    });
 
 });

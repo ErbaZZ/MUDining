@@ -3,17 +3,22 @@
     session_start();
   include_once("dbconnect.php");
   $loggedin = isset($_SESSION['Username']);
+  $range = 5;
+  $ids = array();
   if (!$loggedin) {
     // A simple algorithm to predict desire restaurant just from ratings
-    $range = 5;
     $revs = mysqli_query($con, "select RestaurantID, avg(Rating) as avr from rating group by RestaurantID order by avr desc limit ".$range);
-    $ids = array();
     while ($rev = mysqli_fetch_assoc($revs))
       array_push($ids, $rev['RestaurantID']);
-    $ID = $ids[rand() % $range];
   } else {
     // An (advanced) algorithm to match your needs
-    $ID = rand() % 20;
+    $selecty = mysqli_query($con, "select r.RestaurantID, r.Rating, u.FoodPreferences, res.Type, res.OpenTime, res.CloseTime, res.MinPrice, res.MaxPrice, res.Location from rating as r, user as u, restaurant as res where r.UserID = ".$_SESSION['ID']." and u.UserID = r.UserID and r.RestaurantID = res.RestaurantID order by Rating desc limit ".$range);
+    while ($myres = mysqli_fetch_assoc($selecty)) {
+      if (!isresopen($myres['OpenTime'], $myres['CloseTime']))
+        continue;
+      array_push($ids, $myres['RestaurantID']);
+    }
+    $ID = $ids[rand() % min($range, sizeof($ids))];
   }
   $res = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant where RestaurantID = '$ID' limit 1"));
 ?>

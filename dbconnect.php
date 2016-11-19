@@ -1,4 +1,5 @@
 <?php
+  date_default_timezone_set('Asia/Bangkok');
   $con = mysqli_connect("localhost", "root", "", "mudining") or die("Error " . mysqli_error($con));
   mysqli_query($con, "SET NAMES 'utf8'");
 
@@ -12,4 +13,10 @@
   function imgurl($id) {
     return _imgurl($id, 1 + (rand() % 3));
   }
+
+  function isresopen($opentime, $closetime) {
+    $currenttime = doubleval(date('h.i'));
+    return $opentime <= $currenttime && $currenttime <= $closetime;
+  }
+
 ?>
