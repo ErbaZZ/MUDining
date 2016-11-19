@@ -16,25 +16,32 @@ $(function() {
         $(this).animate({
             opacity: 0
         });
-        $('#recommend').modal('show');
-    });
+        $.ajax({
+            type: "POST",
+            url: "recommend.php",
+            cache: false,
+            success: function(html) {
+                $('#recommend').html(html);
+                $('#recommend').modal('show');
+                var span = document.getElementsByClassName("close")[0];
 
-    var span = document.getElementsByClassName("close")[0];
+                span.onclick = function() {
+                    $('#recommend').modal('hide');
+                    bringback();
+                }
 
-    span.onclick = function() {
-        $('#recommend').modal('hide');
-        bringback();
-    }
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        $('#recommend').modal('hide');
+                        bringback();
+                    }
+                }
 
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            $('#recommend').modal('hide');
-            bringback();
-        }
-    }
-
-    $('.modal').on('hidden.bs.modal', function() {
-        $(this).removeData('bs.modal');
+                $('.modal').on('hidden.bs.modal', function() {
+                    $(this).removeData('bs.modal');
+                });
+            }
+        });
     });
 
     $('#bottombar-wrapper').niceScroll();

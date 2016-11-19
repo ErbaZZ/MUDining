@@ -7,7 +7,7 @@
 <body>
   <?php include_once("navbar.php"); ?>
   <link rel="stylesheet" type="text/css" href="assets/css/recommend.css" />
-  <?php include_once("recommend.php"); ?>
+  <div id="recommend" class="modal"></div>
   <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
 
   <div class="container container-table text-center">
