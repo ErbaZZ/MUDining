@@ -1,6 +1,13 @@
 <?php
 	session_start();
 	include_once("../dbconnect.php");
+	if (!isset($_POST['username']) || !isset($_POST['restaurantName'])) {
+		header("Location: ../index.php");
+	}
+	if ($_POST['restaurantName'] == '' || $_POST['title'] == '' || $_POST['formData'] == '') {
+		$_SESSION['errormsg'] = "Please fill in every field";
+		header("Location: ../review-editor.php");
+	}
 	$username = $_POST['username'];
 	$restaurantName = $_POST['restaurantName'];
 	$title = $_POST['title'];
@@ -14,7 +21,9 @@
 		echo "restaurantID = ".$restaurantID."</br>";
 		echo "userID = ".$userID."</br>";
 		if (!$con->query($query)) {
-			echo "Failed";
+			echo "Failed\n";
+			echo $title."\n";
+			echo $data."\n";
 			echo $con->error;
 		}
 		else {
