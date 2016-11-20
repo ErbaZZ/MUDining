@@ -28,7 +28,7 @@
             <div class="text">
               <div class="row">
                 <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12" id="img-container">
-                  <img class="thumbnail" id="latest-review-img" src=<?php echo getrevimage($con, $rev) ?>>
+                  <img class="thumbnail" id="latest-review-img" src=<?php echo getrevimage($con, $rev) ?> onerror="imgerror(this);" />
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12" id="img-caption">
                   <h3><?php echo mysqli_fetch_assoc(mysqli_query($con, 'select * from restaurant where RestaurantID = ' . $rev['RestaurantID'] . ' LIMIT 1'))['Name'] ?></h3>
