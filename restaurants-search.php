@@ -7,7 +7,6 @@
 	$search_string = "";
 	if (isset($_POST['query']))
 		$search_string = $_POST['query'];
-	$search_string = preg_replace("/[^A-Za-z0-9]/", " ", $search_string);
 	$search_string = $con->real_escape_string($search_string);
 
 	if (!empty($search_string)) {

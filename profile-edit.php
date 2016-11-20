@@ -142,12 +142,12 @@
             </div>
       		<div class="text-center">
       			<input type="submit" class="btn btn-default" value="Save changes">
-            <?php
-              if (isset($_SESSION['msg'])) {
-                echo "</br><label style='color: green'>".$_SESSION['msg']."</label>";
-                unset($_SESSION['msg']);
-              }?>
               <a href="logout.php"><input type="button" class="btn btn-danger" value="Log out"></input></a>
+              <?php
+                if (isset($_SESSION['msg'])) {
+                  echo "</br><label style='color: green'>".$_SESSION['msg']."</label>";
+                  unset($_SESSION['msg']);
+                }?>
       		</div>
 
       	</form>

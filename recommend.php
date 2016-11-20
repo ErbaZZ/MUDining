@@ -53,8 +53,14 @@
         $maxprice = $res['MaxPrice'].' THB';
       ?>
       <ul class="pager">
-        <li><i class="glyphicon glyphicon-time"></i> <span><?php echo $opentime . ' - ' . $closetime ?></span></li>
-        <li><i class="glyphicon glyphicon-usd"></i> <span><?php echo $minprice . ' - ' . $maxprice ?></span></li>
+        <li>
+          <i class="glyphicon glyphicon-time"></i>
+          <span <?php if (!isresopen($opentime, $closetime)) echo 'style="color:red;"';  ?>><?php echo $opentime . ' - ' . $closetime ?></span>
+        </li>
+        <li>
+          <i class="glyphicon glyphicon-usd"></i>
+          <span><?php echo $minprice . ' - ' . $maxprice ?></span>
+        </li>
       </ul>
     </div>
   </div>
