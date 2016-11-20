@@ -31,7 +31,8 @@
                   <img class="thumbnail" id="latest-review-img" src=<?php echo getrevimage($con, $rev) ?> onerror="imgerror(this);" />
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12" id="img-caption">
-                  <h3><?php echo mysqli_fetch_assoc(mysqli_query($con, 'select * from restaurant where RestaurantID = ' . $rev['RestaurantID'] . ' LIMIT 1'))['Name'] ?></h3>
+                  <h3 class="hidden-md hidden-sm hidden-xs"><?php echo $rev['Title'] ?></h3>
+                  <h3>@<?php echo mysqli_fetch_assoc(mysqli_query($con, 'select * from restaurant where RestaurantID = ' . $rev['RestaurantID'] . ' LIMIT 1'))['Name'] ?></h3>
                   <p>By <?php echo mysqli_fetch_assoc(mysqli_query($con, 'select * from user where UserID = ' . $rev['UserID'] . ' LIMIT 1'))['Username'] ?></p>
                   <p><?php echo $rev['ReviewDate'] ?></p>
                 </div>
