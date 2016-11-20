@@ -112,4 +112,10 @@ body {
     .caption>a {
         text-shadow: none;
     }
+    #latest-review-img {
+        -webkit-filter: brightness(86%);
+        -moz-filter: brightness(86%);
+        filter: url(#brightness);
+        filter: brightness(86%);
+    }
 }
