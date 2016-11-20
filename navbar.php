@@ -3,6 +3,7 @@
     session_start();
   include_once("dbconnect.php");
 ?>
+<title>MUDining</title>
 <nav class="navbar navbar-default navbar-fixed-top navbar-static-top" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
