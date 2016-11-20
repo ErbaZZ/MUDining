@@ -1,5 +1,5 @@
 #contact-container {
-  margin: 0;
+    margin: 0;
 }
 
 .circular {
@@ -12,7 +12,7 @@
 }
 
 .circular:hover {
-    box-shadow: 0 0 60px orange;
+    box-shadow: 0 0 60px black;
     background-image: none;
     background-color: transparent;
 }
@@ -25,26 +25,10 @@ figure figcaption {
 figcaption span {
     display: block;
     font-size: 1.9vw;
-    color: rgba(.6, .7, .9, .7);
     text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
     transition: opacity 0.5s ease-out;
 }
 
-figure:hover>figcaption>span {
-    color: orange;
-    text-shadow: 0 1px 3px orange;
-}
-
-figcaption span#def {
-    opacity: 1;
-}
-
-figcaption span#new {
-    opacity: 0;
-}
-
-figcaption:hover span#new {
-    opacity: 1;
-    background-image: none;
-    background-color: transparent;
+li span {
+  cursor: default;
 }
