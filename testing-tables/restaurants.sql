@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 20, 2016 at 03:04 AM
+-- Generation Time: Nov 20, 2016 at 06:16 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -47,8 +47,8 @@ INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `MaxPrice`, `Locat
 (1, 'ไม่ตกไม่แตก', 51, 100, 'F', '01,04,11,12', 10.3, 21, NULL, ''),
 (2, 'สเต็กลุงหนวด', 0, 100, 'F', '04,11', 17, 23.3, NULL, 'There are many branches of Steak-lung-nhuad in Thailand, and the best one are in font of Mahidol University. There are many kind of steak such as chicken steak, pork chops ,fish steak, beef steak and hotdog. All steaks will be served with French fries.  You can order level of steak doneness with waiters.  Also, there are many dishes of spaghetti ,American fire rice, and Salad. For beverage, you can order Coke, or water.\n'),
 (3, 'J-Class Vegetarian', 51, 100, 'R', '01,03,11', 8, 20, NULL, 'The Vegetarian restaurant located across the road from Mahidol University near Namnuan restaurant. In the morning it will sell noodle, and late in the morning it will sell cook to order which all are vegetarian food.\n'),
-(4, 'พุทธรักษา เรสเทรอง', 251, 500, 'F', '01,03,04,11', 10, 20, NULL, ''),
-(5, 'LODIHAM', 50, 100, 'F', '01,04,11,12', 10, 21, NULL, ''),
+(4, 'พุทธรักษา เรสเทรอง', 251, 500, 'F', '01,03,04,11', 10, 20, NULL, 'The most delicious steamed duck in three worlds. If you are looking for a special evening with gorgeous surroundings, great food, and plenty of romance, Phuttaraksa-restaurant completely fits the bill.'),
+(5, 'LODIHAM', 50, 100, 'F', '01,04,11,12', 10, 21, NULL, 'LODIHAM is a steak restaurant that?s not too expensive and be popular in Salaya. Be well known more than 5 years. And, The recommended menu are ham-cheeses roll, spicy chicken and chicken teriyaki with rice'),
 (6, 'Music Square', 101, 250, 'I', '01,04,11,12', 7.3, 20, NULL, 'Restaurant looks cute and full of nature. It is located in College of Music, Mahidol Salaya. This restaurant has both Thai food and European food with great service for lunch and dinner.'),
 (7, 'Anya''s Place', 251, 500, 'F', '01,04,11', 11, 23, NULL, 'Anya?s Place is one of the restaurants in Nakornpathom. Food is high quality and very delicious with fair price. The service is very nice as they service their family.'),
 (8, 'Buta Grill', 251, 500, 'F', '02,04,11,12,13', 11.3, 21.3, NULL, 'It is a Grill restaurant that worth to go and it is suitable for sea food lover because of high quality. It provides great service and fresh food with tasty sauce in 199 Bath and 299 for sea food. These prices include the soft drink.'),
