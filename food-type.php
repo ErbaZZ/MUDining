@@ -1,5 +1,5 @@
 <div class="row text-center">
-  <div class="btn-group" id="foodtype" data-toggle="buttons">
+  <div class="btn-group btn-group-justified" role="group" id="foodtype" data-toggle="buttons">
     <?php if (strpos($res['Type'], '01') !== false) { ?>
     <label class="btn btn-success active"> <?php } else { ?> <label class="btn btn-success"> <?php } ?>
       <input type="checkbox"><span id="long">Thai</span><span id="short">&#x1F1F9;&#x1F1ED;</span>
@@ -21,7 +21,7 @@
 </div>
 <div class="row text-center">
   <?php } ?>
-  <div class="btn-group" id="dishtype" data-toggle="buttons">
+  <div class="btn-group btn-group-justified" role="group" id="dishtype" data-toggle="buttons">
     <?php if (strpos($res['Type'], '11') !== false) { ?>
     <label class="btn btn-default active"> <?php } else { ?> <label class="btn btn-default"> <?php } ?>
       <input type="checkbox"><span id="long">Single Dish</span><span id="short">&#x1F35A;</span>

@@ -21,6 +21,8 @@
   }
   $rsize = sizeof($ids);
   $ID = $rsize != 0 ? $ids[rand() % min($range, $rsize)] : -1;
+  if ($ID == -1)
+   $ID = mysqli_fetch_assoc(mysqli_query($con, "select RestaurantID, avg(Rating) as avr from rating group by RestaurantID order by avr desc limit 1"))['RestaurantID'];
   $res = mysqli_fetch_assoc(mysqli_query($con, "select * from restaurant where RestaurantID = '$ID' limit 1"));
 ?>
 

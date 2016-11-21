@@ -11,6 +11,7 @@
 
 #foodtype, #dishtype {
     width: 50%;
+    margin: auto;
     min-width: 400px;
 }
 
@@ -21,7 +22,6 @@
 #carousel {
     width: 50%;
     min-width: 400px;
-    display: block;
     margin: auto;
 }
 
