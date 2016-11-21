@@ -11,45 +11,37 @@
   <div id="wrapper" class="container" style="width:70%;">
     <section class="col-lg-12 col-xs-12 col-sm-12 col-md-12 page-header">
       <div class="row">
-    		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-  				<form class="form-horizontal" name="search" role="form" method="POST" onkeypress="return event.keyCode != 13;">
-  						<input id="searchbox" name="searchbox" type="text" class="form-control" placeholder="Search by name..." autocomplete="off"/>
-  				</form>
-    		</div>
-        <form id="filter1">
-          <div class="btn-group col-lg-6 col-sm-12 col-xs-12" data-toggle="buttons">
-            <label class="btn btn-success">
-              <input type="checkbox" name="foodprefs[]" value="01">Thai
-            </label>
-            <label class="btn btn-success">
-              <input type="checkbox" name="foodprefs[]" value="02">Japanese
-            </label>
-            <label class="btn btn-success">
-              <input type="checkbox" name="foodprefs[]" value="03">Chinese
-            </label>
-            <label class="btn btn-success">
-              <input type="checkbox" name="foodprefs[]" value="04">European
-            </label>
-      		</div>
+    		<form class="form-horizontal col-lg-4 col-md-12 col-sm-12 col-xs-12" name="search" role="form" method="POST" onkeypress="return event.keyCode != 13;">
+  				<input id="searchbox" name="searchbox" type="text" class="form-control" placeholder="Search by name..." autocomplete="off"/>
+    		</form>
+        <form id="filter1" class="btn-group col-lg-4 col-md-6 col-sm-6 col-xs-6" data-toggle="buttons">
+          <label class="btn btn-success">
+            <input type="checkbox" name="foodprefs[]" value="01"><span id="long">Thai</span><span id="short">&#x1F1F9;&#x1F1ED;</span>
+          </label>
+          <label class="btn btn-warning">
+            <input type="checkbox" name="foodprefs[]" value="02"><span id="long">Japanese</span><span id="short">&#x1F1EF;&#x1F1F5;</span>
+          </label>
+          <label class="btn btn-danger">
+            <input type="checkbox" name="foodprefs[]" value="03"><span id="long">Chinese</span><span id="short">&#x1F1E8;&#x1F1F3;</span>
+          </label>
+          <label class="btn btn-primary">
+            <input type="checkbox" name="foodprefs[]" value="04"><span id="long">European</span><span id="short">&#x1F1EA;&#x1F1FA;</span>
+          </label>
+        </form>
+        <form id="filter2" class="btn-group col-lg-4 col-md-6 col-sm-6 col-xs-6" data-toggle="buttons">
+          <label class="btn btn-default">
+            <input type="checkbox" name="foodprefs[]" value="11"><span id="long">Single Dish</span><span id="short">&#x1F35A;</span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="foodprefs[]" value="12"><span id="long">Set Menu</span><span id="short">&#x1F371;</span>
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="foodprefs[]" value="13"><span id="long">Buffet</span><span id="short">&#x1F374;</span>
+          </label>
         </form>
     	</div>
       <div class="row">
-        <form id="filter2">
-          <div class="btn-group col-lg-6 col-sm-12 col-xs-12 col-lg-offset-6" data-toggle="buttons">
-            <label class="btn btn-primary">
-              <input type="checkbox" name="foodprefs[]" value="11">Single Dish
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" name="foodprefs[]" value="12">Set Menu
-            </label>
-            <label class="btn btn-primary">
-              <input type="checkbox" name="foodprefs[]" value="13">Buffet
-            </label>
-          </div>
-        </form>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 col-lg-offset-6">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div id="slider"></div>
         </div>
       </div>

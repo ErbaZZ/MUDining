@@ -19,8 +19,9 @@
     vertical-align: middle;
 }
 
-
-/* Dealing with images somehow? */
+#content {
+    font-size: 25px;
+}
 
 #content>div>img {
     max-width: 100%;

@@ -112,29 +112,36 @@
                 <div class="row">
                   <div class="btn-group col-xs-12" data-toggle="buttons">
                     <label class="btn btn-primary <?php if (strpos("x".$row['FoodPreferences'], '01') !== false) {echo 'active';} ?>">
-                        <input type="checkbox" name="foodprefs[]" value="01" <?php if (strpos("x".$row['FoodPreferences'], '01') !== false) {echo 'checked';} ?>>Thai
+                        <input type="checkbox" name="foodprefs[]" value="01" <?php if (strpos("x".$row['FoodPreferences'], '01') !== false) {echo 'checked';} ?>>
+                        <span id="long">Thai</span><span id="short">&#x1F1F9;&#x1F1ED;</span>
                     </label>
                     <label class="btn btn-default <?php if (strpos("x".$row['FoodPreferences'], '02') !== false) {echo 'active';} ?>">
-                        <input type="checkbox" name="foodprefs[]" value="02 <?php if (strpos("x".$row['FoodPreferences'], '02') !== false) {echo 'checked';} ?>">Japanese
+                        <input type="checkbox" name="foodprefs[]" value="02 <?php if (strpos("x".$row['FoodPreferences'], '02') !== false) {echo 'checked';} ?>">
+                        <span id="long">Japanese</span><span id="short">&#x1F1EF;&#x1F1F5;</span>
                     </label>
                     <label class="btn btn-warning <?php if (strpos("x".$row['FoodPreferences'], '03') !== false) {echo 'active';} ?>">
-                        <input type="checkbox" name="foodprefs[]" value="03" <?php if (strpos("x".$row['FoodPreferences'], '03') !== false) {echo 'checked';} ?>>Chinese
+                        <input type="checkbox" name="foodprefs[]" value="03" <?php if (strpos("x".$row['FoodPreferences'], '03') !== false) {echo 'checked';} ?>>
+                        <span id="long">Chinese</span><span id="short">&#x1F1E8;&#x1F1F3;</span>
                     </label>
                     <label class="btn btn-success <?php if (strpos("x".$row['FoodPreferences'], '04') !== false) {echo 'active';} ?>">
-                        <input type="checkbox" name="foodprefs[]" value="04" <?php if (strpos("x".$row['FoodPreferences'], '04') !== false) {echo 'checked';} ?>>European
+                        <input type="checkbox" name="foodprefs[]" value="04" <?php if (strpos("x".$row['FoodPreferences'], '04') !== false) {echo 'checked';} ?>>
+                        <span id="long">European</span><span id="short">&#x1F1EA;&#x1F1FA;</span>
                     </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="btn-group col-xs-12" data-toggle="buttons">
                     <label class="btn btn-info <?php if (strpos("x".$row['FoodPreferences'], '11') !== false) {echo 'active';} ?>">
-                      <input type="checkbox" name="foodprefs[]" value="11" <?php if (strpos("x".$row['FoodPreferences'], '11') !== false) {echo 'checked';} ?>>Single Dish
+                      <input type="checkbox" name="foodprefs[]" value="11" <?php if (strpos("x".$row['FoodPreferences'], '11') !== false) {echo 'checked';} ?>>
+                      <span id="long">Single Dish</span><span id="short">&#x1F35A;</span>
                     </label>
                     <label class="btn btn-default <?php if (strpos("x".$row['FoodPreferences'], '12') !== false) {echo 'active';} ?>" style="background-color:#ddd;">
-                      <input type="checkbox" name="foodprefs[]" value="12" <?php if (strpos("x".$row['FoodPreferences'], '12') !== false) {echo 'checked';} ?>>Set Menu
+                      <input type="checkbox" name="foodprefs[]" value="12" <?php if (strpos("x".$row['FoodPreferences'], '12') !== false) {echo 'checked';} ?>>
+                      <span id="long">Set Menu</span><span id="short">&#x1F371;</span>
                     </label>
                     <label class="btn btn-danger <?php if (strpos("x".$row['FoodPreferences'], '13') !== false) {echo 'active';} ?>">
-                      <input type="checkbox" name="foodprefs[]" value="13" <?php if (strpos("x".$row['FoodPreferences'], '13') !== false) {echo 'checked';} ?>>Buffet
+                      <input type="checkbox" name="foodprefs[]" value="13" <?php if (strpos("x".$row['FoodPreferences'], '13') !== false) {echo 'checked';} ?>>
+                      <span id="long">Buffet</span><span id="short">&#x1F374;</span>
                     </label>
                   </div>
                 </div>
