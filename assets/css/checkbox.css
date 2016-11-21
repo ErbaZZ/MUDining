@@ -14,7 +14,7 @@
     display: none;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
     #short {
         display: block;
     }
