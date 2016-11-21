@@ -157,7 +157,10 @@
 		bindHotkeys(options.hotKeys);
 
 		// Support placeholder attribute on the DIV
-		if ($(this).attr('placeholder') != '') {
+		if ($(this).attr('econtent') && $(this).text() != '') {
+			$(this).html($(this).text());
+		}
+		else if ($(this).attr('placeholder') != '') {
 			$(this).addClass('placeholderText');
 			$(this).html($(this).attr('placeholder'));
 			$(this).bind('focus',function(e) {

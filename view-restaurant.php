@@ -93,7 +93,7 @@
         <?php
           if (isset($_SESSION['Username'])) {
           $username = $_SESSION['Username'];
-          $uid = mysqli_fetch_assoc(mysqli_query($con, "select UserID from user where Username = '$username'"))['UserID'];
+          $uid =  $_SESSION['ID'];
           $userRate = mysqli_fetch_assoc(mysqli_query($con, "select Rating from rating where RestaurantID = '$ID' AND UserID = '$uid'"))['Rating'];
           ?>
         <input id='rater' class='rating' value='<?php echo $userRate ?>' data-min='0' data-max='5' data-step='1' data-size='xs' onchange="rate(this.value,<?php echo $ID.",".$uid?>)">

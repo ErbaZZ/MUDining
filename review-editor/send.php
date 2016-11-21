@@ -20,20 +20,20 @@
 		$query = "INSERT INTO review (UserID, RestaurantID, ReviewDate, Title, Content) VALUES ('$userID','$restaurantID','$reviewDate','$title','$data');";
 		echo "restaurantID = ".$restaurantID."</br>";
 		echo "userID = ".$userID."</br>";
-		if (!$con->query($query)) {
+		if (!mysqli_query($con, $query)) {
 			echo "Failed\n";
 			echo $title."\n";
 			echo $data."\n";
 			echo $con->error;
 		}
 		else {
-			header('Location: ../reviews.php');
+			header('Location: ../view-review.php?id='.$restaurantID);
 		}
 	}
 	else {
-		$_SESSION['errormsg'] = "You have already reviewed this restaurant.";
-		echo $_SESSION['errormsg'];
-		header('Location: ../review-editor.php');
+		$query = "UPDATE review SET Content = '$data', Title = '$title' WHERE RestaurantID = '$restaurantID' AND UserID = '$userID'";
+		mysqli_query($con, $query);
+		header('Location: ../view-review.php?id='.$restaurantID);
 	}
 
 ?>

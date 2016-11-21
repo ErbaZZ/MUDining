@@ -24,15 +24,9 @@
           echo "<p style='color:red'>".$_SESSION['errormsg']."</p>";
           unset($_SESSION['errormsg']);
         }
-        if (isset($_GET['id'])) {
-          $resID = $_GET['id'];
-          $userID = $_SESSION['ID'];
-          $dupe = mysqli_fetch_assoc(mysqli_query($con, "SELECT ReviewID FROM review WHERE review.UserID = '". $userID ."' AND review.RestaurantID = '". $resID ."' LIMIT 1"))['ReviewID'];
-          if (!is_null($dupe)) {
-            echo "<p style='color:red'>You have already reviewed this restaurant, redirecting to your review..</p>";
-            header('refresh:3;view-review.php?id='.$dupe);
-          }
-        }
+        $resID = $_GET['id'];
+        $userID = $_SESSION['ID'];
+        $revrow = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM review WHERE UserID = ".$userID." AND RestaurantID = ".$resID." LIMIT 1"));
        ?>
       <label for="restaurant"><h2><b>Restaurant</b></h2></label></br>
           <?php
@@ -59,7 +53,11 @@
         <br/>
         <div class="form-group">
           <label for="titleForm"><h3><b>Title</b></h3></label>
-          <input class="form-control" id="titleForm" type="text" maxlength="50" placeholder="Review Title">
+          <input class="form-control" id="titleForm" type="text" maxlength="50" placeholder="Review Title"
+          <?php if (isset($_SESSION['edit']) && isset($_GET['id'])) { ?>
+            value=<?php echo $revrow['Title'] ?>> <?php } else { ?>
+            >
+          <?php } ?>
         </div>
         <h2><small>
           By
@@ -172,13 +170,22 @@
         </div>
 
         <form action="review-editor/send.php" method="post" enctype="multipart/form-data" id='submitForm'>
+          <?php if (isset($_SESSION['edit']) && isset($_GET['id'])) { ?>
+          <div id="editor" econtent><?php echo $revrow['Content'] ?>
+            <?php } else { ?>
           <div class="placeholder" placeholder="Describe your restaurant here&hellip;" id="editor">
+            <?php } ?>
           </div>
           <br/>
 					<a class="btn btn-large btn-default jumbo" href="#" onClick= "$('#mySubmission').val($('#editor').cleanHtml(true));
                                                                         $('#titleSubmission').val($('#titleForm').val());
                                                                         $('#restaurantSubmission').val($('#restaurant option:selected').cleanHtml(true));
-                                                                        $('#submitForm').submit();">Submit</a>
+                                                                        $('#submitForm').submit();">
+          <?php if (isset($_SESSION['edit']) && isset($_GET['id'])) { ?>
+            Update</a>
+          <?php } else { ?>
+            Submit</a>
+          <?php } ?>
             <input type='hidden' name='title' id='titleSubmission'/>
             <input type='hidden' name='username' id='usernameSubmission' value=<?php echo "'".$_SESSION['Username']."'"?>/>
             <input type='hidden' name='restaurantName' id='restaurantSubmission'/>
