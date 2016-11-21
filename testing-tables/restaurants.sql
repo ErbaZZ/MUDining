@@ -44,7 +44,7 @@ CREATE TABLE `restaurant` (
 --
 
 INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `MaxPrice`, `Location`, `Type`, `OpenTime`, `CloseTime`, `Promotion`, `Description`) VALUES
-(1, 'ไม่ตกไม่แตก', 51, 100, 'F', '01,04,11,12', 10.3, 21, NULL, ''),
+(1, 'ไม่ตกไม่แตก', 51, 100, 'F', '01,04,11,12', 10.3, 21, NULL, 'This is one of the most well-known restaurants near Mahidol Salaya. Located directly in the front of the university, it serves wide ranges of menus, Thai and European. The most iconic thing of this place is the "Chef\'s Choice" menu, which can be any dish from the restaurant for only 60 Baht for those who don\'t want to choose their own menu.'),
 (2, 'สเต็กลุงหนวด', 0, 100, 'F', '04,11', 17, 23.3, NULL, 'There are many branches of Steak-lung-nhuad in Thailand, and the best one are in font of Mahidol University. There are many kind of steak such as chicken steak, pork chops ,fish steak, beef steak and hotdog. All steaks will be served with French fries.  You can order level of steak doneness with waiters.  Also, there are many dishes of spaghetti ,American fire rice, and Salad. For beverage, you can order Coke, or water.\n'),
 (3, 'J-Class Vegetarian', 51, 100, 'R', '01,03,11', 8, 20, NULL, 'The Vegetarian restaurant located across the road from Mahidol University near Namnuan restaurant. In the morning it will sell noodle, and late in the morning it will sell cook to order which all are vegetarian food.\n'),
 (4, 'พุทธรักษา เรสเทรอง', 251, 500, 'F', '01,03,04,11', 10, 20, NULL, 'The most delicious steamed duck in three worlds. If you are looking for a special evening with gorgeous surroundings, great food, and plenty of romance, Phuttaraksa-restaurant completely fits the bill.'),
