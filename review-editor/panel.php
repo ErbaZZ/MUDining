@@ -24,9 +24,11 @@
           echo "<p style='color:red'>".$_SESSION['errormsg']."</p>";
           unset($_SESSION['errormsg']);
         }
-        $resID = $_GET['id'];
-        $userID = $_SESSION['ID'];
-        $revrow = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM review WHERE UserID = ".$userID." AND RestaurantID = ".$resID." LIMIT 1"));
+        if (isset($_GET['id'])) {
+          $resID = $_GET['id'];
+          $userID = $_SESSION['ID'];
+          $revrow = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM review WHERE UserID = ".$userID." AND RestaurantID = ".$resID." LIMIT 1"));
+        }
        ?>
       <label for="restaurant"><h2><b>Restaurant</b></h2></label></br>
           <?php

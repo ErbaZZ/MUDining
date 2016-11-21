@@ -27,13 +27,13 @@
 			echo $con->error;
 		}
 		else {
-			header('Location: ../view-review.php?id='.$restaurantID);
+			header('Location: ../reviews.php');
 		}
 	}
 	else {
 		$query = "UPDATE review SET Content = '$data', Title = '$title' WHERE RestaurantID = '$restaurantID' AND UserID = '$userID'";
 		mysqli_query($con, $query);
-		header('Location: ../view-review.php?id='.$restaurantID);
+		header('Location: ../reviews.php');
 	}
 	unset($_SESSION['edit']);
 

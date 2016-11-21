@@ -55,7 +55,7 @@
               $result = mysqli_query($con, "select UserID from review where UserID = '$userID' and ReviewID = '$ID'");
               if ($result->num_rows) {
                 $_SESSION['edit'] = 1;
-                echo " - <a href=\"review-editor.php?id=$ID\" role='button'>Edit</a>";
+                echo " - <a href=\"review-editor.php?id=".$res['RestaurantID']."\" role='button'>Edit</a>";
                 echo " - <a href='#deleteModal' role='button' data-toggle='modal'>Delete</a>";
               }
             }
