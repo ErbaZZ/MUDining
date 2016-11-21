@@ -4,7 +4,7 @@
     border-bottom-style: solid;
     border-bottom-color: #ffcc00;
     border-bottom-width: 5px;
-    box-shadow: 0px 5px 10px #ccccaa;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .navbar-nav, .nav>li {

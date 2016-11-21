@@ -27,7 +27,7 @@ h3 {
 
 .stylish-panel>.row>div:hover>a>div {
     border: 1px solid rgb(200, 200, 200);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background: rgba(200, 200, 200, 0.1);
     transition: 0.5s;
     background-image: none;
