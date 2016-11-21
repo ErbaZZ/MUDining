@@ -35,5 +35,6 @@
 		mysqli_query($con, $query);
 		header('Location: ../view-review.php?id='.$restaurantID);
 	}
+	unset($_SESSION['edit']);
 
 ?>
