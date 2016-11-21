@@ -20,7 +20,6 @@ p {
 
 #search-row>a {
     display: inline-block;
-    width: auto;
     height: 150px;
     overflow: hidden;
     background-size: 100%;
@@ -47,6 +46,7 @@ hgroup h2.lead {
 
 .search-result .thumbnail {
     border-radius: 0 !important;
+    width: 100%;
 }
 
 .search-result:first-child {
