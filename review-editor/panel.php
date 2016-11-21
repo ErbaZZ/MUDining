@@ -83,18 +83,18 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
+                        <a data-edit="fontSize 6">
+                            <font size="6">Huge</font>
+                        </a>
+                    </li>
+                    <li>
                         <a data-edit="fontSize 5">
-                            <font size="5">Huge</font>
+                            <font size="5">Normal</font>
                         </a>
                     </li>
                     <li>
                         <a data-edit="fontSize 3">
-                            <font size="3">Normal</font>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-edit="fontSize 1">
-                            <font size="1">Small</font>
+                            <font size="3">Small</font>
                         </a>
                     </li>
                 </ul>

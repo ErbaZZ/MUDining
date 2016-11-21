@@ -2,6 +2,9 @@ body {
     overflow: hidden;
 }
 
+.row {
+  word-wrap: break-word;
+}
 .container-table {
     height: 100%;
 }
