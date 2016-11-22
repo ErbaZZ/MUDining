@@ -57,7 +57,7 @@ INSERT INTO `restaurant` (`RestaurantID`, `Name`, `MinPrice`, `MaxPrice`, `Locat
 (11, 'Koh Lanta Pizzeria', 101, 250, 'F', '04,11,12', 11, 22, NULL, 'Lanta Pizzeria''s pizza is crispy dough. You can choose topping that you want, but it already provides some topping. The price isn?t different from choosing topping by yourself. '),
 (12, 'ปู๊ตี่บะหมี่เกี๊ยวกุ้ง', 0, 50, 'F', '03,11', 17, 23.59, NULL, 'The old restaurant which located in front of Srifa bakery sell noodle there around 10 years. The highlight is large shrimp wonton.'),
 (13, 'ศรีไทยขาหมู', 0, 100, 'S', '03,11', 9, 15, NULL, 'Kao Kha Moo with 75 Baht is worth to pay if you compare with the quantity. It servers with medium-boil egg.'),
-(14, 'ครัวการ์ตูน', 0, 100, 'S', '01,11', 9, 21, NULL, ''),
+(14, 'ครัวการ์ตูน', 0, 100, 'S', '01,11', 9, 21, NULL, 'A small cozy restaurant at the side of Mahidol University. Serves quality Thai dishes with a relatively low price.'),
 (15, 'สุธารส', 0, 50, 'F', '01,11', 7, 20, NULL, 'It is the noodle restaurant. The highkight is pork which has a good smell. The price is fair with quality and quantity.'),
 (16, 'Buri Yummy', 0, 100, 'F', '01,02,04,11,12', 11, 22, NULL, 'This restaurant is for Mahidol''s student. It has many menu for you include Thai and European food. Price isn''t too expensive and food is delicious.'),
 (17, 'D''Eiffel', 251, 500, 'F', '04,11,12', 11, 22, NULL, 'This restaurant make you feel like rating in the luxurious classic-style European restaurant.'),
