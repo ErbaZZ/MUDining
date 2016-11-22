@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2016 at 08:08 AM
+-- Generation Time: Nov 22, 2016 at 02:52 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -43,11 +43,13 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`UserID`, `Username`, `Password`, `FirstName`, `LastName`, `Nickname`, `Gender`, `Email`, `FoodPreferences`) VALUES
-(1, 'User', '70db798c18bd7ea6ac706864d1d6fad0', 'User', 'User', 'User', 'm', 'Uesr@user.user', NULL),
-(2, 'User2', '305881f2f0a5383cdfa400734b0f1b60', 'T', 'fs', 'fs', 'm', 'fsd@hot.com', NULL),
-(3, 'Expert', 'bdecc7c3f51fda26836d6a5238b600f3', 'T', 'T', 'T', 'm', 'T@YT.T', NULL),
-(4, 'Dummy', 'Dummy', 'Dummy', 'Dummy', 'Dummy', 'M', 'dummy@dummy.dummy', '01,02,03,11,12,13'),
-(5, 'Foo', 'Foo', 'Foo', 'Foo', 'Foo', 'F', 'foo@foo.foo', '02,03,11,13');
+(1, 'Jack', '14b7b89cc7207bdea7fd5b9f31749a50', 'Jack', 'Johnson', 'Jack', 'm', 'Jack@jack.com', '03,04,11,12,13,'),
+(2, 'Poom', 'd0cfbfd4a514b84c692645cbf695108f', 'Poom', 'Smart', 'Poom', 'm', 'poomst@hotmail.com', '01,02,04,11,12,13,'),
+(3, 'Erbazz', 'c839d7d255e00c748c57a51b11c3f8c6', 'Erbazz', 'Top', 'Top', 'm', 'Erbazz@erbazz.erbazz', '01,02,03,04,11,12,13,'),
+(4, 'Jeep', 'f7e212c99f0de8d6d52ce29864ba0f44', 'Jeep', 'Error', 'Jeep', 'm', 'Jeep@jeep.jeep', '03,04,11,12,'),
+(5, 'Book', '7bf24da86507feac7390140c7685597d', 'Book', 'Koob', 'Book', 'm', 'Book@book.book', '01,03,04,11,12,'),
+(6, 'Drive', 'f4baa7a8d0fe60be68101a7372112ce5', 'Drive', 'Drive', 'Drive', 'm', 'Drive@drive.drive', '01,02,03,11,12,13,'),
+(7, 'Sophia', 'e4fd047cdcacac4f8c94f299f7ce75a1', 'Sophia', 'Sophia', 'Sophia', 'f', 'sophia@sophia.sophia', '02,03,12,');
 
 --
 -- Indexes for dumped tables
@@ -69,7 +71,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
