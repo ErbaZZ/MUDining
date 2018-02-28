@@ -1,4 +1,2 @@
-# MUDining
-MUICT Web Programming Class Project
-
-Goal: Restaurant Suggestion and Recommendation
+# MUDining (Course Project for ITCS210 - Web Programming)
+Restaurant suggestion website for Mahidol University students and Salaya residents
